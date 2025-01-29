@@ -1,0 +1,23 @@
+
+
+{
+  "name": "DoorNote",
+  "short_name": "DoorNote",
+  "description": "인공지능(AI), 머신러닝(ML), 딥러닝(DL)을 중심으로 데이터 분석과 예측 모델링을 연구하는 공간입니다. 다양한 알고리즘, 데이터 기반 인사이트, 그리고 연구 중심의 분석을 다룹니다.  데이터 과학을 활용한 실전 프로젝트와 혁신적인 문제 해결을 함께 탐구하세요.",
+  "icons": [
+    {
+      "src": "/assets/img/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "theme_color": "#2a1e6b",
+  "background_color": "#ffffff",
+  "display": "fullscreen"
+}
+
