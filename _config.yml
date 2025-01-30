@@ -182,6 +182,12 @@ compress_html:
   ignore:
     envs: [development]
 
+# robots.txt 설정
+robots:
+  enabled: true
+  sitemap: true
+  disallow: []
+
 exclude:
   - "assets/feed.xml"
   - "*.gem"

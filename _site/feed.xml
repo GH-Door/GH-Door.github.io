@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>인공지능(AI), 머신러닝(ML), 딥러닝(DL)을 중심으로 데이터 분석과 예측 모델링을 연구하는 공간입니다. 다양한 알고리즘, 데이터 기반 인사이트, 그리고 연구 중심의 분석을 다룹니다.  데이터 과학을 활용한 실전 프로젝트와 혁신적인 문제 해결을 함께 탐구하세요.</subtitle>
-  <updated>2025-01-30T17:39:37+09:00</updated>
+  <updated>2025-01-30T18:40:06+09:00</updated>
   <author>
     <name>Moon</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/first-post/" rel="alternate" type="text/html" title="첫 포스팅 GitHub Pages를 활용한 기술 블로그" />
     <published>2025-01-29T10:00:00+09:00</published>
   
-    <updated>2025-01-29T10:00:00+09:00</updated>
+    <updated>2025-01-30T17:53:44+09:00</updated>
   
     <id>http://localhost:4000/posts/first-post/</id>
     <content type="text/html" src="http://localhost:4000/posts/first-post/" />
