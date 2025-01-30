@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="첫 포스팅 GitHub Pages를 활용한 기술 블로그" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-01-30T23:35:49+09:00","datePublished":"2025-01-29T10:00:00+09:00","description":"GitHub Pages를 선택한 이유","headline":"첫 포스팅 GitHub Pages를 활용한 기술 블로그","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/first-post/"},"url":"http://localhost:4000/posts/first-post/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-01-31T01:07:47+09:00","datePublished":"2025-01-29T10:00:00+09:00","description":"GitHub Pages를 선택한 이유","headline":"첫 포스팅 GitHub Pages를 활용한 기술 블로그","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/first-post/"},"url":"http://localhost:4000/posts/first-post/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -269,8 +269,14 @@
 
   <!-- 네이버 검색 엔진 -->>   
   <meta name="naver-site-verification" content="76fa01e09531a88352db84844647ddfd7fb63161" />
-</head>
 
+  <!-- Kakao SDK 추가 -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    Kakao.init('6eb000f03577bd1c234bd39bda416d13'); // 여기에 본인의 카카오 API 키를 입력
+  </script>
+
+</head>
 
   <body>
     <!-- The Side Bar -->
@@ -1015,13 +1021,13 @@
 
 <time
   
-  data-ts="1738247749"
+  data-ts="1738253267"
   data-df="YYYY년 M월 DD일"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2025년 01월 30일
+  2025년 01월 31일
 </time>
 
         </span>
@@ -1585,6 +1591,24 @@
         rel="noopener"
       >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
   </p>
+  
+<script>
+  function kakaoShare() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'DoorNote',
+        description: 'DoorNote',
+        imageUrl: '',
+        link: {
+          mobileWebUrl: 'https://gh-door.github.io',
+          webUrl: 'https://gh-door.github.io'
+        }
+      }
+    });
+  }
+</script>
+
 </footer>
 
           </div>
