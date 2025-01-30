@@ -2,7 +2,7 @@
 layout: post
 title: "첫 포스팅 GitHub Pages를 활용한 기술 블로그"
 description: "GitHub Pages를 선택한 이유"
-author: GH-Door
+author: "DoorNote"
 date: 2025-01-29 10:00:00 +0900
 categories: [Blog]
 tags: [GitHub Pages, Data Analyst, ML/DL]
@@ -23,6 +23,8 @@ image:
 
 ---
 
+<br>
+
 ## 여러 블로그 플랫폼 비교
 ---------------------------------
 
@@ -31,7 +33,10 @@ image:
 
 ---
 
-### 1. **Velog (벨로그)**  
+<br>
+<br>
+
+### 1. [<img src="/assets/img/Velog.png" alt="Velog" width="25" height="25">](https://velog.io/)  **[Velog (벨로그)](https://velog.io/)**
 
 **장점:**  
 - 개발자 친화적인 인터페이스 (Markdown 지원)  
@@ -44,7 +49,10 @@ image:
 
 ---
 
-### 2. **Tistory (티스토리)**  
+<br>
+<br>
+
+### 2. [<img src="/assets/img/tistory.png" alt="tistory" width="30" height="30">](https://www.tistory.com/)  **[Tistory (티스토리)](https://www.tistory.com/)**  
 
 **장점:**  
 - 카카오 기반, SEO(검색엔진최적화) 강점  
@@ -58,7 +66,10 @@ image:
 
 ---
 
-### 3. **Medium (미디엄)**  
+<br>
+<br>
+
+### 3. [<img src="/assets/img/Medium.png" alt="Medium" width="25" height="25">](https://medium.com/)  **[Medium (미디움)](https://medium.com/)**  
 
 **장점:**  
 - 심플한 UI/UX, 읽기 좋은 디자인  
@@ -72,7 +83,10 @@ image:
 
 ---
 
-### 4. **최종 선택: GitHub Pages**  
+<br>
+<br>
+
+### 4. [<img src="/assets/img/github.png" alt="github" width="25" height="25">](https://pages.github.com/) **[GitHub Pages](https://pages.github.com/)**
 
 **장점:**  
 - 완전한 자유도 (HTML, CSS, JS, 테마 적용 가능)  
@@ -87,6 +101,9 @@ image:
 - 모바일 앱 지원 X  
 
 ---
+
+<br>
+<br>
 
 ## 결론: **GitHub Pages를 선택한 이유**  
 
