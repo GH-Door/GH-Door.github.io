@@ -6,6 +6,7 @@ author: GH-Door
 date: 2025-01-29 10:00:00 +0900
 categories: [Blog]
 tags: [typography]
+comments: true
 pin: true
 math: true
 mermaid: true
