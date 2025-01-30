@@ -146,10 +146,14 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
         align-items: center;
         border-radius: 0.75rem;
         font-weight: 600;
-        color: white !important;
+        // color: white !important;
+        color: rgba(255, 255, 255, 0.7) !important; /* 기본 색상 - 연한 회색 */
+        transition: all 0.3s ease-in-out; /* 애니메이션 추가 */
 
         &:hover {
           background-color: transparent !important; /* 배경 없애기 */
+          color: rgba(255, 255, 255, 1.0) !important; /* 마우스를 올렸을 때 밝은 흰색 */
+          transform: scale(1.1); /* 확대 효과 */
 
         }
 
