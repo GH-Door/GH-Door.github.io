@@ -47,7 +47,7 @@ google_site_verification: # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics: 
-  id: "G-YX9NE5GXJC" # fill in your Google Analytics ID
+  id: "G-YX9NE5GXJC" # fill in your Google Analytics ID 
 
 goatcounter:
   id: # fill in your Goatcounter ID
@@ -183,10 +183,10 @@ compress_html:
     envs: [development]
 
 # robots.txt 설정
-robots:
-  enabled: true
-  sitemap: true
-  disallow: []
+# robots:
+  # enabled: true
+  # sitemap: true
+  # disallow: []
 
 exclude:
   - "assets/feed.xml"

@@ -6,14 +6,6 @@
     "tags": "typography",
     "date": "2025-01-29 10:00:00 +0900",
     "content": "GitHub Pages를 선택한 이유"
-  },
-  {
-    "title": "Customize the Favicon",
-    "url": "/posts/customize-the-favicon/",
-    "categories": "Blogging, Tutorial",
-    "tags": "favicon",
-    "date": "2019-08-11 01:34:00 +0900",
-    "content": "The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons..."
   }
   
 ]
