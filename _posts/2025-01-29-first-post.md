@@ -5,7 +5,7 @@ description: "GitHub Pages를 선택한 이유"
 author: GH-Door
 date: 2025-01-29 10:00:00 +0900
 categories: [Blog]
-tags: [typography]
+tags: [GitHub Pages, Data Analyst, ML/DL]
 comments: true
 pin: true
 math: true
