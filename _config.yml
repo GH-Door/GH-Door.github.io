@@ -152,6 +152,7 @@ defaults:
       path: "" # An empty string here means all files in the project
       type: posts
     values:
+      use_kakao_sdk: true  # 카카오 SDK 사용 여부 설정
       layout: post
       comments: true # 댓글 활성화 설정
       toc: true # Display TOC column in posts.

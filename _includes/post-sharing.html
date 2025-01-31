@@ -30,13 +30,20 @@
         {% continue %}
       {% endif %}
 
-      {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
-
-      <a href="{{ link }}" target="_blank" rel="noopener" {{ tooltip }}>
-        <i class="fa-fw {{ share.icon }}"></i>
-      </a>
+      {% if share.type == 'KakaoTalk' %}
+        <!-- ✅ 카카오톡 공유 버튼 수정 -->
+        <a href="javascript:scrapKakao();" {{ tooltip }}>
+          <i class="fa-fw fas fa-comment"></i>
+        </a>
+      {% else %}
+        {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
+        <a href="{{ link }}" target="_blank" rel="noopener" {{ tooltip }}>
+          <i class="fa-fw {{ share.icon }}"></i>
+        </a>
+      {% endif %}
     {% endfor %}
 
+    <!-- 복사 버튼 유지 -->
     <button
       id="copy-link"
       aria-label="Copy link"
@@ -48,5 +55,6 @@
     >
       <i class="fa-fw fas fa-link pe-none fs-6"></i>
     </button>
+
   </span>
 </div>

@@ -270,11 +270,14 @@
   <!-- 네이버 검색 엔진 -->>   
   <meta name="naver-site-verification" content="76fa01e09531a88352db84844647ddfd7fb63161" />
 
-  <!-- Kakao SDK 추가 -->
-  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <script>
-    Kakao.init('6eb000f03577bd1c234bd39bda416d13'); // 여기에 본인의 카카오 API 키를 입력
+<!-- Kakao SDK 추가 -->
+
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script type="text/javascript">
+    Kakao.init('6eb000f03577bd1c234bd39bda416d13'); // 여기에 카카오 개발자 콘솔에서 발급받은 앱 키 넣기
+    console.log("Kakao SDK Initialized:", Kakao.isInitialized()); // 초기화 확인용 로그
   </script>
+
 
 </head>
 
@@ -1300,26 +1303,30 @@
     
 
       
-
-      <a href="https://sharer.kakao.com/talk/friends/picker/link?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ffirst-post%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk" aria-label="KakaoTalk">
-        <i class="fa-fw fa-solid fa-comment"></i>
-      </a>
+        <!-- ✅ 카카오톡 공유 버튼 수정 -->
+        <a href="javascript:scrapKakao();" data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk" aria-label="KakaoTalk">
+          <i class="fa-fw fas fa-comment"></i>
+        </a>
+      
     
 
       
-
-      <a href="https://www.facebook.com/sharer/sharer.php?title=%EC%B2%AB%20%ED%8F%AC%EC%8A%A4%ED%8C%85%20GitHub%20Pages%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EA%B8%B0%EC%88%A0%20%EB%B8%94%EB%A1%9C%EA%B7%B8%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ffirst-post%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
-        <i class="fa-fw fab fa-facebook-square"></i>
-      </a>
+        
+        <a href="https://www.facebook.com/sharer/sharer.php?title=%EC%B2%AB%20%ED%8F%AC%EC%8A%A4%ED%8C%85%20GitHub%20Pages%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%EA%B8%B0%EC%88%A0%20%EB%B8%94%EB%A1%9C%EA%B7%B8%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ffirst-post%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+      
     
 
       
-
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" aria-label="Instagram">
-        <i class="fa-fw fa-brands fa-instagram"></i>
-      </a>
+        
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" aria-label="Instagram">
+          <i class="fa-fw fa-brands fa-instagram"></i>
+        </a>
+      
     
 
+    <!-- 복사 버튼 유지 -->
     <button
       id="copy-link"
       aria-label="Copy link"
@@ -1331,9 +1338,9 @@
     >
       <i class="fa-fw fas fa-link pe-none fs-6"></i>
     </button>
+
   </span>
 </div>
-
     </div>
     <!-- .post-tail-bottom -->
   </div>
@@ -1592,22 +1599,9 @@
       >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
   </p>
   
-<script>
-  function kakaoShare() {
-    Kakao.Link.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: 'DoorNote',
-        description: 'DoorNote',
-        imageUrl: '',
-        link: {
-          mobileWebUrl: 'https://gh-door.github.io',
-          webUrl: 'https://gh-door.github.io'
-        }
-      }
-    });
-  }
-</script>
+  
+  <script src="/assets/js/dist/kakao-custom.min.js"></script>
+  
 
 </footer>
 

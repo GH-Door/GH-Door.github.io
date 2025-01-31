@@ -215,11 +215,8 @@
   <!-- 네이버 검색 엔진 -->>   
   <meta name="naver-site-verification" content="76fa01e09531a88352db84844647ddfd7fb63161" />
 
-  <!-- Kakao SDK 추가 -->
-  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <script>
-    Kakao.init('6eb000f03577bd1c234bd39bda416d13'); // 여기에 본인의 카카오 API 키를 입력
-  </script>
+<!-- Kakao SDK 추가 -->
+
 
 </head>
 
@@ -685,22 +682,9 @@
       >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
   </p>
   
-<script>
-  function kakaoShare() {
-    Kakao.Link.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: 'DoorNote',
-        description: 'DoorNote',
-        imageUrl: '',
-        link: {
-          mobileWebUrl: 'https://gh-door.github.io',
-          webUrl: 'https://gh-door.github.io'
-        }
-      }
-    });
-  }
-</script>
+  
+  <script src="/assets/js/dist/kakao-custom.min.js"></script>
+  
 
 </footer>
 
