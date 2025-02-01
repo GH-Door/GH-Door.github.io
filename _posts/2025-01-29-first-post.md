@@ -52,7 +52,7 @@ image:
 <br>
 <br>
 
-### 2. [<img src="/assets/img/tistory.png" alt="tistory" width="30" height="30">](https://www.tistory.com/)  **[Tistory (티스토리)](https://www.tistory.com/)**  
+### 2. [<img src="{{ site.baseurl }}/assets/img/tistory.png" alt="tistory" width="30" height="30">](https://www.tistory.com/)  **[Tistory (티스토리)](https://www.tistory.com/)** 
 
 **장점:**  
 - 카카오 기반, SEO(검색엔진최적화) 강점  

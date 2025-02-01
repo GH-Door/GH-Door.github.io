@@ -3,7 +3,12 @@ window.scrapKakao = function () {
         Kakao.init('6eb000f03577bd1c234bd39bda416d13'); // 카카오 앱 키 설정
     }
 
-    var imgUrl1 = 'https://gh-door.github.io/android-chrome-192x192.png';
+    
+    // ✅ 포스트 내 첫 번째 이미지 가져오기 (없으면 기본 이미지 사용)
+    var imgUrl1 = document.querySelector('.page__content img') 
+        ? document.querySelector('.page__content img').src 
+        : 'https://gh-door.github.io/android-chrome-192x192.png';
+        
     var imgUrl2 = '';
     var imgUrlRest = '';
     var $imgs = document.querySelectorAll('.page__content img');
@@ -16,6 +21,7 @@ window.scrapKakao = function () {
         imgUrlRest = $imgs[1].src;
     }
 
+    // 카카오톡 공유 API 실행
     Kakao.Link.sendScrap({
         requestUrl: location.origin + location.pathname,
         templateId: 116831,  // 📌 카카오 개발자 콘솔에서 확인한 템플릿 ID
