@@ -13,13 +13,11 @@ mermaid: true
 image:
 ---
 
-# GitHub Pages를 활용한 기술 블로그
----------------------------------
 
 안녕하세요 이번 포스트에서는 **GitHub Pages**를 활용하여 기술 블로그를 만든 이유와 과정에 대해 정리해보려 합니다.
 
 기술 블로그를 운영하기 위해 여러 플랫폼을 비교해 본 후 **GitHub Pages**를 최종 선택하게 되었습니다.  
-왜 **GitHub Pages**를 선택했는지, 다른 블로그 플랫폼과의 차이점을 살펴보겠습니다.
+왜 **GitHub Pages**를 선택했는지..? 다른 블로그 플랫폼과의 차이점을 살펴보겠습니다.
 
 ---
 
@@ -28,7 +26,7 @@ image:
 ## 여러 블로그 플랫폼 비교
 ---------------------------------
 
-기술 블로그를 만들 때, 대표적인 플랫폼인 Velog, Tistory, Medium을 먼저 검토했습니다.  
+기술 블로그를 만들 때, 대표적인 플랫폼인 Velog, Tistory, Medium, GitHub Pages를 먼저 검토했습니다.  
 각각의 장단점을 정리해 보면 다음과 같습니다.
 
 ---
@@ -52,7 +50,7 @@ image:
 <br>
 <br>
 
-### 2. [<img src="{{ site.baseurl }}/assets/img/tistory.png" alt="tistory" width="30" height="30">](https://www.tistory.com/)  **[Tistory (티스토리)](https://www.tistory.com/)** 
+### 2. [<img src="/assets/img/Tistory.png" alt="Tistory" width="40" height="40">](https://www.tistory.com/)  **[Tistory (티스토리)](https://www.tistory.com/)**
 
 **장점:**  
 - 카카오 기반, SEO(검색엔진최적화) 강점  
@@ -86,7 +84,9 @@ image:
 <br>
 <br>
 
-### 4. [<img src="/assets/img/github.png" alt="github" width="25" height="25">](https://pages.github.com/) **[GitHub Pages](https://pages.github.com/)**
+### 4. [<img src="/assets/img/github.png" alt="github" width="25" height="25">](https://pages.github.com/) **[GitHub Pages(최종 선택)](https://pages.github.com/)**
+
+<img src="/assets/img/github_pages.png" alt="GitHub Pages" width="80%">
 
 **장점:**  
 - 완전한 자유도 (HTML, CSS, JS, 테마 적용 가능)  
@@ -105,9 +105,9 @@ image:
 <br>
 <br>
 
-## 결론: **GitHub Pages를 선택한 이유**  
+## **GitHub Pages를 선택한 이유**  
 
-GitHub Pages는 개발 블로그를 운영하는 데 최적화된 플랫폼입니다.  
+**GitHub Pages**는 개발 블로그를 운영하는 데 최적화된 플랫폼입니다.  
 다른 블로그 플랫폼보다 커스터마이징이 자유롭고, GitHub을 활용한 버전 관리 및 협업이 가능하기 때문에 선택했습니다.  
 
 앞으로 이 블로그를 통해 **데이터 분석, 머신러닝, AI** 관련 기술 글을 공유할 예정입니다.  
