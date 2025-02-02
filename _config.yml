@@ -19,8 +19,7 @@ title: DoorNote # the main title
 tagline: 기록하는 공간 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  인공지능(AI), 머신러닝(ML), 딥러닝(DL)을 중심으로 데이터 분석과 예측 모델링을 기록하는 공간
-  다양한 알고리즘, 데이터 기반 인사이트, 그리고 연구 중심의 분석을 다룹니다.
+  AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
