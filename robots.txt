@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gh-door.github.io/sitemap.xml
