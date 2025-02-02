@@ -10,7 +10,7 @@ comments: true
 pin: true
 math: true
 mermaid: true
-image:
+image: 
 ---
 
 

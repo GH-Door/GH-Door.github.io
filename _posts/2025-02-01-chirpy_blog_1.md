@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Jekyll Chirpy] 커스터마이징 -1"
-description: ""
+description: "[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징"
 author: "DoorNote"
 date: 2025-02-01 10:00:00 +0900
 categories: [Blog]
@@ -13,14 +13,15 @@ mermaid: true
 image:
 ---
 
-## 📌 목차
+## 📑 목차
 1. [로컬 환경 설정](#로컬-환경-설정)
 2. [Jekyll Chirpy 테마 설정](#jekyll-chirpy-테마-설정)
 3. [로컬 환경 연결 및 테스트](#로컬-환경-연결-및-테스트)
 
----
+<br>
 
-## 두서
+## 들어가며
+
 ---
 
 **본론으로 들어가기 전 Github, 터미널 등의 사용법은 이미 숙지했다는 가정하에 진행한다는 점 유의하시길 바랍니다.**

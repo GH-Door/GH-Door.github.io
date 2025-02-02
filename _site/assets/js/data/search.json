@@ -1,6 +1,14 @@
 [
   {
     "title": "[Jekyll Chirpy] 커스터마이징 -1",
+    "url": "/posts/chirpy_blog_4/",
+    "categories": "Blog",
+    "tags": "GitHub Pages, Jekyll, Chirpy",
+    "date": "2025-02-01 10:00:00 +0900",
+    "content": ""
+  },
+  {
+    "title": "[Jekyll Chirpy] 커스터마이징 -1",
     "url": "/posts/chirpy_blog_3/",
     "categories": "Blog",
     "tags": "GitHub Pages, Jekyll, Chirpy",
@@ -21,7 +29,7 @@
     "categories": "Blog",
     "tags": "GitHub Pages, Jekyll, Chirpy",
     "date": "2025-02-01 10:00:00 +0900",
-    "content": ""
+    "content": "[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징"
   },
   {
     "title": "첫 포스팅 GitHub Pages를 활용한 기술 블로그",
