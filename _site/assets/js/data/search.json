@@ -1,32 +1,16 @@
 [
   {
-    "title": "[Jekyll Chirpy] 커스터마이징 -1",
-    "url": "/posts/chirpy_blog_4/",
-    "categories": "Blog",
-    "tags": "GitHub Pages, Jekyll, Chirpy",
-    "date": "2025-02-01 10:00:00 +0900",
-    "content": ""
-  },
-  {
-    "title": "[Jekyll Chirpy] 커스터마이징 -1",
-    "url": "/posts/chirpy_blog_3/",
-    "categories": "Blog",
-    "tags": "GitHub Pages, Jekyll, Chirpy",
-    "date": "2025-02-01 10:00:00 +0900",
-    "content": ""
-  },
-  {
-    "title": "[Jekyll Chirpy] 커스터마이징 -1",
+    "title": "[Jekyll Chirpy] 커스터마이징 -2",
     "url": "/posts/chirpy_blog_2/",
-    "categories": "Blog",
+    "categories": "GitHub Blog",
     "tags": "GitHub Pages, Jekyll, Chirpy",
-    "date": "2025-02-01 10:00:00 +0900",
+    "date": "2025-02-02 10:00:00 +0900",
     "content": ""
   },
   {
     "title": "[Jekyll Chirpy] 커스터마이징 -1",
     "url": "/posts/chirpy_blog_1/",
-    "categories": "Blog",
+    "categories": "GitHub Blog",
     "tags": "GitHub Pages, Jekyll, Chirpy",
     "date": "2025-02-01 10:00:00 +0900",
     "content": "[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징"
@@ -34,7 +18,7 @@
   {
     "title": "첫 포스팅 GitHub Pages를 활용한 기술 블로그",
     "url": "/posts/first-post/",
-    "categories": "Blog",
+    "categories": "GitHub Blog",
     "tags": "GitHub Pages, Data Analyst, ML/DL",
     "date": "2025-01-29 10:00:00 +0900",
     "content": "GitHub Pages를 선택한 이유"

@@ -10,6 +10,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 #sidebar {
   @include mx.pl-pr(0);
 
+  padding-left: 1rem; // 기존 값에서 오른쪽으로 더 밀어줌
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +62,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     height: 6rem;
     overflow: hidden;
     border-radius: 50%; /* 완전한 원형 유지 */
-    box-shadow: var(--avatar-border-color) 0 0 0 2px;
+    box-shadow: #cccccc 0 0 0 2px;
     transform: translateZ(0); /* fixed the zoom in Safari */
 
     @include bp.sm {
@@ -84,7 +85,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   .profile-wrapper {
     @include mx.mt-mb(2.5rem);
     @extend %clickable-transition;
-
+    
     padding-left: 2.5rem;
     padding-right: 1.25rem;
     width: 100%;
@@ -127,12 +128,13 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   }
 
   ul {
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    // margin-bottom: 2rem;
 
     li.nav-item {
       opacity: 0.9;
       width: 100%;
-
+      
       @include mx.pl-pr(1.5rem);
 
       @include bp.xxxl {
@@ -147,14 +149,13 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
         border-radius: 0.75rem;
         font-weight: 600;
         // color: white !important;
-        color: rgba(255, 255, 255, 0.7) !important; /* 기본 색상 - 연한 회색 */
+        color: rgba(255, 255, 255, 0.6) !important; /* 기본 색상 - 연한 회색 */
         transition: all 0.3s ease-in-out; /* 애니메이션 추가 */
 
         &:hover {
           background-color: transparent !important; /* 배경 없애기 */
-          color: rgba(255, 255, 255, 1.0) !important; /* 마우스를 올렸을 때 밝은 흰색 */
+          color: rgba(255, 255, 255, 1) !important; /* 마우스를 올렸을 때 밝은 흰색 */
           transform: scale(1.1); /* 확대 효과 */
-
         }
 
         i {
@@ -187,6 +188,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   }
 
   .sidebar-bottom {
+    // justify-content: center; /* 중앙 정렬 */
     padding-left: 2rem;
     padding-right: 1rem;
     margin-bottom: 1.5rem;
@@ -196,7 +198,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       margin-bottom: 1.75rem;
     }
 
-    $btn-size: 1.75rem;
+    $btn-size: 1.5rem; // 아이콘 뒷 배경(흰색)
 
     %button {
       width: $btn-size;
@@ -234,6 +236,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     }
 
     i {
+      font-size: 18px; // 사이드바 하단 아이콘 크기 
       line-height: $btn-size;
     }
 
@@ -267,4 +270,9 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       transform: translateX(v.$sidebar-width);
     }
   }
+}
+
+h1, h2, h3, .site-title, .page-title, .post-title, .nav-item a {
+  font-family: 'Roboto Slab', Helvetica, Arial, sans-serif !important; // 폰트 수정
+  font-weight: 700; /* 더 굵게 보이도록 설정 */
 }

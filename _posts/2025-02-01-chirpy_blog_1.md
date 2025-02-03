@@ -4,7 +4,7 @@ title: "[Jekyll Chirpy] 커스터마이징 -1"
 description: "[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징"
 author: "DoorNote"
 date: 2025-02-01 10:00:00 +0900
-categories: [Blog]
+categories: [GitHub Blog]
 tags: [GitHub Pages, Jekyll, Chirpy]
 comments: true
 pin: False # 고정핀
