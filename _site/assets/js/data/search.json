@@ -1,5 +1,21 @@
 [
   {
+    "title": "코딩테스트 준비 -2",
+    "url": "/posts/Coding_test_2/",
+    "categories": "Study",
+    "tags": "Python, KT에이블스쿨, Coding_Test",
+    "date": "2025-02-18 10:00:00 +0900",
+    "content": ""
+  },
+  {
+    "title": "코딩테스트 준비 -1",
+    "url": "/posts/Coding_test_1/",
+    "categories": "Study",
+    "tags": "Python, KT에이블스쿨, Coding_Test",
+    "date": "2025-02-17 10:00:00 +0900",
+    "content": ""
+  },
+  {
     "title": "[Jekyll Chirpy] 커스터마이징 -2",
     "url": "/posts/chirpy_blog_2/",
     "categories": "GitHub Blog",

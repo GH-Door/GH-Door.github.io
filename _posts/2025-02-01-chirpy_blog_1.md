@@ -227,7 +227,7 @@ rm -rf jekyll-theme-chirpy
 - Jekyll 서버 실행(로컬에서 확인)
 
 ```bash
-bundle exec jekyll serve
+bundle exec jekyll server
 ```
 
 아래와 같이 출력됩니다.

@@ -100,11 +100,11 @@
 
   /* --- Custom code light mode colors --- */
   --language-border-color: #ececec;
-  --highlight-bg-color: #f6f8fa;
+  --highlight-bg-color: #2F3542;
   --highlighter-rouge-color: #3f596f;
   --highlight-lineno-color: #9e9e9e;
   --inline-code-bg: rgba(25, 25, 28, 0.05);
-  --code-color: #3a3a3a;
+  --code-color: #9CDCFE; // 기본 색 9CDCFE D4D4D4
   --code-header-text-color: #a3a3a3;
   --code-header-muted-color: #e5e5e5;
   --code-header-icon-color: #c9c8c8;
@@ -120,6 +120,7 @@
 
   /* --- Syntax highlight theme from `rougify style github` --- */
 
+  /* 코드 블록 기본 스타일 */
   .highlight table td {
     padding: 5px;
   }
@@ -127,13 +128,14 @@
   .highlight table pre {
     margin: 0;
   }
+  
+  // .highlight,
+  // .highlight .w {
+  //   color: #24292f;
+  //   background-color: #f6f8fa;
+  // }
 
-  .highlight,
-  .highlight .w {
-    color: #24292f;
-    background-color: #f6f8fa;
-  }
-
+  /* 키워드 (def, import, return 등) */
   .highlight .k,
   .highlight .kd,
   .highlight .kn,
@@ -141,55 +143,51 @@
   .highlight .kr,
   .highlight .kt,
   .highlight .kv {
-    color: #cf222e;
+    color: #C586C0;
   }
 
-  .highlight .gr {
-    color: #f6f8fa;
-  }
+  // .highlight .gr {
+  //   color: #f6f8fa;
+  // }
 
-  .highlight .gd {
-    color: #82071e;
-    background-color: #ffebe9;
-  }
+  // .highlight .gd {
+  //   color: #82071e;
+  //   background-color: #ffebe9;
+  // }
 
+  /* 내장 함수 (print, map 등) */
   .highlight .nb {
-    color: #953800;
+    color: #DCDCAA;
   }
 
+  /* 클래스명 */
   .highlight .nc {
-    color: #953800;
+    color: #4EC9B0;
   }
 
+  /* 상수 */
   .highlight .no {
-    color: #953800;
+    color: #4EC9B0;
   }
 
+  /* 모듈명 (import pandas as pd) */
   .highlight .nn {
-    color: #953800;
+    color: #4EC9B0;
   }
 
-  .highlight .sr {
-    color: #116329;
-  }
-
-  .highlight .na {
-    color: #116329;
-  }
-
+  /* 정규식, 속성, 태그 */
+  .highlight .sr,
+  .highlight .na,
   .highlight .nt {
-    color: #116329;
+    color: #D16969;
   }
 
-  .highlight .gi {
-    color: #116329;
-    background-color: #dafbe1;
-  }
-
+  /* 키워드 상수 (True, False 등) */
   .highlight .kc {
-    color: #0550ae;
+    color: #569CD6;
   }
 
+  /* 숫자 및 리터럴 */
   .highlight .l,
   .highlight .ld,
   .highlight .m,
@@ -200,52 +198,10 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #0550ae;
+    color: #B5CEA8;
   }
 
-  .highlight .sb {
-    color: #0550ae;
-  }
-
-  .highlight .bp {
-    color: #0550ae;
-  }
-
-  .highlight .ne {
-    color: #0550ae;
-  }
-
-  .highlight .nl {
-    color: #0550ae;
-  }
-
-  .highlight .py {
-    color: #0550ae;
-  }
-
-  .highlight .nv,
-  .highlight .vc,
-  .highlight .vg,
-  .highlight .vi,
-  .highlight .vm {
-    color: #0550ae;
-  }
-
-  .highlight .o,
-  .highlight .ow {
-    color: #0550ae;
-  }
-
-  .highlight .gh {
-    color: #0550ae;
-    font-weight: bold;
-  }
-
-  .highlight .gu {
-    color: #0550ae;
-    font-weight: bold;
-  }
-
+  /* 문자열 */
   .highlight .s,
   .highlight .sa,
   .highlight .sc,
@@ -257,23 +213,47 @@
   .highlight .sx,
   .highlight .s1,
   .highlight .ss {
-    color: #0a3069;
+    color: #CE9178;
   }
 
-  .highlight .nd {
-    color: #8250df;
+  /* 따옴표 (작은따옴표와 큰따옴표 색상 동일) */
+  .highlight .p {
+    color: #D4D4D4;
   }
 
+  /* 변수 */
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi,
+  .highlight .vm {
+    color: #9CDCFE; /* 밝은 하늘색 */
+  }
+
+  /* 연산자 */
+  .highlight .o,
+  .highlight .ow {
+    color: #D4D4D4;
+  }
+
+  /* 함수명 */
   .highlight .nf,
   .highlight .fm {
-    color: #8250df;
+    color: #DCDCAA;
   }
 
+  /* 데코레이터 */
+  .highlight .nd {
+    color: #DCDCAA;
+  }
+
+  /* 에러 강조 */
   .highlight .err {
-    color: #f6f8fa;
-    background-color: #82071e;
+    color: #F44747;
+    background-color: #FFEBE9;
   }
 
+  /* 주석 */
   .highlight .c,
   .highlight .ch,
   .highlight .cd,
@@ -282,32 +262,41 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #68717a;
+    color: #6A9955;
   }
 
+  /* 헤딩 및 강조 */
+  .highlight .gh,
+  .highlight .gu {
+    color: #D4D4D4;
+    font-weight: bold;
+  }
+
+  /* 기타 스타일 */
   .highlight .gl {
-    color: #68717a;
+    color: #6A9955;
   }
 
   .highlight .gt {
-    color: #68717a;
+    color: #6A9955;
   }
 
-  .highlight .ni {
-    color: #24292f;
-  }
-
+  /* 일반 텍스트 */
+  .highlight .ni,
   .highlight .si {
-    color: #24292f;
+    color: #D4D4D4;
   }
 
+  /* 기울임 */
   .highlight .ge {
-    color: #24292f;
+    color: #D4D4D4;
     font-style: italic;
   }
 
+  /* 굵게 */
   .highlight .gs {
-    color: #24292f;
+    color: #D4D4D4;
     font-weight: bold;
   }
+  
 }
