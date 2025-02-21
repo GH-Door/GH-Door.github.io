@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간</subtitle>
-  <updated>2025-02-20T21:19:50+09:00</updated>
+  <updated>2025-02-21T18:38:39+09:00</updated>
   <author>
     <name>DoorNote</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,78 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>코딩테스트 준비 -5</title>
+    <link href="http://localhost:4000/posts/Coding_test_5/" rel="alternate" type="text/html" title="코딩테스트 준비 -5" />
+    <published>2025-02-21T10:00:00+09:00</published>
+  
+    <updated>2025-02-21T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Coding_test_5/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Coding_test_5/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  <summary>Python 코딩테스트 마지막 시리즈 - 문제 해결 방법</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>코딩테스트 준비 -4</title>
+    <link href="http://localhost:4000/posts/Coding_test_4/" rel="alternate" type="text/html" title="코딩테스트 준비 -4" />
+    <published>2025-02-20T10:00:00+09:00</published>
+  
+    <updated>2025-02-20T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Coding_test_4/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Coding_test_4/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  <summary>Python 마지막 원소 처리, 등차수열 문제 풀이, 프로그래머스 코딩테스트 연습</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>코딩테스트 준비 -3</title>
+    <link href="http://localhost:4000/posts/Coding_test_3/" rel="alternate" type="text/html" title="코딩테스트 준비 -3" />
+    <published>2025-02-19T10:00:00+09:00</published>
+  
+    <updated>2025-02-19T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/Coding_test_3/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Coding_test_3/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+  
+
+  <summary>Python 코딩테스트 문제 풀이, 프로그래머스 Level 1-2 문제 상세 설명</summary>
+
+  </entry>
 
   
   <entry>
@@ -38,7 +110,7 @@
     
   
 
-  <summary></summary>
+  <summary>Python 코딩테스트 문제 풀이 - 자료구조 및 알고리즘 복습</summary>
 
   </entry>
 
@@ -62,79 +134,7 @@
     
   
 
-  <summary></summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Jekyll Chirpy] 커스터마이징 -2</title>
-    <link href="http://localhost:4000/posts/chirpy_blog_2/" rel="alternate" type="text/html" title="[Jekyll Chirpy] 커스터마이징 -2" />
-    <published>2025-02-02T10:00:00+09:00</published>
-  
-    <updated>2025-02-02T10:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/chirpy_blog_2/</id>
-    <content type="text/html" src="http://localhost:4000/posts/chirpy_blog_2/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="GitHub Blog" />
-    
-  
-
-  <summary></summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Jekyll Chirpy] 커스터마이징 -1</title>
-    <link href="http://localhost:4000/posts/chirpy_blog_1/" rel="alternate" type="text/html" title="[Jekyll Chirpy] 커스터마이징 -1" />
-    <published>2025-02-01T10:00:00+09:00</published>
-  
-    <updated>2025-02-03T21:36:41+09:00</updated>
-  
-    <id>http://localhost:4000/posts/chirpy_blog_1/</id>
-    <content type="text/html" src="http://localhost:4000/posts/chirpy_blog_1/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="GitHub Blog" />
-    
-  
-
-  <summary>[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>첫 포스팅 GitHub Pages를 활용한 기술 블로그</title>
-    <link href="http://localhost:4000/posts/first-post/" rel="alternate" type="text/html" title="첫 포스팅 GitHub Pages를 활용한 기술 블로그" />
-    <published>2025-01-29T10:00:00+09:00</published>
-  
-    <updated>2025-02-03T21:36:41+09:00</updated>
-  
-    <id>http://localhost:4000/posts/first-post/</id>
-    <content type="text/html" src="http://localhost:4000/posts/first-post/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="GitHub Blog" />
-    
-  
-
-  <summary>GitHub Pages를 선택한 이유</summary>
+  <summary>KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다.</summary>
 
   </entry>
 
