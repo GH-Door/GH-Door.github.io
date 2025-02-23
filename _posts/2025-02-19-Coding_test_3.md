@@ -4,7 +4,7 @@ title: "코딩테스트 준비 -3"
 description: "Python 코딩테스트 문제 풀이, 프로그래머스 Level 1-2 문제 상세 설명"
 author: "DoorNote"
 date: 2025-02-19 10:00:00 +0900
-categories: [Study]
+categories: [Algorithm]
 tags: [Python, Coding_Test, KT에이블스쿨]
 comments: true
 pin: False # 고정핀

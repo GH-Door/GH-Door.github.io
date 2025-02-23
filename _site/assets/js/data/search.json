@@ -2,7 +2,7 @@
   {
     "title": "코딩테스트 준비 -5",
     "url": "/posts/Coding_test_5/",
-    "categories": "Study",
+    "categories": "Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-21 10:00:00 +0900",
     "content": "Python 코딩테스트 마지막 시리즈 - 문제 해결 방법"
@@ -10,7 +10,7 @@
   {
     "title": "코딩테스트 준비 -4",
     "url": "/posts/Coding_test_4/",
-    "categories": "Study",
+    "categories": "Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-20 10:00:00 +0900",
     "content": "Python 마지막 원소 처리, 등차수열 문제 풀이, 프로그래머스 코딩테스트 연습"
@@ -18,7 +18,7 @@
   {
     "title": "코딩테스트 준비 -3",
     "url": "/posts/Coding_test_3/",
-    "categories": "Study",
+    "categories": "Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-19 10:00:00 +0900",
     "content": "Python 코딩테스트 문제 풀이, 프로그래머스 Level 1-2 문제 상세 설명"
@@ -26,7 +26,7 @@
   {
     "title": "코딩테스트 준비 -2",
     "url": "/posts/Coding_test_2/",
-    "categories": "Study",
+    "categories": "Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-18 10:00:00 +0900",
     "content": "Python 코딩테스트 문제 풀이 - 자료구조 및 알고리즘 복습"
@@ -34,10 +34,26 @@
   {
     "title": "코딩테스트 준비 -1",
     "url": "/posts/Coding_test_1/",
-    "categories": "Study",
+    "categories": "Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-17 10:00:00 +0900",
     "content": "KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다."
+  },
+  {
+    "title": "Cohort Analysis -1",
+    "url": "/posts/DA-1/",
+    "categories": "DA",
+    "tags": "Data Analyst, Python, Cohort Analysis",
+    "date": "2025-02-11 10:00:00 +0900",
+    "content": "Data Analyst - 코호트 분석"
+  },
+  {
+    "title": "Data Analyst 분석 방법론",
+    "url": "/posts/DA/",
+    "categories": "DA",
+    "tags": "Data Analyst, Python, Cohort Analysis, Funnel Analysis, AARRR 프레임워크, A/B Test",
+    "date": "2025-02-10 10:00:00 +0900",
+    "content": "Data Analyst 핵심 분석 방법론 - 코호트 분석, 퍼널 분석, AARRR, A/B 테스트"
   },
   {
     "title": "[Jekyll Chirpy] 커스터마이징 -2",

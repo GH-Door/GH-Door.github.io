@@ -4,7 +4,7 @@ title: "코딩테스트 준비 -2"
 description: "Python 코딩테스트 문제 풀이 - 자료구조 및 알고리즘 복습"
 author: "DoorNote"
 date: 2025-02-18 10:00:00 +0900
-categories: [Study]
+categories: [Algorithm]
 tags: [Python, Coding_Test, KT에이블스쿨]
 comments: true
 pin: False # 고정핀

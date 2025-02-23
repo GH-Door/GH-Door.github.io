@@ -4,7 +4,7 @@ title: "코딩테스트 준비 -1"
 description: "KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다."
 author: "DoorNote"
 date: 2025-02-17 10:00:00 +0900
-categories: [Study]
+categories: [Algorithm]
 tags: [Python, Coding_Test, KT에이블스쿨]
 comments: true
 pin: False # 고정핀

@@ -4,7 +4,7 @@ title: "코딩테스트 준비 -4"
 description: "Python 마지막 원소 처리, 등차수열 문제 풀이, 프로그래머스 코딩테스트 연습"
 author: "DoorNote"
 date: 2025-02-20 10:00:00 +0900
-categories: [Study]
+categories: [Algorithm]
 tags: [Python, Coding_Test, KT에이블스쿨]
 comments: true
 pin: False # 고정핀
