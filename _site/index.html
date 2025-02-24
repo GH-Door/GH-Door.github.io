@@ -38,6 +38,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="DoorNote" />
 <meta property="og:type" content="website" />
+<link rel="next" href="http://localhost:4000/page2" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="DoorNote" />
 <script type="application/ld+json">
@@ -916,17 +917,72 @@
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/DA-1/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/funnel-analysis/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Cohort Analysis -1</h1>
+            <h1 class="card-title my-2 mt-md-0">Funnel Analysis</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>Data Analyst - 코호트 분석</p>
+              <p>Python을 활용한 퍼널 분석 실습</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1739322000"
+  data-df="YYYY년 M월 DD일"
+  
+>
+  2025년 02월 12일
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      DA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/cohort-analysis/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">Cohort Analysis</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>Python을 활용한 코호트 분석 실습</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -971,7 +1027,7 @@
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/chirpy_blog_2/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
@@ -1025,63 +1081,82 @@
       </a>
     </article>
   
-    <article class="card-wrapper card">
-      <a href="/posts/chirpy_blog_1/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[Jekyll Chirpy] 커스터마이징 -1</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1738371600"
-  data-df="YYYY년 M월 DD일"
-  
->
-  2025년 02월 01일
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      GitHub Blog
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
 </div>
 <!-- #post-list -->
+
+
+  <!-- The paginator for post list on HomgPage. -->
+
+<nav aria-label="Page Navigation">
+  <ul class="pagination align-items-center mt-4 mb-0">
+    <!-- left arrow -->
+    
+
+    <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="previous-page">
+        <i class="fas fa-angle-left"></i>
+      </a>
+    </li>
+
+    <!-- page numbers -->
+    
+    
+
+    
+      
+      
+      
+      
+      
+
+      
+
+      
+        <!-- show number -->
+        <li class="page-item  active">
+          <a
+            class="page-link"
+            href="/"
+          >1</a>
+        </li>
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
+        <!-- show number -->
+        <li class="page-item ">
+          <a
+            class="page-link"
+            href="/page2"
+          >2</a>
+        </li>
+      
+    
+
+    <!-- mobile pagination -->
+    <li class="page-index align-middle">
+      <span>1</span>
+      <span class="text-muted">/ 2</span>
+    </li>
+
+    <!-- right arrow -->
+    
+
+    <li class="page-item ">
+      <a class="page-link" href="/page2" aria-label="next-page">
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- .pagination -->
 
 
 
@@ -1115,13 +1190,6 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/chirpy_blog_2/">[Jekyll Chirpy] 커스터마이징 -2</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/Coding_test_1/">코딩테스트 준비 -1</a>
         </li>
       
@@ -1136,14 +1204,21 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Coding_test_5/">코딩테스트 준비 -5</a>
+          <a href="/posts/Coding_test_3/">코딩테스트 준비 -3</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/chirpy_blog_1/">[Jekyll Chirpy] 커스터마이징 -1</a>
+          <a href="/posts/Coding_test_4/">코딩테스트 준비 -4</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
         </li>
       
     </ul>
@@ -1375,8 +1450,6 @@
     
     
     
-      
-    
   
     
     
@@ -1480,6 +1553,51 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1494,22 +1612,6 @@
         
         
 
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1547,13 +1649,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/cohort-analysis/">Cohort Analysis</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/funnel-analysis/">Funnel Analysis</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">Jekyll</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/aarrr-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/">AARRR 프레임워크</a>
       
     </div>
   </section>
@@ -1843,8 +1945,6 @@
     
     
     
-      
-    
   
     
     
@@ -1948,6 +2048,51 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1962,22 +2107,6 @@
         
         
 
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2015,13 +2144,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/cohort-analysis/">Cohort Analysis</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/funnel-analysis/">Funnel Analysis</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">Jekyll</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/aarrr-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/">AARRR 프레임워크</a>
       
     </div>
   </section>

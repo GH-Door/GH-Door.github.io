@@ -112,3 +112,14 @@ image:
 
 앞으로 이 블로그를 통해 **데이터 분석, 머신러닝, AI** 관련 기술 글을 공유할 예정입니다.  
 블로그 운영을 하면서 유용한 팁도 함께 정리해 나가겠습니다. 🚀
+
+<br>
+<br>
+
+## 다음 포스팅 
+
+---
+- [[Jekyll Chirpy] 커스터마이징 - 1](/Jekyll Chirpy-커스터마이징-1/) &nbsp;&nbsp; ⬅️ 기본 설정
+- [[Jekyll Chirpy] 커스터마이징 - 2](/Jekyll Chirpy-커스터마이징-2/) &nbsp;&nbsp; ⬅️ 기본 설정 및 사이드바 꾸미기
+- [[Jekyll Chirpy] 커스터마이징 - 3](/Jekyll Chirpy-커스터마이징-3/) &nbsp;&nbsp; ⬅️ 댓글, 검색엔진 최적화, 구글 애널리틱스 설정
+- [[Jekyll Chirpy] 커스터마이징 - 4](/Jekyll Chirpy-커스터마이징-4/) &nbsp;&nbsp; ⬅️ 카카오톡 공유 기능 추가하기

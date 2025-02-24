@@ -3,6 +3,7 @@ layout: post
 title: "[Jekyll Chirpy] 커스터마이징 -1"
 description: "[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징"
 author: "DoorNote"
+permalink: /Jekyll Chirpy-커스터마이징-1/
 date: 2025-02-01 10:00:00 +0900
 categories: [GitHub Blog]
 tags: [GitHub Pages, Jekyll, Chirpy]
@@ -268,9 +269,10 @@ Chorme 열어서 해당 주소를 입력 후 아래와 같은 이미지 확인
 
 ---
 
-- [[Jekyll Chirpy] 커스터마이징 - 2](/posts/2025-02-02-chirpy_blog_2/) &nbsp;&nbsp; ⬅️ 기본 설정 및 사이드바 꾸미기
-- [[Jekyll Chirpy] 커스터마이징 - 3](/posts/2025-02-03-chirpy_blog_3/) &nbsp;&nbsp; ⬅️ 댓글, 검색엔진 최적화, 구글 애널리틱스 설정
-- [[Jekyll Chirpy] 커스터마이징 - 4](/posts/2025-02-04-chirpy_blog_4/) &nbsp;&nbsp; ⬅️ 카카오톡 공유 기능 추가하기
+- [[Jekyll Chirpy] 커스터마이징 - 1](/Jekyll Chirpy-커스터마이징-1/) &nbsp;&nbsp; ⬅️ 기본 설정
+- [[Jekyll Chirpy] 커스터마이징 - 2](/Jekyll Chirpy-커스터마이징-2/) &nbsp;&nbsp; ⬅️ 기본 설정 및 사이드바 꾸미기
+- [[Jekyll Chirpy] 커스터마이징 - 3](/Jekyll Chirpy-커스터마이징-3/) &nbsp;&nbsp; ⬅️ 댓글, 검색엔진 최적화, 구글 애널리틱스 설정
+- [[Jekyll Chirpy] 커스터마이징 - 4](/Jekyll Chirpy-커스터마이징-4/) &nbsp;&nbsp; ⬅️ 카카오톡 공유 기능 추가하기
 
 
 
