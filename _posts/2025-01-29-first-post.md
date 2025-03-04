@@ -4,7 +4,9 @@ title: "첫 포스팅 GitHub Pages를 활용한 기술 블로그"
 description: "GitHub Pages를 선택한 이유"
 author: "DoorNote"
 date: 2025-01-29 10:00:00 +0900
-categories: [GitHub Blog]
+categories:
+    - GitHub Blog
+    - First Posting
 tags: [GitHub Pages, Data Analyst, ML/DL]
 comments: true
 pin: true

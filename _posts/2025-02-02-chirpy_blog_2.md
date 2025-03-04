@@ -5,7 +5,9 @@ description: "Jekyll Chirpy 테마의 기본 설정을 커스터마이징하는 
 author: "DoorNote"
 permalink: /Jekyll Chirpy-커스터마이징-2/
 date: 2025-02-02 10:00:00 +0900
-categories: [GitHub Blog]
+categories:
+    - GitHub Blog
+    - Jekyll Chirpy
 tags: [GitHub Pages, Jekyll, Chirpy]
 comments: true
 pin: False # 고정핀

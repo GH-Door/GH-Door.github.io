@@ -1,28 +1,40 @@
+/* 테이블 감싸는 컨테이너 초기화 */
+div.table-wrapper,
+div.dataframe-wrapper {
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* Jupyter Notebook 스타일 - 데이터프레임 */
 .dataframe {
   border-collapse: collapse;
   width: 100%;
-  background-color: #f8f8f8;  /* Jupyter 스타일 연한 회색 */
-  font-family: Arial, sans-serif; /* 가독성 좋은 폰트 */
+  max-width: 100%;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
   font-size: 0.9rem;
   border: 1px solid #ddd;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .dataframe th, .dataframe td {
   border: 1px solid #ddd;
-  padding: 8px; /* 셀 간격 조정 */
+  padding: 8px;
   text-align: center;
 }
 
 .dataframe thead th {
-  background-color: #f0f0f0;  /* 컬럼명 강조 */
+  background-color: #f0f0f0;
   font-weight: bold;
-  text-align: center;
 }
 
 .dataframe tbody tr:hover {
-  background: #f2f2f2; /* 마우스 오버 시 강조 */
+  background: #f2f2f2;
 }
 
 /* 테이블 크기 조정 및 배경 제거 */
@@ -30,10 +42,4 @@ table.dataframe {
   width: 100% !important;
   background: none !important;
   border-collapse: collapse;
-  text-align: center;
-}
-
-table.dataframe th, table.dataframe td {
-  padding: 10px;
-  border: 1px solid #ddd;
 }

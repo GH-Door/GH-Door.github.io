@@ -1,64 +1,72 @@
 [
   {
-    "title": "코딩테스트 준비 -5",
+    "title": "[알고리즘] 코딩테스트 준비 -5",
     "url": "/posts/Coding_test_5/",
-    "categories": "Algorithm",
+    "categories": "Coding Test, Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-21 10:00:00 +0900",
     "content": "Python 코딩테스트 마지막 시리즈 - 문제 해결 방법"
   },
   {
-    "title": "코딩테스트 준비 -4",
+    "title": "[알고리즘] 코딩테스트 준비 -4",
     "url": "/posts/Coding_test_4/",
-    "categories": "Algorithm",
+    "categories": "Coding Test, Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-20 10:00:00 +0900",
     "content": "Python 마지막 원소 처리, 등차수열 문제 풀이, 프로그래머스 코딩테스트 연습"
   },
   {
-    "title": "코딩테스트 준비 -3",
+    "title": "[알고리즘] 코딩테스트 준비 -3",
     "url": "/posts/Coding_test_3/",
-    "categories": "Algorithm",
+    "categories": "Coding Test, Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-19 10:00:00 +0900",
     "content": "Python 코딩테스트 문제 풀이, 프로그래머스 Level 1-2 문제 상세 설명"
   },
   {
-    "title": "코딩테스트 준비 -2",
+    "title": "[알고리즘] 코딩테스트 준비 -2",
     "url": "/posts/Coding_test_2/",
-    "categories": "Algorithm",
+    "categories": "Coding Test, Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-18 10:00:00 +0900",
     "content": "Python 코딩테스트 문제 풀이 - 자료구조 및 알고리즘 복습"
   },
   {
-    "title": "코딩테스트 준비 -1",
+    "title": "[알고리즘] 코딩테스트 준비 -1",
     "url": "/posts/Coding_test_1/",
-    "categories": "Algorithm",
+    "categories": "Coding Test, Algorithm",
     "tags": "Python, Coding_Test, KT에이블스쿨",
     "date": "2025-02-17 10:00:00 +0900",
     "content": "KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다."
   },
   {
-    "title": "Funnel Analysis",
+    "title": "[Data Analyst] A/B Test",
+    "url": "/AB-Test/",
+    "categories": "AI & 데이터분석, DA",
+    "tags": "Data Analyst, Python, A/B Test",
+    "date": "2025-02-13 10:00:00 +0900",
+    "content": "Python을 활용한 A/B Test 실습"
+  },
+  {
+    "title": "[Data Analyst] Funnel Analysis",
     "url": "/funnel-analysis/",
-    "categories": "DA",
+    "categories": "AI & 데이터분석, DA",
     "tags": "Data Analyst, Python, Funnel Analysis",
     "date": "2025-02-12 10:00:00 +0900",
     "content": "Python을 활용한 퍼널 분석 실습"
   },
   {
-    "title": "Cohort Analysis",
+    "title": "[Data Analyst] Cohort Analysis",
     "url": "/cohort-analysis/",
-    "categories": "DA",
+    "categories": "AI & 데이터분석, DA",
     "tags": "Data Analyst, Python, Cohort Analysis",
     "date": "2025-02-11 10:00:00 +0900",
     "content": "Python을 활용한 코호트 분석 실습"
   },
   {
-    "title": "Data Analyst 분석 방법론",
+    "title": "[Data Analyst] 데이터 분석 방법론",
     "url": "/posts/DA/",
-    "categories": "DA",
+    "categories": "AI & 데이터분석, DA",
     "tags": "Data Analyst, Python, Cohort Analysis, Funnel Analysis, A/B Test, AARRR 프레임워크",
     "date": "2025-02-10 10:00:00 +0900",
     "content": "Data Analyst 핵심 분석 방법론 - 코호트 분석, 퍼널 분석, AARRR, A/B 테스트"
@@ -66,7 +74,7 @@
   {
     "title": "[Jekyll Chirpy] 커스터마이징 -2",
     "url": "/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/",
-    "categories": "GitHub Blog",
+    "categories": "GitHub Blog, Jekyll Chirpy",
     "tags": "GitHub Pages, Jekyll, Chirpy",
     "date": "2025-02-02 10:00:00 +0900",
     "content": "Jekyll Chirpy 테마의 기본 설정을 커스터마이징하는 방법을 소개합니다."
@@ -74,7 +82,7 @@
   {
     "title": "[Jekyll Chirpy] 커스터마이징 -1",
     "url": "/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-1/",
-    "categories": "GitHub Blog",
+    "categories": "GitHub Blog, Jekyll Chirpy",
     "tags": "GitHub Pages, Jekyll, Chirpy",
     "date": "2025-02-01 10:00:00 +0900",
     "content": "[GitHub Blog] Jekyll Chirpy 테마를 활용한 블로그 커스터마이징"
@@ -82,7 +90,7 @@
   {
     "title": "첫 포스팅 GitHub Pages를 활용한 기술 블로그",
     "url": "/posts/first-post/",
-    "categories": "GitHub Blog",
+    "categories": "GitHub Blog, First Posting",
     "tags": "GitHub Pages, Data Analyst, ML/DL",
     "date": "2025-01-29 10:00:00 +0900",
     "content": "GitHub Pages를 선택한 이유"

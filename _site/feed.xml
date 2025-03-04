@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간</subtitle>
-  <updated>2025-02-27T17:00:06+09:00</updated>
+  <updated>2025-03-04T23:33:57+09:00</updated>
   <author>
     <name>DoorNote</name>
     <uri>http://localhost:4000/</uri>
@@ -20,8 +20,8 @@
 
   
   <entry>
-    <title>코딩테스트 준비 -5</title>
-    <link href="http://localhost:4000/posts/Coding_test_5/" rel="alternate" type="text/html" title="코딩테스트 준비 -5" />
+    <title>[알고리즘] 코딩테스트 준비 -5</title>
+    <link href="http://localhost:4000/posts/Coding_test_5/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -5" />
     <published>2025-02-21T10:00:00+09:00</published>
   
     <updated>2025-02-21T10:00:00+09:00</updated>
@@ -34,6 +34,8 @@
 
   
     
+    <category term="Coding Test" />
+    
     <category term="Algorithm" />
     
   
@@ -44,8 +46,8 @@
 
   
   <entry>
-    <title>코딩테스트 준비 -4</title>
-    <link href="http://localhost:4000/posts/Coding_test_4/" rel="alternate" type="text/html" title="코딩테스트 준비 -4" />
+    <title>[알고리즘] 코딩테스트 준비 -4</title>
+    <link href="http://localhost:4000/posts/Coding_test_4/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -4" />
     <published>2025-02-20T10:00:00+09:00</published>
   
     <updated>2025-02-23T18:47:37+09:00</updated>
@@ -58,6 +60,8 @@
 
   
     
+    <category term="Coding Test" />
+    
     <category term="Algorithm" />
     
   
@@ -68,8 +72,8 @@
 
   
   <entry>
-    <title>코딩테스트 준비 -3</title>
-    <link href="http://localhost:4000/posts/Coding_test_3/" rel="alternate" type="text/html" title="코딩테스트 준비 -3" />
+    <title>[알고리즘] 코딩테스트 준비 -3</title>
+    <link href="http://localhost:4000/posts/Coding_test_3/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -3" />
     <published>2025-02-19T10:00:00+09:00</published>
   
     <updated>2025-02-23T18:47:37+09:00</updated>
@@ -82,6 +86,8 @@
 
   
     
+    <category term="Coding Test" />
+    
     <category term="Algorithm" />
     
   
@@ -92,8 +98,8 @@
 
   
   <entry>
-    <title>코딩테스트 준비 -2</title>
-    <link href="http://localhost:4000/posts/Coding_test_2/" rel="alternate" type="text/html" title="코딩테스트 준비 -2" />
+    <title>[알고리즘] 코딩테스트 준비 -2</title>
+    <link href="http://localhost:4000/posts/Coding_test_2/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -2" />
     <published>2025-02-18T10:00:00+09:00</published>
   
     <updated>2025-02-23T18:47:37+09:00</updated>
@@ -106,6 +112,8 @@
 
   
     
+    <category term="Coding Test" />
+    
     <category term="Algorithm" />
     
   
@@ -116,8 +124,8 @@
 
   
   <entry>
-    <title>코딩테스트 준비 -1</title>
-    <link href="http://localhost:4000/posts/Coding_test_1/" rel="alternate" type="text/html" title="코딩테스트 준비 -1" />
+    <title>[알고리즘] 코딩테스트 준비 -1</title>
+    <link href="http://localhost:4000/posts/Coding_test_1/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -1" />
     <published>2025-02-17T10:00:00+09:00</published>
   
     <updated>2025-02-23T18:47:37+09:00</updated>
@@ -129,6 +137,8 @@
     </author>
 
   
+    
+    <category term="Coding Test" />
     
     <category term="Algorithm" />
     

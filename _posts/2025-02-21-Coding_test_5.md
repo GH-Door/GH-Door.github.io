@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "코딩테스트 준비 -5"
+title: "[알고리즘] 코딩테스트 준비 -5"
 description: "Python 코딩테스트 마지막 시리즈 - 문제 해결 방법"
 author: "DoorNote"
 date: 2025-02-21 10:00:00 +0900
-categories: [Algorithm]
+categories:
+    - Coding Test
+    - Algorithm
 tags: [Python, Coding_Test, KT에이블스쿨]
 comments: true
 pin: False # 고정핀
