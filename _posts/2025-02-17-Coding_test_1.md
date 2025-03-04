@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[알고리즘] 코딩테스트 준비 -1"
-description: "KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다."
+# description: "KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다."
 author: "DoorNote"
 date: 2025-02-17 10:00:00 +0900
 categories:

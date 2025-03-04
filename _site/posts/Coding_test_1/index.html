@@ -33,8 +33,8 @@
 <meta property="og:title" content="[알고리즘] 코딩테스트 준비 -1" />
 <meta name="author" content="DoorNote" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다." />
-<meta property="og:description" content="KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다." />
+<meta name="description" content="코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5" />
+<meta property="og:description" content="코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5" />
 <link rel="canonical" href="http://localhost:4000/posts/Coding_test_1/" />
 <meta property="og:url" content="http://localhost:4000/posts/Coding_test_1/" />
 <meta property="og:site_name" content="DoorNote" />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="[알고리즘] 코딩테스트 준비 -1" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-04T23:35:35+09:00","datePublished":"2025-02-17T10:00:00+09:00","description":"KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다.","headline":"[알고리즘] 코딩테스트 준비 -1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Coding_test_1/"},"url":"http://localhost:4000/posts/Coding_test_1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-04T23:35:35+09:00","datePublished":"2025-02-17T10:00:00+09:00","description":"코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5","headline":"[알고리즘] 코딩테스트 준비 -1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Coding_test_1/"},"url":"http://localhost:4000/posts/Coding_test_1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -870,8 +870,6 @@
   <header>
     <h1 data-toc-skip>[알고리즘] 코딩테스트 준비 -1</h1>
     
-      <p class="post-desc fw-light mb-4">KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다.</p>
-    
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -1401,13 +1399,6 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
         
         
         <li class="text-truncate lh-lg">
-          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/DA/">[Data Analyst] 데이터 분석 방법론</a>
         </li>
       
@@ -1429,7 +1420,14 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Coding_test_1/">[알고리즘] 코딩테스트 준비 -1</a>
+          <a href="/AB-Test/">[Data Analyst] A/B Test</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
         </li>
       
     </ul>
@@ -2071,7 +2069,7 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
 
               <h4 class="pt-0 my-2">[알고리즘] 코딩테스트 준비 -5</h4>
               <div class="text-muted">
-                <p>Python 코딩테스트 마지막 시리즈 - 문제 해결 방법</p>
+                <p>들어가며    이번 포스팅은 코딩테스트 준비 시리즈의 마지막 글이다. 지금까지 기초적인 알고리즘 문제들을 하나씩 살펴보며 Python의 다양한 기능들을 복습해봤다.   1. 수열과 구간 쿼리    문제: 수열과 구간 쿼리 -2    정수 배열과 쿼리를 처리하여 새로운 배열을 만드는 문제     문제 설명    정수 배열 arr와 2차원 정수 배열 qu...</p>
               </div>
             </div>
           </a>
@@ -2099,7 +2097,7 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
 
               <h4 class="pt-0 my-2">[알고리즘] 코딩테스트 준비 -4</h4>
               <div class="text-muted">
-                <p>Python 마지막 원소 처리, 등차수열 문제 풀이, 프로그래머스 코딩테스트 연습</p>
+                <p>들어가며    이번에는 리스트의 마지막 원소를 처리하는 알고리즘 문제를 풀어보며 리스트 인덱싱과 조건문을 활용하는 연습을 해보려한다.    1. 리스트의 마지막 원소 처리    문제: 마지막 원소 처리    리스트의 마지막 원소를 그전 원소와 비교하여 새로운 값을 추가하는 문제     문제 설명    정수 리스트 num_list가 주어진다.   리스트...</p>
               </div>
             </div>
           </a>
@@ -2127,7 +2125,7 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
 
               <h4 class="pt-0 my-2">[알고리즘] 코딩테스트 준비 -3</h4>
               <div class="text-muted">
-                <p>Python 코딩테스트 문제 풀이, 프로그래머스 Level 1-2 문제 상세 설명</p>
+                <p>들어가며    지난 포스팅에서는 상태 전환을 활용한 문자열 처리 문제를 다뤄봤다. 이번에는 주사위 게임과 관련된 알고리즘 문제를 풀어보며 조건문과 수학적 사고력을 기르는 연습을 해보자.    1. 주사위 게임    문제: 주사위 게임    세 개의 주사위를 굴려 나온 값에 따라 특별한 규칙으로 점수를 계산하는 문제     문제 설명    문자열 1부터...</p>
               </div>
             </div>
           </a>

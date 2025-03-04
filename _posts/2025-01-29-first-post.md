@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "첫 포스팅 GitHub Pages를 활용한 기술 블로그"
-description: "GitHub Pages를 선택한 이유"
+# description: "GitHub Pages를 선택한 이유"
 author: "DoorNote"
 date: 2025-01-29 10:00:00 +0900
 categories:
@@ -16,10 +16,9 @@ image:
 ---
 
 
-안녕하세요 이번 포스트에서는 **GitHub Pages**를 활용하여 기술 블로그를 만든 이유와 과정에 대해 정리해보려 합니다.
-
-기술 블로그를 운영하기 위해 여러 플랫폼을 비교해 본 후 **GitHub Pages**를 최종 선택하게 되었습니다.  
-왜 **GitHub Pages**를 선택했는지..? 다른 블로그 플랫폼과의 차이점을 살펴보겠습니다.
+안녕하세요 이번 포스트에서는 **GitHub Pages**를 활용하여 기술 블로그를 만든 이유와 과정에 대해 정리해보려 합니다.<br>
+기술 블로그를 운영하기 위해 여러 플랫폼을 비교해 본 후 **GitHub Pages**를 최종 선택하게 되었습니다.<br>
+왜 **GitHub Pages**를 선택했는지..?<!--more--> 다른 블로그 플랫폼과의 차이점을 살펴보겠습니다.
 
 ---
 

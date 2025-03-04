@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[알고리즘] 코딩테스트 준비 -2"
-description: "Python 코딩테스트 문제 풀이 - 자료구조 및 알고리즘 복습"
+# description: "Python 코딩테스트 문제 풀이 - 자료구조 및 알고리즘 복습"
 author: "DoorNote"
 date: 2025-02-18 10:00:00 +0900
 categories:

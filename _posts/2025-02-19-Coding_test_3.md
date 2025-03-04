@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[알고리즘] 코딩테스트 준비 -3"
-description: "Python 코딩테스트 문제 풀이, 프로그래머스 Level 1-2 문제 상세 설명"
+# description: "Python 코딩테스트 문제 풀이, 프로그래머스 Level 1-2 문제 상세 설명"
 author: "DoorNote"
 date: 2025-02-19 10:00:00 +0900
 categories:

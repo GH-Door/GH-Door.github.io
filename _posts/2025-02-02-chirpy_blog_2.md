@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Jekyll Chirpy] 커스터마이징 -2"
-description: "Jekyll Chirpy 테마의 기본 설정을 커스터마이징하는 방법을 소개합니다."
+# description: "Jekyll Chirpy 테마의 기본 설정을 커스터마이징하는 방법을 소개합니다."
 author: "DoorNote"
 permalink: /Jekyll Chirpy-커스터마이징-2/
 date: 2025-02-02 10:00:00 +0900
