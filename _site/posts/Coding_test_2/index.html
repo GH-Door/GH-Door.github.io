@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="[알고리즘] 코딩테스트 준비 -2" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-04T23:35:35+09:00","datePublished":"2025-02-18T10:00:00+09:00","description":"들어가며 지난 포스팅에서는 기본적인 자료구조와 간단한 문제풀이를 다뤄봤다. 이번에는 조금 더 심화된 내용의 알고리즘 문제 LV1 ~ LV2 문제들을 다뤄볼 예정이다. 1. 상태 전환을 활용한 문자열 처리 문제: 문자열 상태 처리 주어진 문자열을 특정 규칙에 따라 새로운 문자열로 변환하는 문제 문제 설명 문자열 code를 순차적으로 읽으며 처리한다. mode는 0과 1 두 가지 상태가 있으며, 초기값은 0 “1”을 만나면 mode가 전환됨 (0→1 또는 1→0) 문제 해결 접근 상태(mode) 변수를 활용한 조건 처리 문자열 순회를 통한 인덱스 기반 처리 결과 문자열 동적 생성 처리 규칙 Mode 0인 경우: 짝수 인덱스의 문자만 결과 문자열에 추가 “1”을 만나면 Mode 1로 전환 Mode 1인 경우: 홀수 인덱스의 문자만 결과 문자열에 추가 “1”을 만나면 Mode 0으로 전환 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 # 풀이 def solution(code): mode = 0 ret = &quot;&quot; for idx in range(len(code)): # idx를 0 부터 code의 길이 - 1 까지 1씩 if mode == 0: # mode가 0일 때 if code[idx] == &quot;1&quot;: # code[idx]가 1이면 mode = 1 # mode를 1로 변경 elif idx % 2 == 0: # 1이 아니면 idx가 짝수일 때만 ret += code[idx] # code[idx] 추가 else: # mode가 1일 떄 if code[idx] == &quot;1&quot;: # code[idx] 가 1이면 mode = 0 # mode를 0으로 변경 elif idx % 2 != 0: # code[idx]가 &quot;1&quot;이 아니면 홀수일 때만 ret += code[idx] # ret 맨 뒤 code[idx] 추가 return ret if ret else &quot;EMPTY&quot; # ret이 빈 문자라면 &quot;EMPTY&quot; return # test code = &quot;abc1abc1abc&quot; solution(code) # &#39;acbac&#39; 2. 등차수열 특정 항만 더하기 문제: 등차수열과 선택적 합계 계산 문제 설명 등차수열의 첫 항 a, 공차 d, 그리고 included 배열이 주어짐 included[i]가 true이면 i+1항을 더하고, false이면 더하지 않음 선택된 항들의 합을 반환 문제 해결 접근 등차수열 생성 included 배열을 통한 선택적 합계 계산 결과값 도출 처리 규칙 등차수열의 i번째 항 = a + (i-1)d included[i]가 true인 항만 합계에 포함 최종 합계 반환 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 # 풀이 def solution(a, d, included): # a = 첫쨰항 / d = 공차 result = 0 for i in range(len(included)): # included의 길이만큼 term = a + i * d # i번째 등차수열 항 계산 if included[i]: # 해당 항이 True이면 더하기 result += term return result # test a = 3 d = 4 included = [True, False, False, True, True] solution(a, d, included) # 37 마무리 이번 포스팅에서는 등차수열의 특정 항을 선택적으로 더하는 문제를 살펴보았다. 이 문제를 통해 등차수열의 기본 개념과 Python의 리스트 인덱싱을 활용하는 방법을 복습할 수 있었다. 다음 포스팅에서도 기초적인 알고리즘 문제들을 하나씩 살펴보려한다. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2 코딩테스트 준비 -3    ⬅️ 다음 포스팅 코딩테스트 준비 -4 코딩테스트 준비 -5","headline":"[알고리즘] 코딩테스트 준비 -2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Coding_test_2/"},"url":"http://localhost:4000/posts/Coding_test_2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-05T00:15:54+09:00","datePublished":"2025-02-18T10:00:00+09:00","description":"들어가며 지난 포스팅에서는 기본적인 자료구조와 간단한 문제풀이를 다뤄봤다. 이번에는 조금 더 심화된 내용의 알고리즘 문제 LV1 ~ LV2 문제들을 다뤄볼 예정이다. 1. 상태 전환을 활용한 문자열 처리 문제: 문자열 상태 처리 주어진 문자열을 특정 규칙에 따라 새로운 문자열로 변환하는 문제 문제 설명 문자열 code를 순차적으로 읽으며 처리한다. mode는 0과 1 두 가지 상태가 있으며, 초기값은 0 “1”을 만나면 mode가 전환됨 (0→1 또는 1→0) 문제 해결 접근 상태(mode) 변수를 활용한 조건 처리 문자열 순회를 통한 인덱스 기반 처리 결과 문자열 동적 생성 처리 규칙 Mode 0인 경우: 짝수 인덱스의 문자만 결과 문자열에 추가 “1”을 만나면 Mode 1로 전환 Mode 1인 경우: 홀수 인덱스의 문자만 결과 문자열에 추가 “1”을 만나면 Mode 0으로 전환 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 # 풀이 def solution(code): mode = 0 ret = &quot;&quot; for idx in range(len(code)): # idx를 0 부터 code의 길이 - 1 까지 1씩 if mode == 0: # mode가 0일 때 if code[idx] == &quot;1&quot;: # code[idx]가 1이면 mode = 1 # mode를 1로 변경 elif idx % 2 == 0: # 1이 아니면 idx가 짝수일 때만 ret += code[idx] # code[idx] 추가 else: # mode가 1일 떄 if code[idx] == &quot;1&quot;: # code[idx] 가 1이면 mode = 0 # mode를 0으로 변경 elif idx % 2 != 0: # code[idx]가 &quot;1&quot;이 아니면 홀수일 때만 ret += code[idx] # ret 맨 뒤 code[idx] 추가 return ret if ret else &quot;EMPTY&quot; # ret이 빈 문자라면 &quot;EMPTY&quot; return # test code = &quot;abc1abc1abc&quot; solution(code) # &#39;acbac&#39; 2. 등차수열 특정 항만 더하기 문제: 등차수열과 선택적 합계 계산 문제 설명 등차수열의 첫 항 a, 공차 d, 그리고 included 배열이 주어짐 included[i]가 true이면 i+1항을 더하고, false이면 더하지 않음 선택된 항들의 합을 반환 문제 해결 접근 등차수열 생성 included 배열을 통한 선택적 합계 계산 결과값 도출 처리 규칙 등차수열의 i번째 항 = a + (i-1)d included[i]가 true인 항만 합계에 포함 최종 합계 반환 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 # 풀이 def solution(a, d, included): # a = 첫쨰항 / d = 공차 result = 0 for i in range(len(included)): # included의 길이만큼 term = a + i * d # i번째 등차수열 항 계산 if included[i]: # 해당 항이 True이면 더하기 result += term return result # test a = 3 d = 4 included = [True, False, False, True, True] solution(a, d, included) # 37 마무리 이번 포스팅에서는 등차수열의 특정 항을 선택적으로 더하는 문제를 살펴보았다. 이 문제를 통해 등차수열의 기본 개념과 Python의 리스트 인덱싱을 활용하는 방법을 복습할 수 있었다. 다음 포스팅에서도 기초적인 알고리즘 문제들을 하나씩 살펴보려한다. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2 코딩테스트 준비 -3    ⬅️ 다음 포스팅 코딩테스트 준비 -4 코딩테스트 준비 -5","headline":"[알고리즘] 코딩테스트 준비 -2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Coding_test_2/"},"url":"http://localhost:4000/posts/Coding_test_2/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -980,13 +980,13 @@
 
 <time
   
-  data-ts="1741098935"
+  data-ts="1741101354"
   data-df="YYYY년 M월 DD일"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2025년 03월 04일
+  2025년 03월 05일
 </time>
 
         </span>
@@ -1446,7 +1446,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
+          <a href="/posts/Coding_test_1/">[알고리즘] 코딩테스트 준비 -1</a>
         </li>
       
     </ul>
@@ -1554,32 +1554,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1594,40 +1568,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1672,6 +1612,62 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1717,11 +1713,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1738,17 +1729,7 @@
     
     
     
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
     
   
     
@@ -1771,17 +1752,7 @@
     
     
     
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
     
   
     
@@ -1816,17 +1787,7 @@
     
     
     
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
     
   
     
@@ -1871,10 +1832,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/coding-test/">Coding_Test</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-analyst/">Data Analyst</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-analyst/">Data Analyst</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/coding-test/">Coding_Test</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kt%EC%97%90%EC%9D%B4%EB%B8%94%EC%8A%A4%EC%BF%A8/">KT에이블스쿨</a>
@@ -1886,6 +1847,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/aarrr-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/">AARRR 프레임워크</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/chirpy/">Chirpy</a>
       
         
@@ -1893,9 +1857,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/funnel-analysis/">Funnel Analysis</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">Jekyll</a>
       
     </div>
   </section>
@@ -1951,6 +1912,18 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -2335,32 +2308,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2375,40 +2322,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2453,6 +2366,62 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2498,11 +2467,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -2519,17 +2483,7 @@
     
     
     
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
     
   
     
@@ -2552,17 +2506,7 @@
     
     
     
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
     
   
     
@@ -2597,17 +2541,7 @@
     
     
     
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
     
   
     
@@ -2652,10 +2586,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/coding-test/">Coding_Test</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-analyst/">Data Analyst</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-analyst/">Data Analyst</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/coding-test/">Coding_Test</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/kt%EC%97%90%EC%9D%B4%EB%B8%94%EC%8A%A4%EC%BF%A8/">KT에이블스쿨</a>
@@ -2667,6 +2601,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/aarrr-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/">AARRR 프레임워크</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/chirpy/">Chirpy</a>
       
         
@@ -2674,9 +2611,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/funnel-analysis/">Funnel Analysis</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">Jekyll</a>
       
     </div>
   </section>
