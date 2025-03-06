@@ -2,8 +2,9 @@
   {% for share in site.data.share.platforms %}
     {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
     {% if share.type == 'KakaoTalk' %}
-      <a href="https://sharer.kakao.com/talk/friends/picker/link?url={{ url }}"
-         target="_blank" rel="noopener" class="share-btn share-kakaotalk"
+      <!-- ✅ 카카오톡은 scrapKakao() 방식으로 호출 -->
+      <a href="javascript:scrapKakao();" 
+         class="share-btn share-kakaotalk"
          data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk 공유하기">
         <i class="{{ share.icon }}"></i> KakaoTalk
       </a>
@@ -28,3 +29,12 @@
     <i class="fa-fw fas fa-link"></i> Copy URL
   </button>
 </span>
+
+
+{% if page.use_kakao-sdk %}
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript">
+  Kakao.init('카카오 개발자 사이트에 등록한 Javascript 앱 키');
+</script>
+<script src="/assets/js/kakao-custom.min.js"></script>
+{% endif %}

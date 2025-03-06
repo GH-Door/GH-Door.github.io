@@ -1377,8 +1377,9 @@ Acquisition(획득), Activation(활성화), Retention(유지), Revenue(수익), 
   
     
     
-      <a href="https://sharer.kakao.com/talk/friends/picker/link?url="
-         target="_blank" rel="noopener" class="share-btn share-kakaotalk"
+      <!-- ✅ 카카오톡은 scrapKakao() 방식으로 호출 -->
+      <a href="javascript:scrapKakao();" 
+         class="share-btn share-kakaotalk"
          data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk 공유하기">
         <i class="fa-solid fa-comment"></i> KakaoTalk
       </a>
@@ -1422,6 +1423,9 @@ Acquisition(획득), Activation(활성화), Retention(유지), Revenue(수익), 
     <i class="fa-fw fas fa-link"></i> Copy URL
   </button>
 </span>
+
+
+
     </div>
     <!-- .post-tail-bottom -->
   </div>
