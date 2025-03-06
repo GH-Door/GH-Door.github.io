@@ -1312,20 +1312,52 @@
       </div>
 
       <span class="share-icons">
-  <a href="https://sharer.kakao.com/talk/friends/picker/link?app_key=6eb000f03577bd1c234bd39bda416d13&url=" target="_blank" rel="noopener" class="share-btn share-kakaotalk"><i class="fa-solid fa-comment"></i>KakaoTalk</a><a href="https://www.facebook.com/sharer/sharer.php?title=&u=" target="_blank" rel="noopener" class="share-btn share-facebook"><i class="fab fa-facebook-square"></i>Facebook</a><a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=" target="_blank" rel="noopener" class="share-btn share-linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a><a href="https://twitter.com/intent/tweet?url=&text=" target="_blank" rel="noopener" class="share-btn share-twitter"><i class="fab fa-twitter"></i>Twitter</a>
-  </span>
+  
+    
+    
+      <a href="https://sharer.kakao.com/talk/friends/picker/link?app_key=6eb000f03577bd1c234bd39bda416d13&url="
+         target="_blank" rel="noopener" class="share-btn share-kakaotalk"
+         data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk 공유하기">
+        <i class="fa-solid fa-comment"></i> KakaoTalk
+      </a>
+    
+  
+    
+    
+      <a href="https://www.facebook.com/sharer/sharer.php?title=&u=" target="_blank" rel="noopener" class="share-btn share-facebook"
+         data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook 공유하기">
+        <i class="fab fa-facebook-square"></i> Facebook
+      </a>
+    
+  
+    
+    
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=" target="_blank" rel="noopener" class="share-btn share-linkedin"
+         data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn 공유하기">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    
+  
+    
+    
+      <a href="https://twitter.com/intent/tweet?url=&text=" target="_blank" rel="noopener" class="share-btn share-twitter"
+         data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter 공유하기">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+    
+  
 
-  <!-- 복사 버튼 유지 (원래 있던 부분 살림) -->
+  <!-- ✅ 복사 버튼도 동일한 스타일로 -->
   <button
     id="copy-link"
-    aria-label="Copy link"
-    class="btn small"
+    aria-label="Copy URL"
+    class="share-btn share-copy"
     data-bs-toggle="tooltip"
     data-bs-placement="top"
-    title="Copy link"
-    data-title-succeed="Link copied successfully!"
+    title="Copy URL"
+    data-title-succeed="복사 완료!"
   >
-    <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    <i class="fa-fw fas fa-link"></i> Copy URL
   </button>
 </span>
     </div>

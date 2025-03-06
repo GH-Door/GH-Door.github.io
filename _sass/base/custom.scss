@@ -73,8 +73,15 @@ table.dataframe {
   font-weight: 600;
   text-decoration: none;
   border-radius: 6px;
+  border: none !important;  
   color: #fff;
   line-height: 1;    
+}
+
+.share-copy { 
+  background-color: #666; 
+  color: #fff; 
+  border: none !important; /* 혹시 남아있을지 모를 테두리까지 제거 */
 }
 
 /* 플랫폼별 컬러 */

@@ -1,17 +1,30 @@
 <span class="share-icons">
-  {% for share in site.data.share.platforms %}{% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}{% if share.type == 'KakaoTalk' %}<a href="https://sharer.kakao.com/talk/friends/picker/link?app_key=6eb000f03577bd1c234bd39bda416d13&url={{ url }}" target="_blank" rel="noopener" class="share-btn share-kakaotalk"><i class="{{ share.icon }}"></i>KakaoTalk</a>{% else %}<a href="{{ link }}" target="_blank" rel="noopener" class="share-btn share-{{ share.type | downcase }}"><i class="{{ share.icon }}"></i>{{ share.type }}</a>{% endif %}{% endfor %}
-  </span>
+  {% for share in site.data.share.platforms %}
+    {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
+    {% if share.type == 'KakaoTalk' %}
+      <a href="https://sharer.kakao.com/talk/friends/picker/link?app_key=6eb000f03577bd1c234bd39bda416d13&url={{ url }}"
+         target="_blank" rel="noopener" class="share-btn share-kakaotalk"
+         data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk 공유하기">
+        <i class="{{ share.icon }}"></i> KakaoTalk
+      </a>
+    {% else %}
+      <a href="{{ link }}" target="_blank" rel="noopener" class="share-btn share-{{ share.type | downcase }}"
+         data-bs-toggle="tooltip" data-bs-placement="top" title="{{ share.type }} 공유하기">
+        <i class="{{ share.icon }}"></i> {{ share.type }}
+      </a>
+    {% endif %}
+  {% endfor %}
 
-  <!-- 복사 버튼 유지 (원래 있던 부분 살림) -->
+  <!-- ✅ 복사 버튼도 동일한 스타일로 -->
   <button
     id="copy-link"
-    aria-label="Copy link"
-    class="btn small"
+    aria-label="Copy URL"
+    class="share-btn share-copy"
     data-bs-toggle="tooltip"
     data-bs-placement="top"
-    title="{{ site.data.locales[include.lang].post.button.share_link.title }}"
-    data-title-succeed="{{ site.data.locales[include.lang].post.button.share_link.succeed }}"
+    title="Copy URL"
+    data-title-succeed="복사 완료!"
   >
-    <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    <i class="fa-fw fas fa-link"></i> Copy URL
   </button>
 </span>
