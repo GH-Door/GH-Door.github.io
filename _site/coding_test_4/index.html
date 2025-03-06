@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="[알고리즘] 코딩테스트 준비 -4" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-05T00:15:54+09:00","datePublished":"2025-02-20T10:00:00+09:00","description":"들어가며 이번에는 리스트의 마지막 원소를 처리하는 알고리즘 문제를 풀어보며 리스트 인덱싱과 조건문을 활용하는 연습을 해보려한다. 1. 리스트의 마지막 원소 처리 문제: 마지막 원소 처리 리스트의 마지막 원소를 그전 원소와 비교하여 새로운 값을 추가하는 문제 문제 설명 정수 리스트 num_list가 주어진다. 리스트의 마지막 원소가 그전 원소보다 크면 그전 원소를 뺀 값을 추가 리스트의 마지막 원소가 그전 원소보다 크지 않다면 마지막 원소의 두 배 값을 추가 문제 해결 접근 리스트의 마지막 두 원소 비교 조건에 따라 다른 연산 수행 리스트에 새로운 값 추가 후 반환 처리 규칙 num_list[-1] &gt; num_list[-2] num_list.append(num_list[-1] - num_list[-2]) num_list[-1] &lt;= num_list[-2] num_list.append(num_list[-1] * 2) 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 # 풀이 def solution(num_list): last = num_list[-1] # 마지막 second_last = num_list[-2] # 마지막 전 if last &gt; second_last: # 마지막 요소가 더 크다면 num_list.append(last - second_last) # 차이를 추가 else: # 마지막 요소가 더 작다면 num_list.append(last * 2) # 두 배를 추가 return num_list # test num_list = [5, 2, 1, 7, 5] solution(num_list) # [5, 2, 1, 7, 5, 10] 2. 수열과 구간 쿼리 문제: 리스트 원소들의 곱과 합 비교 정수로 이루어진 리스트가 주어졌을 때, 리스트의 모든 원소들의 곱과 합의 제곱을 비교하는 문제 문제 설명 정수 배열 arr과 2차원 정수 배열 queries가 주어짐 queries[i] = [s, e, k] 형태로 주어지며, 이는 arr[s]부터 arr[e]까지 중 k보다 크면서 가장 작은 값을 찾아야한다. 특정 쿼리에서 조건을 만족하는 값이 없으면 -1을 반환 문제 해결 접근 쿼리마다 [s, e] 범위를 순회하며 k보다 크면서 가장 작은 값 찾기 조건을 만족하는 값이 없다면 -1을 반환 여러 개의 쿼리를 순서대로 처리 처리 규칙 각 쿼리 [s, e, k]를 순회하면서 범위 [s, e] 내에서 k보다 큰 최소값을 찾음 k보다 큰 값이 없으면 -1을 저장 모든 쿼리를 처리한 결과를 배열로 반환 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 # 풀이 def solution(arr, queries): result = [] for s, e, k in queries: # queries의 각 쿼리에서 s, e, k를 추출 candidates = [arr[i] for i in range(s, e+1) if arr[i] &gt; k] # 조건을 만족하는 값 찾기 result.append(min(candidates) if candidates else -1) # 최솟값을 추가 (없으면 -1) return result # test arr = [0, 1, 2, 4, 3] queries = [[0, 4, 2],[0, 3, 2],[0, 2, 2]] solution(arr, queries) # [5, 9, 7] 마무리 이번 포스팅에서는 수열과 구간 쿼리 문제를 살펴보았다. 이 문제를 통해 리스트 슬라이싱, 조건문, 리스트 컴프리헨션 등 Python의 다양한 기능을 활용하는 방법을 복습해봤다. 다음 포스팅에서도 기초적인 알고리즘 문제들을 하나씩 살펴보려한다. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5    ⬅️ 다음 포스팅","headline":"[알고리즘] 코딩테스트 준비 -4","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/coding_test_4/"},"url":"http://localhost:4000/coding_test_4/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-06T18:08:50+09:00","datePublished":"2025-02-20T10:00:00+09:00","description":"들어가며 이번에는 리스트의 마지막 원소를 처리하는 알고리즘 문제를 풀어보며 리스트 인덱싱과 조건문을 활용하는 연습을 해보려한다. 1. 리스트의 마지막 원소 처리 문제: 마지막 원소 처리 리스트의 마지막 원소를 그전 원소와 비교하여 새로운 값을 추가하는 문제 문제 설명 정수 리스트 num_list가 주어진다. 리스트의 마지막 원소가 그전 원소보다 크면 그전 원소를 뺀 값을 추가 리스트의 마지막 원소가 그전 원소보다 크지 않다면 마지막 원소의 두 배 값을 추가 문제 해결 접근 리스트의 마지막 두 원소 비교 조건에 따라 다른 연산 수행 리스트에 새로운 값 추가 후 반환 처리 규칙 num_list[-1] &gt; num_list[-2] num_list.append(num_list[-1] - num_list[-2]) num_list[-1] &lt;= num_list[-2] num_list.append(num_list[-1] * 2) 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 # 풀이 def solution(num_list): last = num_list[-1] # 마지막 second_last = num_list[-2] # 마지막 전 if last &gt; second_last: # 마지막 요소가 더 크다면 num_list.append(last - second_last) # 차이를 추가 else: # 마지막 요소가 더 작다면 num_list.append(last * 2) # 두 배를 추가 return num_list # test num_list = [5, 2, 1, 7, 5] solution(num_list) # [5, 2, 1, 7, 5, 10] 2. 수열과 구간 쿼리 문제: 리스트 원소들의 곱과 합 비교 정수로 이루어진 리스트가 주어졌을 때, 리스트의 모든 원소들의 곱과 합의 제곱을 비교하는 문제 문제 설명 정수 배열 arr과 2차원 정수 배열 queries가 주어짐 queries[i] = [s, e, k] 형태로 주어지며, 이는 arr[s]부터 arr[e]까지 중 k보다 크면서 가장 작은 값을 찾아야한다. 특정 쿼리에서 조건을 만족하는 값이 없으면 -1을 반환 문제 해결 접근 쿼리마다 [s, e] 범위를 순회하며 k보다 크면서 가장 작은 값 찾기 조건을 만족하는 값이 없다면 -1을 반환 여러 개의 쿼리를 순서대로 처리 처리 규칙 각 쿼리 [s, e, k]를 순회하면서 범위 [s, e] 내에서 k보다 큰 최소값을 찾음 k보다 큰 값이 없으면 -1을 저장 모든 쿼리를 처리한 결과를 배열로 반환 구현 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 # 풀이 def solution(arr, queries): result = [] for s, e, k in queries: # queries의 각 쿼리에서 s, e, k를 추출 candidates = [arr[i] for i in range(s, e+1) if arr[i] &gt; k] # 조건을 만족하는 값 찾기 result.append(min(candidates) if candidates else -1) # 최솟값을 추가 (없으면 -1) return result # test arr = [0, 1, 2, 4, 3] queries = [[0, 4, 2],[0, 3, 2],[0, 2, 2]] solution(arr, queries) # [5, 9, 7] 마무리 이번 포스팅에서는 수열과 구간 쿼리 문제를 살펴보았다. 이 문제를 통해 리스트 슬라이싱, 조건문, 리스트 컴프리헨션 등 Python의 다양한 기능을 활용하는 방법을 복습해봤다. 다음 포스팅에서도 기초적인 알고리즘 문제들을 하나씩 살펴보려한다. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5    ⬅️ 다음 포스팅","headline":"[알고리즘] 코딩테스트 준비 -4","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/coding_test_4/"},"url":"http://localhost:4000/coding_test_4/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -978,13 +978,13 @@
 
 <time
   
-  data-ts="1741101354"
+  data-ts="1741252130"
   data-df="YYYY년 M월 DD일"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2025년 03월 05일
+  2025년 03월 06일
 </time>
 
         </span>
@@ -1306,56 +1306,50 @@
         
       </div>
 
-      <!-- Post sharing snippet -->
+      <span class="share-icons">
+  
+  
+  
 
-<div class="share-wrapper d-flex align-items-center">
-  <span class="share-label text-muted">Share</span>
-  <span class="share-icons">
-    
-    
-    
-
-    
-
+  
       
-        <!-- ✅ 카카오톡 공유 버튼 수정 -->
-        <a href="javascript:scrapKakao();" data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk" aria-label="KakaoTalk">
-          <i class="fa-fw fas fa-comment"></i>
-        </a>
+      <a href="https://sharer.kakao.com/talk/friends/picker/link?url=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_4%2F" target="_blank" rel="noopener" class="share-btn share-kakaotalk">
+          <i class="fa-solid fa-comment"></i>
+          KakaoTalk
+      </a>
+  
       
-    
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-4%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_4%2F" target="_blank" rel="noopener" class="share-btn share-facebook">
+          <i class="fab fa-facebook-square"></i>
+          Facebook
+      </a>
+  
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_4%2F&title=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-4%20-%20DoorNote" target="_blank" rel="noopener" class="share-btn share-linkedin">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+      </a>
+  
+      
+      <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_4%2F&text=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-4%20-%20DoorNote" target="_blank" rel="noopener" class="share-btn share-twitter">
+          <i class="fab fa-twitter"></i>
+          Twitter
+      </a>
+  
 
-      
-        
-        <a href="https://www.facebook.com/sharer/sharer.php?title=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-4%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_4%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
-          <i class="fa-fw fab fa-facebook-square"></i>
-        </a>
-      
-    
-
-      
-        
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" aria-label="Instagram">
-          <i class="fa-fw fa-brands fa-instagram"></i>
-        </a>
-      
-    
-
-    <!-- 복사 버튼 유지 -->
-    <button
-      id="copy-link"
-      aria-label="Copy link"
-      class="btn small"
-      data-bs-toggle="tooltip"
-      data-bs-placement="top"
-      title="Copy link"
-      data-title-succeed="Link copied successfully!"
-    >
-      <i class="fa-fw fas fa-link pe-none fs-6"></i>
-    </button>
-
-  </span>
-</div>
+  <!-- 복사 버튼 유지 (원래 있던 부분 살림) -->
+  <button
+    id="copy-link"
+    aria-label="Copy link"
+    class="btn small"
+    data-bs-toggle="tooltip"
+    data-bs-placement="top"
+    title="Copy link"
+    data-title-succeed="Link copied successfully!"
+  >
+    <i class="fa-fw fas fa-link pe-none fs-6"></i>
+  </button>
+</span>
     </div>
     <!-- .post-tail-bottom -->
   </div>
@@ -1399,13 +1393,6 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/DA/">[Data Analyst] 데이터 분석 방법론</a>
         </li>
       
@@ -1428,6 +1415,13 @@
         
         <li class="text-truncate lh-lg">
           <a href="/ab-test/">[Data Analyst] A/B Test</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/coding_test_1/">[알고리즘] 코딩테스트 준비 -1</a>
         </li>
       
     </ul>

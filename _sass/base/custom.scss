@@ -58,18 +58,32 @@ table.dataframe {
   padding-right: 130px;  // 썸네일 자리 확보용
 }
 
-// /*table 표 설정*/
-// table {
-//   border: 2px solid #ddd;
-//   border-collapse: collapse;
-//   width: 100%;
-// }
+.share-icons {
+  display: flex;
+  gap: 8px;
+}
 
-// table th, table td {
-//   border: 1px solid #ddd;
-//   padding: 8px;
-// }
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;   // << 여기서 강제 박스 높이 지정
+  padding: 0px 6px; // 가로 세로 조정
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  color: #fff;
+  line-height: 1;    
+}
 
-// table th {
-//   background-color: #f2f2f2;
-// }
+/* 플랫폼별 컬러 */
+.share-kakaotalk { background-color: #FEE500; color: #3C1E1E; }
+.share-twitter { background-color: #1DA1F2; }
+.share-facebook { background-color: #1877F2; }
+.share-linkedin { background-color: #0077B5; }
+
+/* 아이콘 스타일 */
+.share-btn i {
+  font-size: 16px;
+}

@@ -37,9 +37,9 @@ image:
 > 이 글은 Mac OS 환경을 기준으로 진행했습니다. 
 
 > **참고 블로그**
-> - [하얀눈길 블로그]("https://www.irgroup.org/posts/jekyll-chirpy/)
-> - [Dodev 블로그]("https://wlqmffl0102.github.io/posts/Customizing-Blogs/)
-> - [JSDevBlog]("https://jason9288.github.io/posts/github_blog_1/)
+> - [하얀눈길 블로그](https://www.irgroup.org/posts/jekyll-chirpy/)
+> - [Dodev 블로그](https://wlqmffl0102.github.io/posts/Customizing-Blogs/)
+> - [JSDevBlog](https://jason9288.github.io/posts/github_blog_1/)
 
 
 <br>

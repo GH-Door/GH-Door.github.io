@@ -1320,9 +1320,9 @@
 <blockquote>
   <p><strong>참고 블로그</strong></p>
   <ul>
-    <li><a href="&quot;https://www.irgroup.org/posts/jekyll-chirpy/">하얀눈길 블로그</a></li>
-    <li><a href="&quot;https://wlqmffl0102.github.io/posts/Customizing-Blogs/">Dodev 블로그</a></li>
-    <li><a href="&quot;https://jason9288.github.io/posts/github_blog_1/">JSDevBlog</a></li>
+    <li><a href="https://www.irgroup.org/posts/jekyll-chirpy/">하얀눈길 블로그</a></li>
+    <li><a href="https://wlqmffl0102.github.io/posts/Customizing-Blogs/">Dodev 블로그</a></li>
+    <li><a href="https://jason9288.github.io/posts/github_blog_1/">JSDevBlog</a></li>
   </ul>
 </blockquote>
 
@@ -1686,56 +1686,50 @@ Chorme 열어서 해당 주소를 입력 후 아래와 같은 이미지 확인</
         
       </div>
 
-      <!-- Post sharing snippet -->
+      <span class="share-icons">
+  
+  
+  
 
-<div class="share-wrapper d-flex align-items-center">
-  <span class="share-label text-muted">Share</span>
-  <span class="share-icons">
-    
-    
-    
-
-    
-
+  
       
-        <!-- ✅ 카카오톡 공유 버튼 수정 -->
-        <a href="javascript:scrapKakao();" data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk" aria-label="KakaoTalk">
-          <i class="fa-fw fas fa-comment"></i>
-        </a>
+      <a href="https://sharer.kakao.com/talk/friends/picker/link?url=http%3A%2F%2Flocalhost%3A4000%2FJekyll%2520Chirpy-%25EC%25BB%25A4%25EC%258A%25A4%25ED%2584%25B0%25EB%25A7%2588%25EC%259D%25B4%25EC%25A7%2595-1%2F" target="_blank" rel="noopener" class="share-btn share-kakaotalk">
+          <i class="fa-solid fa-comment"></i>
+          KakaoTalk
+      </a>
+  
       
-    
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[Jekyll%20Chirpy]%20%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95%20-1%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2FJekyll%2520Chirpy-%25EC%25BB%25A4%25EC%258A%25A4%25ED%2584%25B0%25EB%25A7%2588%25EC%259D%25B4%25EC%25A7%2595-1%2F" target="_blank" rel="noopener" class="share-btn share-facebook">
+          <i class="fab fa-facebook-square"></i>
+          Facebook
+      </a>
+  
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FJekyll%2520Chirpy-%25EC%25BB%25A4%25EC%258A%25A4%25ED%2584%25B0%25EB%25A7%2588%25EC%259D%25B4%25EC%25A7%2595-1%2F&title=[Jekyll%20Chirpy]%20%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95%20-1%20-%20DoorNote" target="_blank" rel="noopener" class="share-btn share-linkedin">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+      </a>
+  
+      
+      <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4000%2FJekyll%2520Chirpy-%25EC%25BB%25A4%25EC%258A%25A4%25ED%2584%25B0%25EB%25A7%2588%25EC%259D%25B4%25EC%25A7%2595-1%2F&text=[Jekyll%20Chirpy]%20%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95%20-1%20-%20DoorNote" target="_blank" rel="noopener" class="share-btn share-twitter">
+          <i class="fab fa-twitter"></i>
+          Twitter
+      </a>
+  
 
-      
-        
-        <a href="https://www.facebook.com/sharer/sharer.php?title=[Jekyll%20Chirpy]%20%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95%20-1%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2FJekyll%2520Chirpy-%25EC%25BB%25A4%25EC%258A%25A4%25ED%2584%25B0%25EB%25A7%2588%25EC%259D%25B4%25EC%25A7%2595-1%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
-          <i class="fa-fw fab fa-facebook-square"></i>
-        </a>
-      
-    
-
-      
-        
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" aria-label="Instagram">
-          <i class="fa-fw fa-brands fa-instagram"></i>
-        </a>
-      
-    
-
-    <!-- 복사 버튼 유지 -->
-    <button
-      id="copy-link"
-      aria-label="Copy link"
-      class="btn small"
-      data-bs-toggle="tooltip"
-      data-bs-placement="top"
-      title="Copy link"
-      data-title-succeed="Link copied successfully!"
-    >
-      <i class="fa-fw fas fa-link pe-none fs-6"></i>
-    </button>
-
-  </span>
-</div>
+  <!-- 복사 버튼 유지 (원래 있던 부분 살림) -->
+  <button
+    id="copy-link"
+    aria-label="Copy link"
+    class="btn small"
+    data-bs-toggle="tooltip"
+    data-bs-placement="top"
+    title="Copy link"
+    data-title-succeed="Link copied successfully!"
+  >
+    <i class="fa-fw fas fa-link pe-none fs-6"></i>
+  </button>
+</span>
     </div>
     <!-- .post-tail-bottom -->
   </div>
@@ -1779,13 +1773,6 @@ Chorme 열어서 해당 주소를 입력 후 아래와 같은 이미지 확인</
         
         
         <li class="text-truncate lh-lg">
-          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/DA/">[Data Analyst] 데이터 분석 방법론</a>
         </li>
       
@@ -1808,6 +1795,13 @@ Chorme 열어서 해당 주소를 입력 후 아래와 같은 이미지 확인</
         
         <li class="text-truncate lh-lg">
           <a href="/ab-test/">[Data Analyst] A/B Test</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/coding_test_1/">[알고리즘] 코딩테스트 준비 -1</a>
         </li>
       
     </ul>

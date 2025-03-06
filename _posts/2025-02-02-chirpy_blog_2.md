@@ -279,12 +279,13 @@ git push origin main
 이번 포스트로 블로그 커스터마이징에 대한 내용을 마무리하려고합니다.<br>
 여기까지 본격적인 커스터마이징 방법에 대해 살펴보았습니다.<br>
 개인적으로 가장 귀찮고 시간이 많이 걸리는 과정이지만, 이 과정을 거치면 블로그의 기본 틀은 거의 완성된다고 볼 수 있습니다.<br>
-추가로 구글 애널리틱스, 검색엔진 등의 대한 상세한 내용은 아래 블로그를 참고하시면 쉽게 하실 수 있습니다.
+추가로 구글 애널리틱스, 검색엔진 등의 대한 상세한 내용은 아래 블로그 와 [**TeddyNote**](https://www.youtube.com/@teddynote)를 참고하시면 쉽게 하실 수 있습니다.
 
-> **참고 블로그**
-> - [하얀눈길 블로그]("https://www.irgroup.org/posts/jekyll-chirpy/)
-> - [Dodev 블로그]("https://wlqmffl0102.github.io/posts/Customizing-Blogs/)
-> - [JSDevBlog]("https://jason9288.github.io/posts/github_blog_1/)
+> **참고**
+> - [하얀눈길 블로그](https://www.irgroup.org/posts/jekyll-chirpy/)
+> - [Dodev 블로그](https://wlqmffl0102.github.io/posts/Customizing-Blogs/)
+> - [JSDevBlog](https://jason9288.github.io/posts/github_blog_1/)
+> - [TeddyNote 유튜브](https://www.youtube.com/@teddynote) ⬅️ (테마가 달라도 전체적인 구조는 비슷해서 영상을 보고 따라하기 쉽습니다.) 추천!
 
 <br>
 

@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="[알고리즘] 코딩테스트 준비 -1" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-05T00:15:54+09:00","datePublished":"2025-02-17T10:00:00+09:00","description":"코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5","headline":"[알고리즘] 코딩테스트 준비 -1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/coding_test_1/"},"url":"http://localhost:4000/coding_test_1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-06T18:08:50+09:00","datePublished":"2025-02-17T10:00:00+09:00","description":"코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5","headline":"[알고리즘] 코딩테스트 준비 -1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/coding_test_1/"},"url":"http://localhost:4000/coding_test_1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -908,13 +908,13 @@
 
 <time
   
-  data-ts="1741101354"
+  data-ts="1741252130"
   data-df="YYYY년 M월 DD일"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2025년 03월 05일
+  2025년 03월 06일
 </time>
 
         </span>
@@ -1304,56 +1304,50 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
         
       </div>
 
-      <!-- Post sharing snippet -->
+      <span class="share-icons">
+  
+  
+  
 
-<div class="share-wrapper d-flex align-items-center">
-  <span class="share-label text-muted">Share</span>
-  <span class="share-icons">
-    
-    
-    
-
-    
-
+  
       
-        <!-- ✅ 카카오톡 공유 버튼 수정 -->
-        <a href="javascript:scrapKakao();" data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk" aria-label="KakaoTalk">
-          <i class="fa-fw fas fa-comment"></i>
-        </a>
+      <a href="https://sharer.kakao.com/talk/friends/picker/link?url=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_1%2F" target="_blank" rel="noopener" class="share-btn share-kakaotalk">
+          <i class="fa-solid fa-comment"></i>
+          KakaoTalk
+      </a>
+  
       
-    
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-1%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_1%2F" target="_blank" rel="noopener" class="share-btn share-facebook">
+          <i class="fab fa-facebook-square"></i>
+          Facebook
+      </a>
+  
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_1%2F&title=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-1%20-%20DoorNote" target="_blank" rel="noopener" class="share-btn share-linkedin">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+      </a>
+  
+      
+      <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_1%2F&text=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-1%20-%20DoorNote" target="_blank" rel="noopener" class="share-btn share-twitter">
+          <i class="fab fa-twitter"></i>
+          Twitter
+      </a>
+  
 
-      
-        
-        <a href="https://www.facebook.com/sharer/sharer.php?title=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-1%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_1%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
-          <i class="fa-fw fab fa-facebook-square"></i>
-        </a>
-      
-    
-
-      
-        
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" aria-label="Instagram">
-          <i class="fa-fw fa-brands fa-instagram"></i>
-        </a>
-      
-    
-
-    <!-- 복사 버튼 유지 -->
-    <button
-      id="copy-link"
-      aria-label="Copy link"
-      class="btn small"
-      data-bs-toggle="tooltip"
-      data-bs-placement="top"
-      title="Copy link"
-      data-title-succeed="Link copied successfully!"
-    >
-      <i class="fa-fw fas fa-link pe-none fs-6"></i>
-    </button>
-
-  </span>
-</div>
+  <!-- 복사 버튼 유지 (원래 있던 부분 살림) -->
+  <button
+    id="copy-link"
+    aria-label="Copy link"
+    class="btn small"
+    data-bs-toggle="tooltip"
+    data-bs-placement="top"
+    title="Copy link"
+    data-title-succeed="Link copied successfully!"
+  >
+    <i class="fa-fw fas fa-link pe-none fs-6"></i>
+  </button>
+</span>
     </div>
     <!-- .post-tail-bottom -->
   </div>
@@ -1397,13 +1391,6 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
         
         
         <li class="text-truncate lh-lg">
-          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/DA/">[Data Analyst] 데이터 분석 방법론</a>
         </li>
       
@@ -1426,6 +1413,13 @@ map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</stro
         
         <li class="text-truncate lh-lg">
           <a href="/ab-test/">[Data Analyst] A/B Test</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/coding_test_1/">[알고리즘] 코딩테스트 준비 -1</a>
         </li>
       
     </ul>

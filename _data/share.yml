@@ -10,14 +10,18 @@ platforms:
     icon: "fab fa-facebook-square"
     link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
 
-  - type: Instagram
-    icon: "fa-brands fa-instagram"
-    link: "https://www.instagram.com/"
+  - type: LinkedIn
+    icon: "fab fa-linkedin"
+    link: "https://www.linkedin.com/shareArticle?mini=true&url=URL&title=TITLE"
+  
+  - type: Twitter
+    icon: "fab fa-twitter"
+    link: "https://twitter.com/intent/tweet?url=URL&text=TITLE"
     
   # Uncomment below if you need to.
   #
   # - type: Linkedin
-  #   icon: "fab fa-linkedin"
+  #   icon: "fab fa-linkedin"ㅇ
   #   link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
   #
   # - type: Weibo
