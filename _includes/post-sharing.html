@@ -2,7 +2,7 @@
   {% for share in site.data.share.platforms %}
     {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
     {% if share.type == 'KakaoTalk' %}
-      <a href="https://sharer.kakao.com/talk/friends/picker/link?app_key=6eb000f03577bd1c234bd39bda416d13&url={{ url }}"
+      <a href="https://sharer.kakao.com/talk/friends/picker/link?url={{ url }}"
          target="_blank" rel="noopener" class="share-btn share-kakaotalk"
          data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk 공유하기">
         <i class="{{ share.icon }}"></i> KakaoTalk
