@@ -1,0 +1,2758 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="en" >
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+  ><!-- Setup Open Graph image -->
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.0" />
+<meta property="og:title" content="[알고리즘] 코딩테스트 준비 -1" />
+<meta name="author" content="DoorNote" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5" />
+<meta property="og:description" content="코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5" />
+<link rel="canonical" href="http://localhost:4000/coding_test_1/" />
+<meta property="og:url" content="http://localhost:4000/coding_test_1/" />
+<meta property="og:site_name" content="DoorNote" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-17T10:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[알고리즘] 코딩테스트 준비 -1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-05T00:15:54+09:00","datePublished":"2025-02-17T10:00:00+09:00","description":"코딩테스트 준비 KT 에이블스쿨에 AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다. 에이블스쿨은 프로그래머스를 통해 코딩테스트를 본다고 하는데 난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다. 현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..) 자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다. 1. 자료구조 Python에서는 기본적으로 List, Tuple, Dictionary 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다. 여기서는 각 자료구조의 특징과 주요 메서드를 간략하게 정리한다. 1 2 3 4 # list test_list = [1, 2, 3, 4] test_tuple = (1, 2, 3, 4) test_dict = {&#39;name&#39;:&#39;DoorNote&#39;, &#39;age&#39;:99} List(리스트) 순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능 1 2 3 4 5 6 7 8 9 # 리스트 생성 numbers = [1, 2, 3, 4] # 요소 추가 및 삭제 numbers.append(5) # [1, 2, 3, 4, 5] numbers.remove(2) # [1, 3, 4, 5] numbers.sort() # 오름차순 정렬 numbers.reverse() # 내림차순 정렬 Tuple(튜플) 순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가 1 2 3 4 5 6 7 8 # 튜플 생성 my_tuple = (10, 20, 30) # 요소 접근 first_value = my_tuple[0] # 10 # 요소 개수 세기 count_10 = my_tuple.count(10) Dictionary(딕셔너리) 키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능 1 2 3 4 5 6 7 8 9 10 # 딕셔너리 생성 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 25} # 값 추가 및 변경 user[&#39;city&#39;] = &#39;Seoul&#39; user[&#39;age&#39;] = 26 # 값 조회 및 삭제 name = user[&#39;name&#39;] # &#39;Alice&#39; del user[&#39;age&#39;] 2. 문제 풀이 Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다. 이 문제들을 통해 기초부터 다시 잡고 가자 1번 문제 위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다. Python에서는 map() 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다. 1 2 def solution(num_str): return sum(map(int, num_str)) Tip: map(), apply() 비교 필자는 데이터 분석 라이브러리인 Pandas 가 훨씬 더 익숙하기에 자주쓰는 apply()와 비교해서 정리해봤다. map() 함수는 리스트 등의 반복 가능한 객체(iterable)에 주어진 함수를 적용하는 역할을 한다. 이는 Pandas의 apply()와 유사한 기능을 제공하지만, apply()는 Series 단위로 동작하며 병렬 처리를 지원하는 차이가 있다. 1 2 3 4 5 6 7 8 9 10 # map() 예시 (Python 기본 함수) numbers = [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;] result = list(map(int, numbers)) print(result) # [1, 2, 3] # apply() 예시 (Pandas 함수) import pandas as pd df = pd.DataFrame({&#39;numbers&#39;: [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]}) df[&#39;int_numbers&#39;] = df[&#39;numbers&#39;].apply(lambda x: int(x)) print(df) 2번 문제 이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.) def solution(n): return [i for i in range(1, n + 1) if n % i == 0] # 정석 for문 def solution(n): result = [] # 약수를 저장할 리스트 for i in range(1, n + 1): # 1부터 n까지 반복 if n % i == 0: # n을 i로 나누었을 때 나머지가 0이면 약수 result.append(i) # 리스트에 추가 return result # 이 코드가 정석이라고 생각하고 나도 이게 더 편하다.. # 예제 실행 print(solution(24)) # [1, 2, 3, 4, 6, 8, 12, 24] print(solution(29)) # [1, 29] 마무리 알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다. 독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다.. 다음 포스팅 시리즈 코딩테스트 준비 -1 코딩테스트 준비 -2    ⬅️ 다음 포스팅 코딩테스트 준비 -3 코딩테스트 준비 -4 코딩테스트 준비 -5","headline":"[알고리즘] 코딩테스트 준비 -1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/coding_test_1/"},"url":"http://localhost:4000/coding_test_1/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <title>[알고리즘] 코딩테스트 준비 -1 | DoorNote
+  </title>
+
+  <!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  Generated by: https://realfavicongenerator.net/
+-->
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+
+  <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="DoorNote">
+<meta name="application-name" content="DoorNote">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+  <!-- Resource Hints -->
+  
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+      
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+      
+    
+  
+
+  <!-- Bootstrap -->
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
+
+  <!-- Web Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css">
+
+  <!-- 3rd-party Dependencies -->
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+  
+
+  <!-- Scripts -->
+
+  <script src="/assets/js/dist/theme.min.js"></script>
+
+  <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
+
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/tocbot@4.32.2/dist/tocbot.min.js,npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+  <!-- MathJax -->
+  <script async src="/assets/js/data/mathjax.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+
+
+<!-- Pageviews -->
+
+  
+
+  
+
+
+
+  
+
+  <!-- A placeholder to allow defining custom metadata -->
+
+
+  <!-- 구글 애드센스 -->>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7080850189313886"
+     crossorigin="anonymous"></script>
+
+  <!-- 네이버 검색 엔진 -->>   
+  <meta name="naver-site-verification" content="76fa01e09531a88352db84844647ddfd7fb63161" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX9NE5GXJC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YX9NE5GXJC');  // GA ID
+  </script>
+
+  <!-- Kakao SDK 추가 -->
+  
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript">
+      Kakao.init('6eb000f03577bd1c234bd39bda416d13'); // 카카오 개발자 콘솔에서 발급받은 앱 키 넣기
+      console.log("Kakao SDK Initialized:", Kakao.isInitialized()); // 초기화 확인용 로그
+    </script>
+   
+
+</head>
+
+  <body>
+    <!-- The Side Bar -->
+
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/profile.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+
+    <a class="site-title d-block" href="/">DoorNote</a>
+    <p class="site-subtitle fst-italic mb-0">기록하는 공간</p>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <!-- home -->
+      <li class="nav-item">
+        <a href="/" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+      <!-- the real tabs -->
+      
+        <li class="nav-item">
+          <a href="/categories/" class="nav-link">
+            <i class="fa-fw fas fa-stream"></i>
+            
+
+            <span>CATEGORIES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/tags/" class="nav-link">
+            <i class="fa-fw fas fa-tags"></i>
+            
+
+            <span>TAGS</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/archives/" class="nav-link">
+            <i class="fa-fw fas fa-archive"></i>
+            
+
+            <span>ARCHIVES</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/about/" class="nav-link">
+            <i class="fa-fw fas fa-info-circle"></i>
+            
+
+            <span>ABOUT</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+    
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      
+        <span class="icon-border"></span>
+      
+    
+
+    
+      
+
+      
+        <a
+          href="https://github.com/GH-Door"
+          aria-label="github"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+
+      
+    
+      
+
+      
+        <a
+          href="javascript:location.href = 'mailto:' + ['moonstalker9010','gmail.com'].join('@')"
+          aria-label="email"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="/feed.xml"
+          aria-label="rss"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-rss"></i>
+        </a>
+      
+    
+  </div>
+  <!-- .sidebar-bottom -->
+</aside>
+<!-- #sidebar -->
+
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        <!-- The Top Bar -->
+
+<header id="topbar-wrapper" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
+  >
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      
+
+      
+        
+          
+            <span>
+              <a href="/">Home</a>
+            </span>
+
+          
+        
+          
+            
+              <span>[알고리즘] 코딩테스트 준비 -1</span>
+            
+
+          
+        
+      
+    </nav>
+    <!-- endof #breadcrumb -->
+
+    <button type="button" id="sidebar-trigger" class="btn btn-link">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
+    <div id="topbar-title">
+      Post
+    </div>
+
+    <button type="button" id="search-trigger" class="btn btn-link">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
+
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="Search..."
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
+  </div>
+</header>
+
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+
+
+
+
+
+
+<article class="px-1" data-toc="true">
+  <header>
+    <h1 data-toc-skip>[알고리즘] 코딩테스트 준비 -1</h1>
+    
+
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1739754000"
+  data-df="YYYY년 M월 DD일"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2025년 02월 17일
+</time>
+
+      </span>
+
+      <!-- lastmod date -->
+      
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1741101354"
+  data-df="YYYY년 M월 DD일"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2025년 03월 05일
+</time>
+
+        </span>
+      
+
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              
+                <a href="https://github.com/GH-Door">DoorNote</a>
+                
+              
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="1168 words"
+>
+  <em>6 min</em> read</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+    <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
+      <span class="label text-truncate">[알고리즘] 코딩테스트 준비 -1</span>
+      <button type="button" class="toc-trigger btn me-1">
+        <i class="fa-solid fa-list-ul fa-fw"></i>
+      </button>
+    </div>
+
+    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
+      <span class="label ps-2 pe-1">Contents</span>
+      <i class="fa-solid fa-angle-right fa-fw"></i>
+    </button>
+
+    <dialog id="toc-popup" class="p-0">
+      <div class="header d-flex flex-row align-items-center justify-content-between">
+        <div class="label text-truncate py-2 ms-4">[알고리즘] 코딩테스트 준비 -1</div>
+        <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
+          <i class="fas fa-close"></i>
+        </button>
+      </div>
+      <div id="toc-popup-content" class="px-4 py-3 pb-4"></div>
+    </dialog>
+  
+
+  <div class="content">
+    <h2 id="코딩테스트-준비"><span class="me-2">코딩테스트 준비</span><a href="#코딩테스트-준비" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<blockquote>
+  <p><strong>KT 에이블스쿨에</strong> AI 트랙에 1차 합격해서 코딩테스트를 준비하려 한다.<br />
+에이블스쿨은 <strong>프로그래머스</strong>를 통해 코딩테스트를 본다고 하는데<br />
+난이도는 검색해본 결과 프로그래머스 기준 1~2 정도의 해당하는 문제들이 나온다고 한다.<br /> 
+현재 시간이 없는 관계로… 일주일 남은 지금부터라도 부랴부랴 준비 (참고로 알고리즘 공부를 안한지 꽤 된 거 같다..)<br />
+자료구조와 기본 함수를 먼저 복습 차원에서 시작해보려 한다.</p>
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="1-자료구조"><span class="me-2">1. 자료구조</span><a href="#1-자료구조" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<hr />
+
+<p>Python에서는 기본적으로 <strong>List, Tuple, Dictionary</strong> 같은 자료구조를 제공하며, 코딩테스트에서도 자주 사용된다.<br />
+여기서는 각 자료구조의 <strong>특징과 주요 메서드</strong>를 간략하게 정리한다.<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c1"># list
+</span><span class="n">test_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">test_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">test_dict</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">:</span><span class="sh">'</span><span class="s">DoorNote</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">age</span><span class="sh">'</span><span class="p">:</span><span class="mi">99</span><span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p><br /></p>
+
+<h3 id="list리스트"><span class="me-2">List(리스트)</span><a href="#list리스트" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>순서가 있는 가변형(mutable) 자료구조, 요소 추가, 삭제, 변경 가능</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c1"># 리스트 생성
+</span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># 요소 추가 및 삭제
+</span><span class="n">numbers</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># [1, 2, 3, 4, 5]
+</span><span class="n">numbers</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># [1, 3, 4, 5]
+</span>
+<span class="n">numbers</span><span class="p">.</span><span class="nf">sort</span><span class="p">()</span>  <span class="c1"># 오름차순 정렬
+</span><span class="n">numbers</span><span class="p">.</span><span class="nf">reverse</span><span class="p">()</span>  <span class="c1"># 내림차순 정렬
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<p><br /></p>
+
+<h3 id="tuple튜플"><span class="me-2">Tuple(튜플)</span><a href="#tuple튜플" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>순서가 있는 불변형 자료구조, 한번 생성되면 요소 변경 불가</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c1"># 튜플 생성
+</span><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># 요소 접근
+</span><span class="n">first_value</span> <span class="o">=</span> <span class="n">my_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 10
+</span>
+<span class="c1"># 요소 개수 세기
+</span><span class="n">count_10</span> <span class="o">=</span> <span class="n">my_tuple</span><span class="p">.</span><span class="nf">count</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><br /></p>
+
+<h3 id="dictionary딕셔너리"><span class="me-2">Dictionary(딕셔너리)</span><a href="#dictionary딕셔너리" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>키-값(key-value) 쌍으로 구성된 자료구조, 순서가 없고 키를 사용해 빠르게 값 조회 가능</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="c1"># 딕셔너리 생성
+</span><span class="n">user</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">Alice</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">age</span><span class="sh">'</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+
+<span class="c1"># 값 추가 및 변경
+</span><span class="n">user</span><span class="p">[</span><span class="sh">'</span><span class="s">city</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="sh">'</span><span class="s">Seoul</span><span class="sh">'</span>
+<span class="n">user</span><span class="p">[</span><span class="sh">'</span><span class="s">age</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">26</span>
+
+<span class="c1"># 값 조회 및 삭제
+</span><span class="n">name</span> <span class="o">=</span> <span class="n">user</span><span class="p">[</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">]</span>  <span class="c1"># 'Alice'
+</span><span class="k">del</span> <span class="n">user</span><span class="p">[</span><span class="sh">'</span><span class="s">age</span><span class="sh">'</span><span class="p">]</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><br />
+<br /></p>
+
+<h2 id="2-문제-풀이"><span class="me-2">2. 문제 풀이</span><a href="#2-문제-풀이" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<hr />
+
+<p>Python에서 자주 사용되는 내장 함수 및 알고리즘 개념을 함께 정리하려 한다.<br />
+이 문제들을 통해 기초부터 다시 잡고 가자</p>
+
+<p><br /></p>
+
+<h3 id="1번-문제"><span class="me-2">1번 문제</span><a href="#1번-문제" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/assets/img/Coding_test_1.png" class="popup img-link  shimmer"><img src="/assets/img/Coding_test_1.png" style="box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); border-radius: 8px;" width="80%" loading="lazy"></a></p>
+
+<p>위 문제에서 각 자리 숫자의 합을 구하기 위해 문자열을 숫자로 변환한 후 합산하는 방식을 사용했다.<br />
+Python에서는 <code class="language-plaintext highlighter-rouge">map()</code> 함수를 활용하면 문자열을 정수로 변환하는 작업을 간결하게 처리할 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">num_str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nf">sum</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">num_str</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><br /></p>
+
+<h3 id="tip-map-apply-비교"><span class="me-2">Tip: <code class="language-plaintext highlighter-rouge">map()</code>, <code class="language-plaintext highlighter-rouge">apply()</code> 비교</span><a href="#tip-map-apply-비교" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>필자는 데이터 분석 라이브러리인 <strong>Pandas</strong> 가 훨씬 더 익숙하기에 자주쓰는 <code class="language-plaintext highlighter-rouge">apply()</code>와 비교해서 정리해봤다.<br />
+map() 함수는 리스트 등의 반복 가능한 <strong>객체(iterable)</strong>에 주어진 함수를 적용하는 역할을 한다.<br />
+이는 Pandas의 <strong>apply()</strong>와 유사한 기능을 제공하지만, <strong>apply()</strong>는 <strong>Series</strong> 단위로 동작하며 병렬 처리를 지원하는 차이가 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="c1"># map() 예시 (Python 기본 함수)
+</span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">1</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">2</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">3</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># [1, 2, 3]
+</span>
+<span class="c1"># apply() 예시 (Pandas 함수)
+</span><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">({</span><span class="sh">'</span><span class="s">numbers</span><span class="sh">'</span><span class="p">:</span> <span class="p">[</span><span class="sh">"</span><span class="s">1</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">2</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">3</span><span class="sh">"</span><span class="p">]})</span>
+<span class="n">df</span><span class="p">[</span><span class="sh">'</span><span class="s">int_numbers</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="sh">'</span><span class="s">numbers</span><span class="sh">'</span><span class="p">].</span><span class="nf">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nf">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><br /></p>
+
+<h3 id="2번-문제"><span class="me-2">2번 문제</span><a href="#2번-문제" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/assets/img/Coding_test_2.png" class="popup img-link  shimmer"><img src="/assets/img/Coding_test_2.png" style="box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); border-radius: 8px;" width="80%" loading="lazy"></a></p>
+
+<ul>
+  <li>이 문제는 정수 n이 주어질 때, n의 약수를 오름차순으로 정렬하여 배열로 반환하는 문제이다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="c1"># 한줄 코드 형식(리스트 컴프리헨션?이라고도 한다.)
+</span><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># 정석 for문
+</span><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 약수를 저장할 리스트
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># 1부터 n까지 반복
+</span>        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># n을 i로 나누었을 때 나머지가 0이면 약수
+</span>            <span class="n">result</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  <span class="c1"># 리스트에 추가
+</span>    <span class="k">return</span> <span class="n">result</span>
+<span class="c1"># 이 코드가 정석이라고 생각하고 나도 이게 더 편하다..
+</span>
+<span class="c1"># 예제 실행
+</span><span class="nf">print</span><span class="p">(</span><span class="nf">solution</span><span class="p">(</span><span class="mi">24</span><span class="p">))</span>  <span class="c1"># [1, 2, 3, 4, 6, 8, 12, 24]
+</span><span class="nf">print</span><span class="p">(</span><span class="nf">solution</span><span class="p">(</span><span class="mi">29</span><span class="p">))</span>  <span class="c1"># [1, 29]
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<p><br />
+<br /></p>
+
+<h2 id="마무리"><span class="me-2">마무리</span><a href="#마무리" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<hr />
+
+<p>알고리즘 공부를 안한지 너무 오래돼서 그런가 쉬운 문제들도 풀기가 어렵게 느껴진다.<br />
+독자분들은 평소에 틈틈히 알고리즘 공부를 하길 권장한다..</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="다음-포스팅"><span class="me-2">다음 포스팅</span><a href="#다음-포스팅" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<hr />
+
+<p><strong>시리즈</strong></p>
+
+<ul>
+  <li><a href="/coding_test_1/">코딩테스트 준비 -1</a></li>
+  <li><a href="/coding_test_2/">코딩테스트 준비 -2</a>    ⬅️ <strong>다음 포스팅</strong></li>
+  <li><a href="/coding_test_3/">코딩테스트 준비 -3</a></li>
+  <li><a href="/coding_test_4/">코딩테스트 준비 -4</a></li>
+  <li><a href="/coding_test_5/">코딩테스트 준비 -5</a></li>
+</ul>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/coding-test/">Coding Test</a>,
+          <a href="/categories/algorithm/">Algorithm</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/python/"
+            class="post-tag no-text-decoration"
+          >Python</a>
+        
+          <a
+            href="/tags/coding-test/"
+            class="post-tag no-text-decoration"
+          >Coding_Test</a>
+        
+          <a
+            href="/tags/kt%EC%97%90%EC%9D%B4%EB%B8%94%EC%8A%A4%EC%BF%A8/"
+            class="post-tag no-text-decoration"
+          >KT에이블스쿨</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+        <!-- ✅ 카카오톡 공유 버튼 수정 -->
+        <a href="javascript:scrapKakao();" data-bs-toggle="tooltip" data-bs-placement="top" title="KakaoTalk" aria-label="KakaoTalk">
+          <i class="fa-fw fas fa-comment"></i>
+        </a>
+      
+    
+
+      
+        
+        <a href="https://www.facebook.com/sharer/sharer.php?title=[%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98]%20%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-1%20-%20DoorNote&u=http%3A%2F%2Flocalhost%3A4000%2Fcoding_test_1%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+      
+    
+
+      
+        
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram" aria-label="Instagram">
+          <i class="fa-fw fa-brands fa-instagram"></i>
+        </a>
+      
+    
+
+    <!-- 복사 버튼 유지 -->
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+
+  </span>
+</div>
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="GH-Door/GH-Door.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+            
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+            <div class="access">
+              <!-- Get 5 last posted/updated posts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="access-lastmod">
+    <h2 class="panel-heading">Recently Updated</h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/Jekyll%20Chirpy-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-2/">[Jekyll Chirpy] 커스터마이징 -2</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/DA/">[Data Analyst] 데이터 분석 방법론</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/cohort-analysis/">[Data Analyst] Cohort Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/funnel-analysis/">[Data Analyst] Funnel Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/ab-test/">[Data Analyst] A/B Test</a>
+        </li>
+      
+    </ul>
+  </section>
+  <!-- #access-lastmod -->
+
+
+              <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/coding-test/">Coding_Test</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-analyst/">Data Analyst</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/kt%EC%97%90%EC%9D%B4%EB%B8%94%EC%8A%A4%EC%BF%A8/">KT에이블스쿨</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/github-pages/">GitHub Pages</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/chirpy/">Chirpy</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/cohort-analysis/">Cohort Analysis</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/funnel-analysis/">Funnel Analysis</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">Jekyll</a>
+      
+    </div>
+  </section>
+
+
+            </div>
+
+            
+              
+              
+
+
+
+
+
+
+  <div class="toc-border-cover z-3"></div>
+  <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
+    <h2 class="panel-heading ps-3 pb-2 mb-0">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/coding_test_5/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1740099600"
+  data-df="YYYY년 M월 DD일"
+  
+>
+  2025년 02월 21일
+</time>
+
+              <h4 class="pt-0 my-2">[알고리즘] 코딩테스트 준비 -5</h4>
+              <div class="text-muted">
+                <p>들어가며    이번 포스팅은 코딩테스트 준비 시리즈의 마지막 글이다. 지금까지 기초적인 알고리즘 문제들을 하나씩 살펴보며 Python의 다양한 기능들을 복습해봤다.   1. 수열과 구간 쿼리    문제: 수열과 구간 쿼리 -2    정수 배열과 쿼리를 처리하여 새로운 배열을 만드는 문제     문제 설명    정수 배열 arr와 2차원 정수 배열 qu...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/coding_test_4/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1740013200"
+  data-df="YYYY년 M월 DD일"
+  
+>
+  2025년 02월 20일
+</time>
+
+              <h4 class="pt-0 my-2">[알고리즘] 코딩테스트 준비 -4</h4>
+              <div class="text-muted">
+                <p>들어가며    이번에는 리스트의 마지막 원소를 처리하는 알고리즘 문제를 풀어보며 리스트 인덱싱과 조건문을 활용하는 연습을 해보려한다.    1. 리스트의 마지막 원소 처리    문제: 마지막 원소 처리    리스트의 마지막 원소를 그전 원소와 비교하여 새로운 값을 추가하는 문제     문제 설명    정수 리스트 num_list가 주어진다.   리스트...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/coding_test_3/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1739926800"
+  data-df="YYYY년 M월 DD일"
+  
+>
+  2025년 02월 19일
+</time>
+
+              <h4 class="pt-0 my-2">[알고리즘] 코딩테스트 준비 -3</h4>
+              <div class="text-muted">
+                <p>들어가며    지난 포스팅에서는 상태 전환을 활용한 문자열 처리 문제를 다뤄봤다. 이번에는 주사위 게임과 관련된 알고리즘 문제를 풀어보며 조건문과 수학적 사고력을 기르는 연습을 해보자.    1. 주사위 게임    문제: 주사위 게임    세 개의 주사위를 굴려 나온 값에 따라 특별한 규칙으로 점수를 계산하는 문제     문제 설명    문자열 1부터...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/ab-test/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>[Data Analyst] A/B Test</p>
+    </a>
+  
+
+  
+    <a
+      href="/coding_test_2/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>[알고리즘] 코딩테스트 준비 -2</p>
+    </a>
+  
+</nav>
+
+            
+
+            <!-- The Footer -->
+
+<footer
+  aria-label="Site Info"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
+>
+  <p>©
+    <time>2025</time>
+
+    
+      <a href="https://github.com/GH-Door">DoorNote</a>.
+    
+
+    
+      <span
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
+      >Some rights reserved.</span>
+    
+  </p>
+
+  <p>Using the <a
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="v7.2.4"
+        href="https://github.com/cotes2020/jekyll-theme-chirpy"
+        target="_blank"
+        rel="noopener"
+      >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
+  </p>
+  
+  
+  <script src="/assets/js/dist/kakao-custom.min.js"></script>
+  
+
+</footer>
+
+          </div>
+        </div>
+
+        <!-- The Search results -->
+
+<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
+  <div class="col-11 content">
+    <div id="search-hints">
+      <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/python/">Python</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/coding-test/">Coding_Test</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-analyst/">Data Analyst</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/kt%EC%97%90%EC%9D%B4%EB%B8%94%EC%8A%A4%EC%BF%A8/">KT에이블스쿨</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/github-pages/">GitHub Pages</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/chirpy/">Chirpy</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/cohort-analysis/">Cohort Analysis</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/funnel-analysis/">Funnel Analysis</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jekyll/">Jekyll</a>
+      
+    </div>
+  </section>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
+
+    
+      <aside
+  id="notification"
+  class="toast"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  data-bs-animation="true"
+  data-bs-autohide="false"
+>
+  <div class="toast-header">
+    <button
+      type="button"
+      class="btn-close ms-auto"
+      data-bs-dismiss="toast"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="toast-body text-center pt-0">
+    <p class="px-2 mb-3">A new version of content is available.</p>
+    <button type="button" class="btn btn-primary" aria-label="Update">
+      Update
+    </button>
+  </div>
+</aside>
+
+    
+
+    <!-- Embedded scripts -->
+
+    
+      
+      <!-- The comments switcher -->
+
+
+    
+
+    <!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+
+
+
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('search-results'),
+      json: '/assets/js/data/search.json',
+      searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
+      noResultsText: '<p class="mt-5">Oops! No results found.</p>',
+      templateMiddleware: function(prop, value, template) {
+        if (prop === 'categories') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+          }
+        }
+
+        if (prop === 'tags') {
+          if (value === '') {
+            return `${value}`;
+          } else {
+            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+          }
+        }
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>
+

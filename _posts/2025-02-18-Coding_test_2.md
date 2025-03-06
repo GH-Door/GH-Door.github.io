@@ -3,6 +3,7 @@ layout: post
 title: "[알고리즘] 코딩테스트 준비 -2"
 # description: "Python 코딩테스트 문제 풀이 - 자료구조 및 알고리즘 복습"
 author: "DoorNote"
+permalink: /coding_test_2/
 date: 2025-02-18 10:00:00 +0900
 categories:
     - Coding Test
@@ -150,8 +151,8 @@ solution(a, d, included) # 37
 
 **시리즈** 
 
-- [코딩테스트 준비 -1](/posts/2025-02-17-Coding_test_1/)
-- [코딩테스트 준비 -2](/posts/2025-02-18-Coding_test_2/) 
-- [코딩테스트 준비 -3](/posts/2025-02-19-Coding_test_3/) &nbsp;&nbsp; ⬅️ **다음 포스팅**
-- [코딩테스트 준비 -4](/posts/2025-02-20-Coding_test_4/) 
-- [코딩테스트 준비 -5](/posts/2025-02-21-Coding_test_5/) 
+- [코딩테스트 준비 -1](/coding_test_1/)
+- [코딩테스트 준비 -2](/coding_test_2/) 
+- [코딩테스트 준비 -3](/coding_test_3/) &nbsp;&nbsp; ⬅️ **다음 포스팅**
+- [코딩테스트 준비 -4](/coding_test_4/) 
+- [코딩테스트 준비 -5](/coding_test_5/) 
