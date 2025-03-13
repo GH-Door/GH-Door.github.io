@@ -37,7 +37,7 @@ GEM
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     ffi (1.17.1-arm64-darwin)
-    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.1-x86_64-linux)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
@@ -109,7 +109,7 @@ GEM
     mercenary (0.4.0)
     nokogiri (1.18.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.2-x86_64-linux-gnu)
+    nokogiri (1.18.2-x86_64-linux)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -160,4 +160,4 @@ DEPENDENCIES
   wdm (~> 0.2.0)
 
 BUNDLED WITH
-   2.3.26
+   2.6.5

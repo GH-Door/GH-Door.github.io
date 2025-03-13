@@ -20,7 +20,7 @@ window.scrapKakao = function () {
 
     // 카카오톡 공유 API 실행
     Kakao.Link.sendScrap({
-        requestUrl: location.origin + location.pathname,
+        requestUrl: location.origin + location.pathname + 'index.html',
         templateId: 116831,  // 카카오 개발자 콘솔에서 설정한 템플릿 ID
         templateArgs: {
             img1: img1,              // 메시지 템플릿의 ${img1}과 매칭
