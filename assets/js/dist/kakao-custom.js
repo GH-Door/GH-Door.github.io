@@ -3,11 +3,11 @@ window.scrapKakao = function () {
         Kakao.init('6eb000f03577bd1c234bd39bda416d13'); // 카카오 앱 키 설정
     }
 
-    // 포스트 내 이미지 추출 (없으면 기본 이미지 사용)
-    const images = document.querySelectorAll('.page__content img');
-    const img1 = images[0] ? images[0].src : 'https://gh-door.github.io/android-chrome-192x192.png';
-    const img2 = images[1] ? images[1].src : '';
-    const imgRest = images[2] ? images[2].src : '';
+    // 썸네일 이미지 추출 (og:image 메타 태그 사용)
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    const image = ogImage ? ogImage.content : 'https://gh-door.github.io/android-chrome-192x192.png';  // 기본 이미지 다시 설정
+    
+    console.log('공유 이미지:', image); // 디버깅용
 
     // 제목과 설명 추출 (Open Graph 메타 태그 사용)
     const title = document.querySelector('meta[property="og:title"]') 

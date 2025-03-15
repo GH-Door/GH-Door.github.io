@@ -34,9 +34,9 @@
       {% include media-url.html src=site.social_preview_image absolute=true %}
     {%- endcapture -%}
 
-    {%- capture og_image -%}
+    {%- if img_url -%}
       <meta property="og:image" content="{{ img_url }}" />
-    {%- endcapture -%}
+    {%- endif -%}
 
     {%- capture twitter_image -%}
       <meta name="twitter:card" content="summary_large_image" />
