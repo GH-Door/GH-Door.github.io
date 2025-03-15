@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[알고리즘] 코딩테스트 준비 -4"
-# description: "Python 마지막 원소 처리, 등차수열 문제 풀이, 프로그래머스 코딩테스트 연습"
+description: "[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리"
 author: "DoorNote"
 permalink: /coding_test_4/
 date: 2025-02-20 10:00:00 +0900

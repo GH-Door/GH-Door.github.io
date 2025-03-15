@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "첫 포스팅 GitHub Pages를 활용한 기술 블로그"
-# description: "GitHub Pages를 선택한 이유"
+description: "GitHub Pages를 활용한 기술 블로그 구축 방법과 선택 이유를 공유합니다."
 author: "DoorNote"
 date: 2025-01-29 10:00:00 +0900
 categories:
@@ -12,7 +12,7 @@ comments: true
 pin: true
 math: true
 mermaid: true
-image: 
+image: /assets/img/github-jekyll.jpg
 ---
 
 
@@ -108,10 +108,10 @@ image:
 
 ## **GitHub Pages를 선택한 이유**  
 
-**GitHub Pages**는 개발 블로그를 운영하는 데 최적화된 플랫폼입니다.  
+**GitHub Pages**는 개발 블로그를 운영하는 데 최적화된 플랫폼입니다.<br>
 다른 블로그 플랫폼보다 커스터마이징이 자유롭고, GitHub을 활용한 버전 관리 및 협업이 가능하기 때문에 선택했습니다.  
 
-앞으로 이 블로그를 통해 **데이터 분석, 머신러닝, AI** 관련 기술 글을 공유할 예정입니다.  
+앞으로 이 블로그를 통해 **데이터 분석, 머신러닝, AI** 관련 기술 글을 공유할 예정입니다.<br>
 블로그 운영을 하면서 유용한 팁도 함께 정리해 나가겠습니다. 🚀
 
 <br>

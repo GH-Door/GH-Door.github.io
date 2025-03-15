@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[알고리즘] 코딩테스트 준비 -5"
-# description: "Python 코딩테스트 마지막 시리즈 - 문제 해결 방법"
+description: "[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리"
 author: "DoorNote"
 permalink: /coding_test_5/
 date: 2025-02-21 10:00:00 +0900

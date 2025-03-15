@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간</subtitle>
-  <updated>2025-03-14T01:07:16+09:00</updated>
+  <updated>2025-03-15T18:30:58+09:00</updated>
   <author>
     <name>DoorNote</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,37 @@
 
   
   <entry>
+    <title>[빅분기] 필기 Chapter 01. 빅데이터의 이해 -2</title>
+    <link href="http://localhost:4000/big-data-2/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 01. 빅데이터의 이해 -2" />
+    <published>2025-03-11T10:00:00+09:00</published>
+  
+    <updated>2025-03-11T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/big-data-2/</id>
+    <content type="text/html" src="http://localhost:4000/big-data-2/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="자격증" />
+    
+    <category term="빅데이터분석기사" />
+    
+  
+
+  <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 01. 빅데이터의 이해&amp;#39; 내용을 정리했습니다.</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>[Upstage AI Lab] AI 부트캠프 선택</title>
     <link href="http://localhost:4000/posts/bootcamp/" rel="alternate" type="text/html" title="[Upstage AI Lab] AI 부트캠프 선택" />
     <published>2025-03-10T10:00:00+09:00</published>
   
-    <updated>2025-03-14T00:52:36+09:00</updated>
+    <updated>2025-03-14T01:14:32+09:00</updated>
   
     <id>http://localhost:4000/posts/bootcamp/</id>
     <content type="text/html" src="http://localhost:4000/posts/bootcamp/" />
@@ -34,13 +60,39 @@
 
   
     
-    <category term="AI &amp; 데이터분석" />
+    <category term="AI &amp; Data" />
     
     <category term="Upstage AI Lab" />
     
   
 
-  <summary>들어가며    이번 포스팅에서는 여러 부트캠프 중 Upstage AI Lab을 선택한 이유와 준비 과정에 대해 이야기해볼 예정입니다. 같은 고민을 하고 있는 분들에게 도움이 될 수 있도록 선택 기준과 부트캠프 비교 과정을 정리해봤습니다. 이 글은 제 개인적인 경험과 판단을 바탕으로 작성했으니 각자의 상황이나 목표에 따라 참고용으로 봐주시면 감사하겠습니다.     부트캠프 특징 비교    AI 관련 부트캠프들은 수없이 많지만 대표적인 부트캠프들만 추려 간략히 다루려고합니다. 독자님들은 현재 상황, 목표 등을 고려해서 선택하시길 추천드립니다. 과정명은 아래와 같습니다.     네이버 부스트캠프   KT 에이블스쿨   SK C&amp;amp;amp;C AI Leader Academy   Upstage AI Lab   이어...</summary>
+  <summary>AI 부트캠프 선택을 위해 다양한 AI 부트캠프 비교와 선택 기준을 요약합니다.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[빅분기] 필기 Chapter 01. 빅데이터의 이해 -1</title>
+    <link href="http://localhost:4000/big-data-1/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 01. 빅데이터의 이해 -1" />
+    <published>2025-03-10T10:00:00+09:00</published>
+  
+    <updated>2025-03-10T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/big-data-1/</id>
+    <content type="text/html" src="http://localhost:4000/big-data-1/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="자격증" />
+    
+    <category term="빅데이터분석기사" />
+    
+  
+
+  <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 01. 빅데이터의 이해&amp;#39; 내용을 정리했습니다.</summary>
 
   </entry>
 
@@ -66,7 +118,7 @@
     
   
 
-  <summary>들어가며    이번 포스팅은 코딩테스트 준비 시리즈의 마지막 글이다. 지금까지 기초적인 알고리즘 문제들을 하나씩 살펴보며 Python의 다양한 기능들을 복습해봤다.   1. 수열과 구간 쿼리    문제: 수열과 구간 쿼리 -2    정수 배열과 쿼리를 처리하여 새로운 배열을 만드는 문제     문제 설명    정수 배열 arr와 2차원 정수 배열 queries가 주어짐   queries의 각 원소는 [s, e, k] 형태의 쿼리를 나타냄   s ≤ i ≤ e 범위의 모든 i에 대해 i가 k의 배수이면 arr[i]에 1을 더함   모든 쿼리를 처리한 후의 arr를 return   문제 해결 접근    queries 배열을 순회하며 각 쿼리 처리   각 쿼리에서 주어진 범위(s~e) 확인   범위 내 k의...</summary>
+  <summary>[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리</summary>
 
   </entry>
 
@@ -92,59 +144,7 @@
     
   
 
-  <summary>들어가며    이번에는 리스트의 마지막 원소를 처리하는 알고리즘 문제를 풀어보며 리스트 인덱싱과 조건문을 활용하는 연습을 해보려한다.    1. 리스트의 마지막 원소 처리    문제: 마지막 원소 처리    리스트의 마지막 원소를 그전 원소와 비교하여 새로운 값을 추가하는 문제     문제 설명    정수 리스트 num_list가 주어진다.   리스트의 마지막 원소가 그전 원소보다 크면 그전 원소를 뺀 값을 추가   리스트의 마지막 원소가 그전 원소보다 크지 않다면 마지막 원소의 두 배 값을 추가   문제 해결 접근    리스트의 마지막 두 원소 비교   조건에 따라 다른 연산 수행   리스트에 새로운 값 추가 후 반환   처리 규칙    num_list[-1] &amp;amp;gt; num_list[-2]     ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[알고리즘] 코딩테스트 준비 -3</title>
-    <link href="http://localhost:4000/coding_test_3/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -3" />
-    <published>2025-02-19T10:00:00+09:00</published>
-  
-    <updated>2025-03-06T18:08:50+09:00</updated>
-  
-    <id>http://localhost:4000/coding_test_3/</id>
-    <content type="text/html" src="http://localhost:4000/coding_test_3/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="Coding Test" />
-    
-    <category term="Algorithm" />
-    
-  
-
-  <summary>들어가며    지난 포스팅에서는 상태 전환을 활용한 문자열 처리 문제를 다뤄봤다. 이번에는 주사위 게임과 관련된 알고리즘 문제를 풀어보며 조건문과 수학적 사고력을 기르는 연습을 해보자.    1. 주사위 게임    문제: 주사위 게임    세 개의 주사위를 굴려 나온 값에 따라 특별한 규칙으로 점수를 계산하는 문제     문제 설명    문자열 1부터 6까지 숫자가 적힌 주사위 3개를 굴린다.   각 주사위에서 나온 숫자를 a, b, c라고 한다.   각 조건에 맞게 얻는 점수를 return   문제 해결 접근    세 숫자의 동일 여부 확인   조건에 따른 점수 계산 로직 구현   수학적 연산 처리   처리 규칙    세 숫자가 모두 다른 경우:            점수 = a + b + c     ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[알고리즘] 코딩테스트 준비 -2</title>
-    <link href="http://localhost:4000/coding_test_2/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -2" />
-    <published>2025-02-18T10:00:00+09:00</published>
-  
-    <updated>2025-03-06T18:08:50+09:00</updated>
-  
-    <id>http://localhost:4000/coding_test_2/</id>
-    <content type="text/html" src="http://localhost:4000/coding_test_2/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="Coding Test" />
-    
-    <category term="Algorithm" />
-    
-  
-
-  <summary>들어가며    지난 포스팅에서는 기본적인 자료구조와 간단한 문제풀이를 다뤄봤다. 이번에는 조금 더 심화된 내용의 알고리즘 문제 LV1 ~ LV2 문제들을 다뤄볼 예정이다.    1. 상태 전환을 활용한 문자열 처리    문제: 문자열 상태 처리    주어진 문자열을 특정 규칙에 따라 새로운 문자열로 변환하는 문제       문제 설명    문자열 code를 순차적으로 읽으며 처리한다.   mode는 0과 1 두 가지 상태가 있으며, 초기값은 0   “1”을 만나면 mode가 전환됨 (0→1 또는 1→0)   문제 해결 접근    상태(mode) 변수를 활용한 조건 처리   문자열 순회를 통한 인덱스 기반 처리   결과 문자열 동적 생성   처리 규칙    Mode 0인 경우:            짝수 ...</summary>
+  <summary>[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리</summary>
 
   </entry>
 
