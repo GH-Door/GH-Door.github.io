@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간</subtitle>
-  <updated>2025-03-17T16:08:59+09:00</updated>
+  <updated>2025-03-18T12:28:03+09:00</updated>
   <author>
     <name>DoorNote</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,37 @@
 
   
   <entry>
+    <title>[빅분기] 필기 Chapter 02. 데이터 분석 계획</title>
+    <link href="http://localhost:4000/big-data-2/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 02. 데이터 분석 계획" />
+    <published>2025-03-14T10:00:00+09:00</published>
+  
+    <updated>2025-03-14T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/big-data-2/</id>
+    <content type="text/html" src="http://localhost:4000/big-data-2/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="자격증" />
+    
+    <category term="빅데이터분석기사" />
+    
+  
+
+  <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 02. 데이터 분석 계획&amp;#39; 내용을 정리했습니다.</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>[빅분기] 필기 Chapter 01. 빅데이터의 이해</title>
     <link href="http://localhost:4000/big-data-1/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 01. 빅데이터의 이해" />
     <published>2025-03-13T10:00:00+09:00</published>
   
-    <updated>2025-03-17T15:48:25+09:00</updated>
+    <updated>2025-03-13T10:00:00+09:00</updated>
   
     <id>http://localhost:4000/big-data-1/</id>
     <content type="text/html" src="http://localhost:4000/big-data-1/" />
@@ -106,32 +132,6 @@
   
     <id>http://localhost:4000/coding_test_4/</id>
     <content type="text/html" src="http://localhost:4000/coding_test_4/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="Coding Test" />
-    
-    <category term="Algorithm" />
-    
-  
-
-  <summary>[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[알고리즘] 코딩테스트 준비 -3</title>
-    <link href="http://localhost:4000/coding_test_3/" rel="alternate" type="text/html" title="[알고리즘] 코딩테스트 준비 -3" />
-    <published>2025-02-19T10:00:00+09:00</published>
-  
-    <updated>2025-03-15T18:39:02+09:00</updated>
-  
-    <id>http://localhost:4000/coding_test_3/</id>
-    <content type="text/html" src="http://localhost:4000/coding_test_3/" />
     <author>
       <name>DoorNote</name>
     </author>
