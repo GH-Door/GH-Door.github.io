@@ -7,8 +7,8 @@ permalink: /coding_test_1/
 date: 2025-02-17 10:00:00 +0900
 categories:
     - Coding Test
-    - Algorithm
-tags: [Python, Coding_Test, KT에이블스쿨]
+    - Python
+tags: [Algorithm, Coding_Test, KT에이블스쿨]
 comments: true
 pin: False # 고정핀
 math: true

@@ -1,5 +1,13 @@
 [
   {
+    "title": "[빅분기] 필기 Chapter 03. 데이터 수집 및 저장",
+    "url": "/big-data-3/",
+    "categories": "자격증, 빅데이터분석기사",
+    "tags": "빅데이터분석기사",
+    "date": "2025-03-17 10:00:00 +0900",
+    "content": "[빅데이터분석기사] 필기 &#39;Chapter 03. 데이터 수집 및 저장&#39; 내용을 정리했습니다."
+  },
+  {
     "title": "[빅분기] 필기 Chapter 02. 데이터 분석 계획",
     "url": "/big-data-2/",
     "categories": "자격증, 빅데이터분석기사",
@@ -26,40 +34,40 @@
   {
     "title": "[알고리즘] 코딩테스트 준비 -5",
     "url": "/coding_test_5/",
-    "categories": "Coding Test, Algorithm",
-    "tags": "Python, Coding_Test, KT에이블스쿨",
+    "categories": "Coding Test, Python",
+    "tags": "Algorithm, Coding_Test, KT에이블스쿨",
     "date": "2025-02-21 10:00:00 +0900",
     "content": "[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리"
   },
   {
     "title": "[알고리즘] 코딩테스트 준비 -4",
     "url": "/coding_test_4/",
-    "categories": "Coding Test, Algorithm",
-    "tags": "Python, Coding_Test, KT에이블스쿨",
+    "categories": "Coding Test, Python",
+    "tags": "Algorithm, Coding_Test, KT에이블스쿨",
     "date": "2025-02-20 10:00:00 +0900",
     "content": "[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리"
   },
   {
     "title": "[알고리즘] 코딩테스트 준비 -3",
     "url": "/coding_test_3/",
-    "categories": "Coding Test, Algorithm",
-    "tags": "Python, Coding_Test, KT에이블스쿨",
+    "categories": "Coding Test, Python",
+    "tags": "Algorithm, Coding_Test, KT에이블스쿨",
     "date": "2025-02-19 10:00:00 +0900",
     "content": "[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리"
   },
   {
     "title": "[알고리즘] 코딩테스트 준비 -2",
     "url": "/coding_test_2/",
-    "categories": "Coding Test, Algorithm",
-    "tags": "Python, Coding_Test, KT에이블스쿨",
+    "categories": "Coding Test, Python",
+    "tags": "Algorithm, Coding_Test, KT에이블스쿨",
     "date": "2025-02-18 10:00:00 +0900",
     "content": "[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리"
   },
   {
     "title": "[알고리즘] 코딩테스트 준비 -1",
     "url": "/coding_test_1/",
-    "categories": "Coding Test, Algorithm",
-    "tags": "Python, Coding_Test, KT에이블스쿨",
+    "categories": "Coding Test, Python",
+    "tags": "Algorithm, Coding_Test, KT에이블스쿨",
     "date": "2025-02-17 10:00:00 +0900",
     "content": "[KT 에이블스쿨] AI 트랙 코딩테스트 대비 - 프로그래머스 기반 알고리즘 학습 과정 정리"
   },
