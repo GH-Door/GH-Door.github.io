@@ -13,7 +13,7 @@ comments: true
 pin: False # 고정핀
 math: true
 mermaid: true
-image:
+image: /assets/img/jekyll-chirpy.png
 ---
 
 ## 📑 목차

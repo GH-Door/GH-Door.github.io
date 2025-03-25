@@ -36,7 +36,12 @@ script_includes:
         </span>
       {% endif %}
 
-      {% if page.image and page.layout != "post" %}
+      <!-- 포스트 상단 썸네일 이미지 조건문 (나중에 복구용) -->
+      <!-- {% if page.image and page.layout != "post" %} -->
+      <!-- {% endif %} -->
+      
+      <!-- header_img = True 면 포스팅 상단 이미지 안 나옴 -->
+      {% if page.image and page.hide_header_img != true %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
         {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
         {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
