@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간</subtitle>
-  <updated>2025-03-25T15:48:15+09:00</updated>
+  <updated>2025-03-26T16:15:06+09:00</updated>
   <author>
     <name>DoorNote</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[빅분기] 필기 Chapter 07. 분석 모형 설계</title>
+    <link href="http://localhost:4000/big-data-7/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 07. 분석 모형 설계" />
+    <published>2025-03-25T10:00:00+09:00</published>
+  
+    <updated>2025-03-25T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/big-data-7/</id>
+    <content type="text/html" src="http://localhost:4000/big-data-7/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="자격증" />
+    
+    <category term="빅데이터분석기사" />
+    
+  
+
+  <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 07. 분석 모형 설계&amp;#39; 내용을 정리했습니다.</summary>
+
+  </entry>
 
   
   <entry>
@@ -119,32 +145,6 @@
   
 
   <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 04. 데이터 전처리&amp;#39; 내용을 정리했습니다.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[빅분기] 필기 Chapter 03. 데이터 수집 및 저장</title>
-    <link href="http://localhost:4000/big-data-3/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 03. 데이터 수집 및 저장" />
-    <published>2025-03-17T10:00:00+09:00</published>
-  
-    <updated>2025-03-25T12:11:57+09:00</updated>
-  
-    <id>http://localhost:4000/big-data-3/</id>
-    <content type="text/html" src="http://localhost:4000/big-data-3/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="자격증" />
-    
-    <category term="빅데이터분석기사" />
-    
-  
-
-  <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 03. 데이터 수집 및 저장&amp;#39; 내용을 정리했습니다.</summary>
 
   </entry>
 
