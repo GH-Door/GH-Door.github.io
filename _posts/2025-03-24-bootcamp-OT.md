@@ -14,7 +14,7 @@ comments: true
 pin: false # 고정핀
 math: true
 mermaid: true
-image: /assets/img/업스테이지.png
+image: /assets/img/upstage-img.png
 ---
 
 ## 들어가며

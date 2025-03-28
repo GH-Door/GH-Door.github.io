@@ -1,5 +1,21 @@
 [
   {
+    "title": "[Upstage AI Lab] - 1주차",
+    "url": "/posts/bootcamp-1/",
+    "categories": "AI & Data, Upstage AI Lab",
+    "tags": "Upstage AI Lab",
+    "date": "2025-03-28 10:00:00 +0900",
+    "content": "[Upstage AI Lab] 1주차 회고록"
+  },
+  {
+    "title": "[빅분기] 필기 Chapter 08. 분석 기법 적용",
+    "url": "/big-data-8/",
+    "categories": "자격증, 빅데이터분석기사",
+    "tags": "[빅분기]-필기, PART 03. 빅데이터 모델링",
+    "date": "2025-03-26 10:00:00 +0900",
+    "content": "[빅데이터분석기사] 필기 &#39;Chapter 08. 분석 기법 적용&#39; 내용을 정리했습니다."
+  },
+  {
     "title": "[빅분기] 필기 Chapter 07. 분석 모형 설계",
     "url": "/big-data-7/",
     "categories": "자격증, 빅데이터분석기사",

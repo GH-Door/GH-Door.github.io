@@ -13,7 +13,7 @@ comments: true
 pin: False # 고정핀
 math: true
 mermaid: true
-image:
+image: /assets/img/python.png
 ---
 
 ## 들어가며
