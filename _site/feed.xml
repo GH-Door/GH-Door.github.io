@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간</subtitle>
-  <updated>2025-03-30T19:46:00+09:00</updated>
+  <updated>2025-04-01T20:32:24+09:00</updated>
   <author>
     <name>DoorNote</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[빅분기] 필기 Chapter 10. 분석결과 해석</title>
+    <link href="http://localhost:4000/big-data-10/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 10. 분석결과 해석" />
+    <published>2025-03-29T10:00:00+09:00</published>
+  
+    <updated>2025-03-29T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/big-data-10/</id>
+    <content type="text/html" src="http://localhost:4000/big-data-10/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="자격증" />
+    
+    <category term="빅데이터분석기사" />
+    
+  
+
+  <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 10. 분석결과 해석 및 활용&amp;#39; 내용을 정리했습니다.</summary>
+
+  </entry>
 
   
   <entry>
@@ -119,32 +145,6 @@
   
 
   <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 07. 분석 모형 설계&amp;#39; 내용을 정리했습니다.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Upstage AI Lab] OT - 후기</title>
-    <link href="http://localhost:4000/posts/bootcamp-OT/" rel="alternate" type="text/html" title="[Upstage AI Lab] OT - 후기" />
-    <published>2025-03-24T10:00:00+09:00</published>
-  
-    <updated>2025-03-28T21:50:17+09:00</updated>
-  
-    <id>http://localhost:4000/posts/bootcamp-OT/</id>
-    <content type="text/html" src="http://localhost:4000/posts/bootcamp-OT/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="AI &amp; Data" />
-    
-    <category term="Upstage AI Lab" />
-    
-  
-
-  <summary>[Upstage AI Lab] OT 후기에 대한 내용</summary>
 
   </entry>
 
