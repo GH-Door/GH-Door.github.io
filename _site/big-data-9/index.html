@@ -50,7 +50,7 @@
 <meta property="twitter:image" content="http://localhost:4000/assets/img/빅데이터분석기사.png" />
 <meta property="twitter:title" content="[빅분기] 필기 Chapter 09. 분석모형 평가 개선" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-03-27T10:00:00+09:00","datePublished":"2025-03-27T10:00:00+09:00","description":"[빅데이터분석기사] 필기 ‘Chapter 09. 분석모형 평가 및 개선’ 내용을 정리했습니다.","headline":"[빅분기] 필기 Chapter 09. 분석모형 평가 개선","image":"http://localhost:4000/assets/img/빅데이터분석기사.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/big-data-9/"},"url":"http://localhost:4000/big-data-9/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoorNote","url":"https://github.com/GH-Door"},"dateModified":"2025-04-01T20:33:27+09:00","datePublished":"2025-03-27T10:00:00+09:00","description":"[빅데이터분석기사] 필기 ‘Chapter 09. 분석모형 평가 및 개선’ 내용을 정리했습니다.","headline":"[빅분기] 필기 Chapter 09. 분석모형 평가 개선","image":"http://localhost:4000/assets/img/빅데이터분석기사.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/big-data-9/"},"url":"http://localhost:4000/big-data-9/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1485,6 +1485,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1743507207"
+  data-df="YYYY년 M월 DD일"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2025년 04월 01일
+</time>
+
+        </span>
+      
 
       <!-- 포스트 상단 썸네일 이미지 조건문 (나중에 복구용) -->
       <!--  -->
@@ -1579,7 +1602,7 @@
   <div class="content">
     <h2 id="들어가며"><span class="me-2">들어가며</span><a href="#들어가며" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-tip">
   <p><strong>빅데이터분석기사 필기 시험</strong>을 준비하며 공부한 내용을 <strong>Chapter</strong> 별 핵심 내용 기준으로 정리한 내용입니다.<br />
 교재는 <a href="https://search.shopping.naver.com/book/catalog/41869053620?cat_id=50010601&amp;frm=PBOKPRO&amp;query=%EC%9D%B4%EA%B8%B0%EC%A0%81+%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%EA%B8%B0%EC%82%AC+%ED%95%84%EA%B8%B0&amp;NaPm=ct%3Dm88q4ot4%7Cci%3D23875283d14200743013ebc63ca27206ecd57363%7Ctr%3Dboknx%7Csn%3D95694%7Chk%3Dd90241b163c19c2f3cce4b072ef86e71d42f9d26">이기적-빅데이터분석기사 필기-2024</a>로 공부했습니다.</p>
 </blockquote>
@@ -1593,7 +1616,7 @@
 
 <h3 id="1-평가-지표"><span class="me-2">1. 평가 지표</span><a href="#1-평가-지표" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-info">
   <p><strong>분석모형</strong>의 답과 실제 답과의 관계 오차행렬을 통해 모델을 평가한다.</p>
 </blockquote>
 
@@ -1825,7 +1848,7 @@
 
 <h4 id="2-1-정규성-가정"><span class="me-2"><strong>2-1) 정규성 가정</strong></span><a href="#2-1-정규성-가정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-info">
   <p><strong>분석을 진행하기 전에 데이터가 정규분포를 따르는지 검정</strong>하는 것으로 데이터 자체의 <strong>정규성을 확인</strong></p>
 </blockquote>
 
@@ -1847,7 +1870,7 @@
 
 <h4 id="2-2-잔차-진단"><span class="me-2"><strong>2-2) 잔차 진단</strong></span><a href="#2-2-잔차-진단" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-info">
   <p>회귀분석에서 최적의 회귀선은 <strong>실측지와 예측치의 차이인 잔차를 가장 작게 해주는 선으로 잔차의 합은 0이며 잔차는 추세, 특정 패턴을 가지고 있지 않다.</strong></p>
 </blockquote>
 
@@ -1877,7 +1900,7 @@
 
 <h3 id="3-k-fold-교차검증k-fold-cross-validation"><span class="me-2">3. k-fold 교차검증(k-fold Cross Validation)</span><a href="#3-k-fold-교차검증k-fold-cross-validation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-info">
   <p>테스트 데이터셋에 <strong>과적합</strong> 되어버리는 결과가 생길 수 있을 떄 <strong>이를 방지하고자 나온 방법이 교차검증</strong> 기법이다.</p>
 </blockquote>
 
@@ -1907,7 +1930,7 @@
 
 <h3 id="4-적합도-검정"><span class="me-2">4. 적합도 검정</span><a href="#4-적합도-검정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-info">
   <p>데이터 분포가 특정 <strong>분포함수와 얼마나 맞는지를 검정하는 방법</strong><br />
 일반적인 방법으로 <strong>정규성</strong> 검정이 있으며 <strong>정규분포를 가정하는 분석기법(t-Test, ANOVA, 회귀분석)</strong>이 적용될 시 <strong>데이터가 정규분포를 따라는가</strong>를 확인할 떄 사용된다.</p>
 </blockquote>
@@ -1947,7 +1970,7 @@
 
 <h3 id="1-과대적합-방지"><span class="me-2">1. 과대적합 방지</span><a href="#1-과대적합-방지" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-info">
   <p>훈련 시에는 높은 성능을 보이지만, 테스트 데이터에 대해서는 낮은 성능을 보여주는 과적합을 방지하고, 일반화된 모델을 생성하기 위한 방향</p>
 </blockquote>
 
@@ -1995,7 +2018,7 @@
 
 <h3 id="2-매개변수-최적화"><span class="me-2">2. 매개변수 최적화</span><a href="#2-매개변수-최적화" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+<blockquote class="prompt-info">
   <p><strong>신경망 학습</strong>의 목표는 <strong>손실 함수의 값을 최대한 낮추는 매개변수</strong>를 찾는 것<br />
 <strong>매개변수의 최적값을 찾는 과정을 매개변수 최적화라고 한다.</strong></p>
 </blockquote>
@@ -2273,6 +2296,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/big-data-9/">[빅분기] 필기 Chapter 09. 분석모형 평가 개선</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/big-data-10/">[빅분기] 필기 Chapter 10. 분석결과 해석</a>
         </li>
       
@@ -2295,13 +2325,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/bootcamp-OT/">[Upstage AI Lab] OT - 후기</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/coding_test_1/">[알고리즘] 코딩테스트 준비 -1</a>
         </li>
       
     </ul>
