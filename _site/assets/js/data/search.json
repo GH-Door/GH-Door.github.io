@@ -1,5 +1,13 @@
 [
   {
+    "title": "[Upstage AI Lab] - 2주차",
+    "url": "/posts/bootcamp-2/",
+    "categories": "AI & Data, Upstage AI Lab",
+    "tags": "Upstage AI Lab, Python, 데이터분석, Statistics",
+    "date": "2025-04-04 10:00:00 +0900",
+    "content": "[Upstage AI Lab] 2주차 학습 내용"
+  },
+  {
     "title": "[빅분기] 필기 Chapter 10. 분석결과 해석",
     "url": "/big-data-10/",
     "categories": "자격증, 빅데이터분석기사",
@@ -11,7 +19,7 @@
     "title": "[Upstage AI Lab] - 1주차",
     "url": "/posts/bootcamp-1/",
     "categories": "AI & Data, Upstage AI Lab",
-    "tags": "Upstage AI Lab",
+    "tags": "Upstage AI Lab, Python, 데이터분석",
     "date": "2025-03-28 10:00:00 +0900",
     "content": "[Upstage AI Lab] 1주차 회고록"
   },

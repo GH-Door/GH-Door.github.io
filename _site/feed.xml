@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>DoorNote</title>
   <subtitle>AI와 ML/DL 기반 데이터 분석과 예측 모델링을 기록하는 공간</subtitle>
-  <updated>2025-04-02T15:08:29+09:00</updated>
+  <updated>2025-04-04T20:10:03+09:00</updated>
   <author>
     <name>DoorNote</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,37 @@
 
   
   <entry>
+    <title>[Upstage AI Lab] - 2주차</title>
+    <link href="http://localhost:4000/posts/bootcamp-2/" rel="alternate" type="text/html" title="[Upstage AI Lab] - 2주차" />
+    <published>2025-04-04T10:00:00+09:00</published>
+  
+    <updated>2025-04-04T10:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/bootcamp-2/</id>
+    <content type="text/html" src="http://localhost:4000/posts/bootcamp-2/" />
+    <author>
+      <name>DoorNote</name>
+    </author>
+
+  
+    
+    <category term="AI &amp; Data" />
+    
+    <category term="Upstage AI Lab" />
+    
+  
+
+  <summary>[Upstage AI Lab] 2주차 학습 내용</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>[빅분기] 필기 Chapter 10. 분석결과 해석</title>
     <link href="http://localhost:4000/big-data-10/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 10. 분석결과 해석" />
     <published>2025-03-29T10:00:00+09:00</published>
   
-    <updated>2025-03-29T10:00:00+09:00</updated>
+    <updated>2025-04-02T15:21:27+09:00</updated>
   
     <id>http://localhost:4000/big-data-10/</id>
     <content type="text/html" src="http://localhost:4000/big-data-10/" />
@@ -76,7 +102,7 @@
     <link href="http://localhost:4000/big-data-9/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 09. 분석모형 평가 개선" />
     <published>2025-03-27T10:00:00+09:00</published>
   
-    <updated>2025-04-01T20:33:27+09:00</updated>
+    <updated>2025-04-02T15:21:27+09:00</updated>
   
     <id>http://localhost:4000/big-data-9/</id>
     <content type="text/html" src="http://localhost:4000/big-data-9/" />
@@ -102,7 +128,7 @@
     <link href="http://localhost:4000/big-data-8/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 08. 분석 기법 적용" />
     <published>2025-03-26T10:00:00+09:00</published>
   
-    <updated>2025-03-26T10:00:00+09:00</updated>
+    <updated>2025-04-02T15:21:27+09:00</updated>
   
     <id>http://localhost:4000/big-data-8/</id>
     <content type="text/html" src="http://localhost:4000/big-data-8/" />
@@ -119,32 +145,6 @@
   
 
   <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 08. 분석 기법 적용&amp;#39; 내용을 정리했습니다.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[빅분기] 필기 Chapter 07. 분석 모형 설계</title>
-    <link href="http://localhost:4000/big-data-7/" rel="alternate" type="text/html" title="[빅분기] 필기 Chapter 07. 분석 모형 설계" />
-    <published>2025-03-25T10:00:00+09:00</published>
-  
-    <updated>2025-03-25T10:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/big-data-7/</id>
-    <content type="text/html" src="http://localhost:4000/big-data-7/" />
-    <author>
-      <name>DoorNote</name>
-    </author>
-
-  
-    
-    <category term="자격증" />
-    
-    <category term="빅데이터분석기사" />
-    
-  
-
-  <summary>[빅데이터분석기사] 필기 &amp;#39;Chapter 07. 분석 모형 설계&amp;#39; 내용을 정리했습니다.</summary>
 
   </entry>
 
