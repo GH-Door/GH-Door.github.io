@@ -19,9 +19,8 @@ image: /assets/img/upstage-img.png
 
 ## 들어가며
 
-<blockquote style="background: #E1F5Fe; color: #2e2e2ec4; padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-**Upstage AI Lab** 부트캠프의 OT에 직접 참여하며 느낀점, 앞으로 진행될 예정을 정리했다.
-</blockquote>
+> **Upstage AI Lab** 부트캠프의 OT에 직접 참여하며 느낀점, 앞으로 진행될 예정을 정리했다.
+{: .prompt-tip }
 
 ## OT 회고
 
