@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "첫 포스팅 GitHub Pages를 활용한 기술 블로그"
+title: "GitHub Pages를 활용한 기술 블로그"
 description: "GitHub Pages를 활용한 기술 블로그 구축 방법과 선택 이유를 공유합니다."
 author: "DoorNote"
 date: 2025-01-29 10:00:00 +0900
