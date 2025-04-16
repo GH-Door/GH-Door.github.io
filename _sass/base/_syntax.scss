@@ -252,3 +252,25 @@ div {
   }
 }
 
+/* Python 코드블럭: 줄번호 셀 제거 + 좌측 여백 추가 */
+div.language-python table td:first-child {
+  display: none !important;
+}
+div.language-python table td:last-child pre {
+  padding-left: 1rem !important;
+}
+
+// /* Python 코드블럭: 직사각형(라운딩 제거) */
+// div.language-python,
+// div.language-python .highlight,
+// div.language-python pre {
+//   border-radius: 0 !important;
+// }
+
+/* SQL 코드블럭: 줄번호 셀 제거 + 좌측 여백 추가 */
+div.language-sql table td:first-child {
+  display: none !important;
+}
+div.language-sql table td:last-child pre {
+  padding-left: 1rem !important;
+}
