@@ -24,12 +24,13 @@ image: /assets/img/paper-review1.png
 
 <br>
 
-### 핵심 키워드
+## 핵심 키워드
 
 - **Neural Networks** : 인간의 뇌 구조를 모방한 연산 시스템, 입력과 출력을 연결하는 신경망 구조를 학습에 활용
 - **OCR** : 이미지나 문서 내의 문자 데이터를 인식하고 디지털 텍스트로 변환하는 기술
 - **Document Recognition** : 문서 내의 텍스트, 구조, 레이아웃 등을 인식하여 이해하는 기술
 - **Machine Learning** : 데이터를 이용해 기계가 스스로 패턴을 학습하고 예측하거나 분류하는 기술
+- **Backpropagation**: 신경망 학습을 위해 오차를 거꾸로 전파하는 **역전파 알고리즘**을 의미
 - **Gradient-Based Learning** : 손실 함수의 기울기를 계산해 모델의 파라미터를 업데이트하는 학습 방법
 - **Convolutional Neural Networks (CNN)** : 이미지나 영상 데이터에 특화된 신경망 구조
 - **Graph Transformer Networks (GTN)** : 복잡한 모듈 간의 관계를 그래프 구조로 모델링
@@ -300,3 +301,7 @@ Pooling 과정을 통해 위치 변화나 왜곡에도 강인한 특성을 확�
 
 결국, 사람이 feature를 일일이 설계하지 않아도,
 데이터와 **Gradient** 기반 학습만으로 효과적인 인식이 가능하다는 사실을 실험을 통해 입증한 연구다.
+
+<br>
+<br>
+
