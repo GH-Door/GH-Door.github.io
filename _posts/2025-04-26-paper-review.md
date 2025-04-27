@@ -307,6 +307,9 @@ Pooling 과정을 통해 위치 변화나 왜곡에도 강인한 특성을 확�
 
 ## Code 구현
 
+> 위 논문에서 제안한 **LeNet-5** 모델 구조를 기반으로, **MNIST** 데이터셋 분류를 위한 코드를 짧게 구현했다.<br>
+> 전체 코드는 [GitHub 링크](https://github.com/GH-Door/Study/blob/main/DL/code/LeNet-5.ipynb)에 있다.
+
 <head>
   <style>
     table.dataframe {
@@ -380,6 +383,7 @@ Pooling 과정을 통해 위치 변화나 왜곡에도 강인한 특성을 확�
 
 
 ```python
+# Library
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -388,9 +392,7 @@ import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import warnings
 from torch.utils.data import DataLoader
-```
 
-```python
 # LeNet-5 Model
 class LeNet5(nn.Module):
     def __init__(self):
