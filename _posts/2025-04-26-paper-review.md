@@ -26,15 +26,15 @@ image: /assets/img/paper-review1.png
 
 ## 핵심 키워드
 
-- **Neural Networks** : 인간의 뇌 구조를 모방한 연산 시스템, 입력과 출력을 연결하는 신경망 구조를 학습에 활용
-- **OCR** : 이미지나 문서 내의 문자 데이터를 인식하고 디지털 텍스트로 변환하는 기술
-- **Document Recognition** : 문서 내의 텍스트, 구조, 레이아웃 등을 인식하여 이해하는 기술
-- **Machine Learning** : 데이터를 이용해 기계가 스스로 패턴을 학습하고 예측하거나 분류하는 기술
-- **Backpropagation**: 신경망 학습을 위해 오차를 거꾸로 전파하는 **역전파 알고리즘**을 의미
-- **Gradient-Based Learning** : 손실 함수의 기울기를 계산해 모델의 파라미터를 업데이트하는 학습 방법
-- **Convolutional Neural Networks (CNN)** : 이미지나 영상 데이터에 특화된 신경망 구조
-- **Graph Transformer Networks (GTN)** : 복잡한 모듈 간의 관계를 그래프 구조로 모델링
-- **Finite State Transducers (FST)** : 입력을 받아 상태를 전이시키고 출력을 생성하는 계산 모델
+> - **Neural Networks** : 인간의 뇌 구조를 모방한 연산 시스템, 입력,출력을 연결하는 신경망 구조를 학습에 활용<br>
+> - **OCR** : 이미지나 문서 내의 문자 데이터를 인식하고 디지털 텍스트로 변환하는 기술<br>
+> - **Document Recognition** : 문서 내의 텍스트, 구조, 레이아웃 등을 인식하여 이해하는 기술<br>
+> - **Machine Learning** : 데이터를 이용해 기계가 스스로 패턴을 학습하고 예측하거나 분류하는 기술<br>
+> - **Backpropagation**: 신경망 학습을 위해 오차를 거꾸로 전파하는 **역전파 알고리즘**을 의미<br>
+> - **Gradient-Based Learning** : 손실 함수의 기울기를 계산해 모델의 파라미터를 업데이트하는 학습 방법<br>
+> - **Convolutional Neural Networks (CNN)** : 이미지나 영상 데이터에 특화된 신경망 구조<br>
+> - **Graph Transformer Networks (GTN)** : 복잡한 모듈 간의 관계를 그래프 구조로 모델링<br>
+> - **Finite State Transducers (FST)** : 입력을 받아 상태를 전이시키고 출력을 생성하는 계산 모델
 
 <br>
 <br>
@@ -307,8 +307,8 @@ Pooling 과정을 통해 위치 변화나 왜곡에도 강인한 특성을 확�
 
 ## Code 구현
 
-> 위 논문에서 제안한 **LeNet-5** 모델 구조를 기반으로, **MNIST** 데이터셋 분류를 위한 코드를 짧게 구현했다.<br>
-> 전체 코드는 [GitHub 링크](https://github.com/GH-Door/Study/blob/main/DL/code/LeNet-5.ipynb)에 있다.
+> 위 논문에서 제안한 **LeNet-5** 모델 구조를 기반으로, **MNIST** 데이터셋 분류를 위한 코드를 짧게 구현해봤습니다.<br>
+> 전체 코드는 [GitHub 링크](https://github.com/GH-Door/Study/blob/main/DL/code/LeNet-5.ipynb)에서 확인 할 수 있습니다.
 
 <head>
   <style>
