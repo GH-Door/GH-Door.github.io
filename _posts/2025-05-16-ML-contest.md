@@ -8,7 +8,7 @@ date: 2025-05-16 10:00:00 +0900
 categories:
     - AI & Data
     - Upstage AI Lab
-tags: [Upstage AI Lab, Machine Learning]
+tags: [Upstage AI Lab, Machine Learning, 경진대회]
 use_math: true
 comments: true
 pin: false # 고정핀
