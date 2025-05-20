@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Upstage AI Lab] ML-경진대회"
+title: "[Upstage AI Lab] 8주차 - ML-경진대회"
 description: "[Upstage AI Lab] ML-경진대회 회고"
 author: "DoorNote"
 date: 2025-05-16 10:00:00 +0900
