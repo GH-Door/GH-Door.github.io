@@ -106,7 +106,7 @@
   --highlighter-rouge-color: #3f596f;
   --highlight-lineno-color: #9e9e9e;
   --inline-code-bg: rgba(25, 25, 28, 0.05);
-  --code-color: #9CDCFE; // 기본 색 9CDCFE D4D4D4
+  --code-color: #D4D4D4; // 실제 vscode cursor 색상 기본 색 9CDCFE: 하늘색 D4D4D4: 흰색
   --code-header-text-color: #a3a3a3;
   --code-header-muted-color: #e5e5e5;
   --code-header-icon-color: #c9c8c8;
@@ -300,5 +300,128 @@
     color: #D4D4D4;
     font-weight: bold;
   }
-  
 }
+
+  /* ---------------------- */
+  /* iTerm 스타일 터미널 코드블럭 (적용 범위 확장 및 명령어 색상 수정) */
+  /* ---------------------- */
+
+  /* 프롬프트(예: Moon 🌙 ~) */
+//   .language-bash .highlight .gp,
+//   .language-shell .highlight .gp,
+//   .language-console .highlight .gp,
+//   .language-terminal .highlight .gp,
+//   .highlight.language-bash .gp,
+//   .highlight.language-shell .gp,
+//   .highlight.language-console .gp,
+//   .highlight.language-terminal .gp {
+//     color: #fff;
+//     background: #22223b;
+//     font-weight: bold;
+//   }
+
+//   /* 명령어(cd, ls, clear 등) - 초록색 */
+//   .language-bash .highlight .nb,
+//   .language-shell .highlight .nb,
+//   .language-console .highlight .nb,
+//   .language-terminal .highlight .nb,
+//   .highlight.language-bash .nb,
+//   .highlight.language-shell .nb,
+//   .highlight.language-console .nb,
+//   .highlight.language-terminal .nb {
+//     color: #00ff7f;
+//     font-weight: bold;
+//   }
+
+//   /* 경로/디렉토리(~/Documents 등) - 하늘색 */
+//   .language-bash .highlight .nv,
+//   .language-shell .highlight .nv,
+//   .language-console .highlight .nv,
+//   .language-terminal .highlight .nv,
+//   .highlight.language-bash .nv,
+//   .highlight.language-shell .nv,
+//   .highlight.language-console .nv,
+//   .highlight.language-terminal .nv {
+//     color: #4ec9b0;
+//     font-weight: bold;
+//   }
+
+//   /* 브랜치(main 등) */
+//   .language-bash .highlight .ge,
+//   .language-shell .highlight .ge,
+//   .language-console .highlight .ge,
+//   .language-terminal .highlight .ge,
+//   .highlight.language-bash .ge,
+//   .highlight.language-shell .ge,
+//   .highlight.language-console .ge,
+//   .highlight.language-terminal .ge {
+//     background: #f9f871;
+//     color: #22223b;
+//     font-weight: bold;
+//     border-radius: 4px;
+//     padding: 0 4px;
+//   }
+
+//   /* 명령어 옵션(-, --, \ 등) */
+//   .language-bash .highlight .o,
+//   .language-shell .highlight .o,
+//   .language-console .highlight .o,
+//   .language-terminal .highlight .o,
+//   .highlight.language-bash .o,
+//   .highlight.language-shell .o,
+//   .highlight.language-console .o,
+//   .highlight.language-terminal .o {
+//     color: #d4d4d4;
+//   }
+
+//   /* 문자열(따옴표 등) */
+//   .language-bash .highlight .s,
+//   .language-shell .highlight .s,
+//   .language-console .highlight .s,
+//   .language-terminal .highlight .s,
+//   .highlight.language-bash .s,
+//   .highlight.language-shell .s,
+//   .highlight.language-console .s,
+//   .highlight.language-terminal .s {
+//     color: #ce9178;
+//   }
+
+//   /* 결과/출력(기본 텍스트) */
+//   .language-bash .highlight .go,
+//   .language-shell .highlight .go,
+//   .language-console .highlight .go,
+//   .language-terminal .highlight .go,
+//   .highlight.language-bash .go,
+//   .highlight.language-shell .go,
+//   .highlight.language-console .go,
+//   .highlight.language-terminal .go {
+//     color: #aeefff;
+//     font-weight: bold;
+//   }
+
+//   /* 오류 메시지 */
+//   .language-bash .highlight .err,
+//   .language-shell .highlight .err,
+//   .language-console .highlight .err,
+//   .language-terminal .highlight .err,
+//   .highlight.language-bash .err,
+//   .highlight.language-shell .err,
+//   .highlight.language-console .err,
+//   .highlight.language-terminal .err {
+//     color: #ff5370;
+//     font-weight: bold;
+//   }
+
+//   /* 주석 */
+//   .language-bash .highlight .c,
+//   .language-shell .highlight .c,
+//   .language-console .highlight .c,
+//   .language-terminal .highlight .c,
+//   .highlight.language-bash .c,
+//   .highlight.language-shell .c,
+//   .highlight.language-console .c,
+//   .highlight.language-terminal .c {
+//     color: #6a9955;
+//     font-style: italic;
+//   }
+// }

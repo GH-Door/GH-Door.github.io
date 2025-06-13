@@ -287,7 +287,7 @@ VGGNet의 학습 전략은 전반적으로 **AlexNet**의 방식을 따르며, �
 ## Code 구현
 
 > 아래는 논문에서 제안한 VGG 구조를 기반으로, **VGG-16 전체 네트워크를 PyTorch로 구현한 코드**입니다.<br>
-> 전체 코드는 [GitHub 링크](https://github.com/GH-Door/Study/blob/main/DL/code/VGGNet.ipynb)에서 확인할 수 있습니다.
+> 전체 코드는 [GitHub 링크](https://github.com/GH-Door/Study/blob/main/DL/code/VGG.ipynb)에서 확인할 수 있습니다.
 
 ```python
 class VGG16(nn.Module):
