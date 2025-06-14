@@ -26,16 +26,15 @@ image: /assets/img/ML-contest.png
 
 ### 1. 개요
 
-> **House Price Prediction** 경진대회는 주어진 데이터를 활용하여 **서울의 아파트 실거래가를** 효과적으로 예측하는 모델을 개발하는 대회
+> **House Price Prediction** 경진대회는 **서울시 아파트 실거래가를** 예측하는 모델을 개발하는 대회다.
 {: .prompt-info }
 
-#### **Submission**
+**Project Overview**
 
-- output : **9,272**개의 **input**에 대한 예상 아파트 거래금액
-
-#### **Evaluation Metric**
-
-- 본 대회에서는 모델의 성능을 평가하기 위해 **RMSE**(Root Mean Squared Error)를 사용
+- Project Duration: **2025.05.01 ~ 2025.05.15**
+- Team: **5명**
+- Submission: **9,272**개의 **input**에 대한 **예상 아파트 거래금액**
+- Evaluation Metric: **RMSE**(Root Mean Squared Error)
 
 <br>
 

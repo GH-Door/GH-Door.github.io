@@ -7,7 +7,7 @@ date: 2025-01-29 10:00:00 +0900
 categories:
     - GitHub Blog
     - Jekyll Chirpy
-tags: [GitHub Pages, Data Analyst, ML/DL]
+tags: [GitHub Pages]
 comments: true
 pin: true
 math: true
