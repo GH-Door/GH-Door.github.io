@@ -6,7 +6,7 @@ author: "DoorNote"
 date: 2025-05-17 10:00:00 +0900
 # permalink: /big-data-10/
 categories:
-    - AI & Data
+    - Review
     - 논문 Review
 tags: ['Deep Learning', 'CNN', 'VGGNet']
 use_math: true

@@ -6,7 +6,7 @@ author: "DoorNote"
 date: 2025-04-26 10:00:00 +0900
 # permalink: /big-data-10/
 categories:
-    - AI & Data
+    - Review
     - 논문 Review
 tags: ['Deep Learning', 'CNN', 'Gradient Descent']
 use_math: true
