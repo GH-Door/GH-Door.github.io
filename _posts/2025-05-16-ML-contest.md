@@ -6,7 +6,7 @@ author: "DoorNote"
 date: 2025-05-16 10:00:00 +0900
 #  permalink: //
 categories:
-    - AI & Data
+    - AI | 인공지능
     - Upstage AI Lab
 tags: [Upstage AI Lab, Machine Learning, 경진대회]
 use_math: true

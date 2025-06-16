@@ -9,7 +9,7 @@ categories:
     - Jekyll Chirpy
 tags: [GitHub Pages]
 comments: true
-pin: true
+pin: false
 math: true
 mermaid: true
 image: /assets/img/github-jekyll.jpg
