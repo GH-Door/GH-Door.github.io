@@ -8,7 +8,7 @@ date: 2025-06-10 10:00:00 +0900
 categories:
     - AI | 인공지능
     - Upstage AI Lab
-tags: [Upstage AI Lab, MLOps]
+tags: [MLOps]
 use_math: true
 comments: true
 pin: false # 고정핀

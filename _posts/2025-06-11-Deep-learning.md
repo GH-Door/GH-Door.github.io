@@ -61,7 +61,7 @@ image: /assets/img/DL.png
 
 - **Learning Rate**(학습률): 가중치 업데이트 크기  
 - **Batch Size**(배치 크기): 한 번에 처리할 샘플 수  
-- **Epochs**(에폭 수): 전체 데이턄셋을 반복 학습하는 횟수  
+- **Epochs**(에폭 수): 전체 데이터셋을 반복 학습하는 횟수  
 - **Optimizer**(최적화 알고리즘): 가중치 갱신 방식을 결정 (예: SGD, Adam)  
 - **Momentum**(모멘텀): SGD의 관성 항 비율, 진동 완화 및 수렴 가속  
 - **Regularization**(정규화 강도): L1/L2 페널티 계수 등, 과적합 방지 정도  
