@@ -87,6 +87,36 @@ image: /assets/img/DL.png
 
 <br>
 <br>
+
+### 4. Loss Function (손실 함수)
+
+> 모델 학습 시 **예측값과 실제값의 차이(오차)**를 수치화하여 **가중치 갱신**에 활용하는 함수  
+> 손실함수의 함수값이 최소화 되도록 하는 **가중치(weight)와 편향(bias)**을 찾는 것이 목표  
+> 값이 **낮을수록 학습이 잘 된 것**, 정답과 알고리즘 출력을 **비교하는 데 사용**
+{: .prompt-info }
+
+![Loss Function](/assets/img/Loss-Function.png){: width="800" .center}
+
+- **Mean Squared Error (MSE)**: 회귀 문제에서 오차 제곱의 평균을 사용하며, 큰 오차에 더 민감  
+  - Activation: **Linear 출력층**
+
+- **Mean Absolute Error (MAE)**: 회귀 문제에서 오차 절댓값의 평균을 사용하며, 이상치에 덜 민감  
+  - Activation: **Linear 출력층**
+
+- **Huber Loss (Smooth L1)**: 작은 오차에는 제곱 손실, 큰 오차에는 절댓값 손실을 적용해 이상치에 강건  
+  - Activation: **Linear 출력층**
+
+- **Binary Cross-Entropy (BCE)**: 이진 분류에서 예측 확률과 실제 레이블 간 차이를 계산  
+  - Activation: **Sigmoid**
+
+- **Categorical Cross-Entropy (CCE)**: 다중 클래스(one-hot) 분류에서 클래스 확률 분포 간 차이를 계산  
+  - Activation: **Softmax**
+
+- **Sparse Categorical Cross-Entropy**: 정수 레이블을 직접 사용해 CCE를 계산하며, 메모리·계산 효율이 높음  
+  - Activation: **Softmax**
+
+<br>
+<br>
 <br>
 
 ## Convolutional Neural Network
