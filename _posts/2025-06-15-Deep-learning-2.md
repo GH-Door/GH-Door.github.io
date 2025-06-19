@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "[Deep Learning] Basic Model"
-description: "[Deep Learning] CNN, RNN, GPT 모델 구조 이해하기"
+description: "[Deep Learning] CNN, RNN, LSTM, GRU 모델 구조 이해하기"
 author: "DoorNote"
 date: 2025-06-15 10:00:00 +0900
 #  permalink: //
 categories:
     - AI | 인공지능
     - DL
-tags: [Deep Learning, CNN, RNN, Transformer, GPT]
+tags: [Deep Learning, CNN, RNN, LSTM, GRU]
 use_math: true
 comments: true
 pin: false # 고정핀
@@ -129,7 +129,7 @@ $$
 <br>
 <br>
 
-## Recurrent Neural Network (순환 신경망)
+## Recurrent Neural Network (RNN)
 
 ---
 
@@ -217,3 +217,4 @@ $$
 
 - **GRU**: **LSTM**보다 단순한 구조로 **Reset, Update Gate**만을 사용  
     - **연산량이 적고, 빠른 학습이 가능하면서도 비슷한 성능**을 보이는 경우가 많음.
+

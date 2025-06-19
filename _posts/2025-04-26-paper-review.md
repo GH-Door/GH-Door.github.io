@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "[논문 Review] Gradient-Based Learning"
-description: "Gradient-Based 기법을 활용한 패턴 및 문서 인식 방법을 정리했습니다."
+title: "[논문 Review] LeNet-5"
+description: "LeNet-5 기법을 활용한 패턴 및 문서 인식 방법을 정리했습니다."
 author: "DoorNote"
 date: 2025-04-26 10:00:00 +0900
 # permalink: /big-data-10/
 categories:
     - Review
     - 논문 Review
-tags: ['Deep Learning', 'CNN', 'Gradient Descent']
+tags: ['Deep Learning', 'LeNet-5', 'CNN', 'Gradient Descent']
 use_math: true
 comments: true
 pin: false # 고정핀
 math: true
-mermaid: true
+mermaid: true 
 image: /assets/img/paper-review1.png
 ---
 
