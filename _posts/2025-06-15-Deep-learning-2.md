@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "[Deep Learning] Basic Model"
-description: "[Deep Learning] CNN, RNN, LSTM, GRU 모델 구조 이해하기"
+description: "[Deep Learning] CNN, RNN, LSTM, GRU 구조 이해하기"
 author: "DoorNote"
-date: 2025-06-15 10:00:00 +0900
+date: 2025-06-15 17:00:00 +0900
 #  permalink: //
 categories:
     - AI | 인공지능
@@ -19,7 +19,7 @@ image:  /assets/img/위키라이더-썸네일.png
 
 ## 들어가며
 
-> 이번 포스팅은 딥러닝 대표 모델인 **CNN, RNN, GPT**의 기본 구조와 동작 원리를 정리했습니다.  
+> 이번 포스팅은 딥러닝 대표 모델인 **CNN, RNN**의 기본 구조와 동작 원리를 정리했습니다.  
 > **관련 용어**는 [**딥러닝 기본 용어 정리**](/posts/deep-learning-1/)를 참고 
 {: .prompt-tip }
 
