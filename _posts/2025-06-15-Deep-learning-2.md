@@ -67,7 +67,7 @@ image:  /assets/img/위키라이더-썸네일.png
 > Stride가 커질수록 **출력 크기는 줄어들고, 연산량도 줄어든다.**
 {: .prompt-info }
 
-![Stride](/assets/img/Stride.gif){: width="1000" .center}
+![Stride](/assets/img/stride.gif){: width="1000" .center}
 
 - 일반적으로 **`stride=1`**이면 필터가 한 칸씩 이동하며 모든 위치를 훑는다.
 - **`stride=2`** 이상을 사용하면 **Feature Map** 크기가 빠르게 작아진다.
