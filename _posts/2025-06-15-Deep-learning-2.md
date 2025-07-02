@@ -85,10 +85,10 @@ image:  /assets/img/위키라이더-썸네일.png
 ![Feature_Map-계산](/assets/img/Feature_Map-계산.png){: width="600" .center}
 
 $$
-\text{Output Size} = \left\lfloor \frac{N + 2P - F}{S} \right\rfloor + 1
+\text{Output Size} = \left\lfloor \frac{I + 2P - F}{S} \right\rfloor + 1
 $$
 
-- \( N \): **Input size** (Height 또는 Width)
+- \( I \): **Input size** (Height 또는 Width)
 - \( F \): **Filter size**
 - \( P \): **Padding**
 - \( S \): **Stride**

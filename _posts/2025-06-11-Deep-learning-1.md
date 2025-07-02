@@ -137,8 +137,9 @@ image: /assets/img/DL.png
 - **Pooling (풀링)**: 공간 크기 축소 및 중요한 특징 보존  
   - **Max Pooling**(최대 풀링)  
   - **Mean Pooling**(평균 풀링)  
-- **Flatten**(평탄화): 다차원 **Feature Map**을 1D 벡터로 변환  
-- **Fully-Connected**(완전 연결층): 벡터를 입력받아 최종 분류/회귀 수행 
+- **Flatten**(평탄화): 다차원 **Feature Map**을 **1D 벡터로 변환** 
+- **Fully-Connected Layer**(완전 연결층): 벡터를 입력받아 **최종 분류/회귀 수행**
+  - 💡**모든 입력이 모든 출력 노드와 연결되어 있는 신경망의 최종 결정 계층**
 
 <br>
 <br>
