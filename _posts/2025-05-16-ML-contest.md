@@ -116,7 +116,7 @@ image: /assets/img/ML-contest.png
 > Public Score 에선 **8위**를 했지만 Private Score 에서는 **4위**로 마무리했다.
 {: .prompt-info}
 
-![최종결과](/assets/img/최종결과.png){: width="700" .center}
+![최종결과](/assets/img/최종결과.png){: width="800" .center}
 
 - **Public** Score: 16681.1584
 - **Private** Score: **11593.6103**
