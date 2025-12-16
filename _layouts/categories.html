@@ -29,12 +29,17 @@ layout: page
       {% endif %}
     {% endfor %}
 
+    <!-- 수동 하드코딩 (주석 처리) - 필요시 복원 가능
     {% if category_name == "AI | 인공지능" %}
       {% assign ordered_subs = "Upstage AI Lab,DA,ML,DL" | split: "," %}
       {% assign sub_categories = sub_categories | uniq %}
     {% else %}
       {% assign ordered_subs = sub_categories | sort %}
     {% endif %}
+    -->
+    
+    <!-- 자동 카테고리 생성 (알파벳순 정렬) -->
+    {% assign ordered_subs = sub_categories | sort %}
     {% assign sub_categories_size = sub_categories | size %}
 
     <div class="card categories">
