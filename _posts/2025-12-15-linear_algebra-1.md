@@ -8,7 +8,7 @@ date: 2025-12-15 10:00:00 +0900
 categories:
     - AI | 인공지능
     - 선형대수
-tags: [수학, 고유값, 고유벡터, 특이값분해, SVD]
+tags: [고유값, 고유벡터, 특이값분해, SVD]
 use_math: true
 comments: true
 pin: false # 고정핀
