@@ -138,7 +138,7 @@ $$\text{누적 설명된 분산} = \frac{\sum_{j=1}^{k} \lambda_j}{\sum_{j=1}^{p
 
 **몇 개의 주성분을 선택할까?**
 
-- **임계값(threshold)**: <span style="color: #3498db;">**누적 기여도가 80% 이상**</span>이 되는 지점까지 선택
+- **임계값(threshold)**: <span style="color: #3498db;">**누적 기여도가 80% 이상**</span>이 되는 지점까지 선택 (보통 95% 선택)
 - **Kaiser 기준**: 고유값이 1보다 큰 주성분만 선택
 - **Scree Plot**: <span style="color: #3498db;">**급격한 감소가 끝나는 지점(elbow point)**</span>에서 선택
 - **도메인 지식**: 해석 가능성과 실용성을 고려하여 결정
