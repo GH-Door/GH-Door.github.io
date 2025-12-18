@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "[선형대수] 02 - PCA (주성분 분석)"
-description: "[선형대수] PCA 주성분 분석과 데이터 차원 축소"
+description: "[선형대수] 주성분 분석의 이해"
 author: "DoorNote"
 date: 2025-12-17 10:00:00 +0900
 #  permalink: //
 categories:
     - AI | 인공지능
     - 선형대수
-tags: [수학, 주성분 분석, PCA, 차원의 저주]
+tags: [고유값, 고유벡터, 특이값분해, SVD, 주성분 분석, PCA, 차원의 저주, 공분산 행렬]
 use_math: true
 comments: true
 pin: false # 고정핀
