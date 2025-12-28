@@ -65,8 +65,12 @@
   --btn-share-hover-color: #0d6efd;
   --card-bg: white;
   --card-hovor-bg: #e2e2e2;
-  --card-shadow: rgb(104, 104, 104, 0.05) 0 2px 6px 0,
-    rgba(211, 209, 209, 0.15) 0 0 0 1px;
+  //  기존 포스팅 라운드 박스 색상
+  // --card-shadow: rgb(104, 104, 104, 0.05) 0 2px 6px 0,
+  //   rgba(211, 209, 209, 0.15) 0 0 0 1px;
+
+  --card-shadow: rgb(0, 0, 0, 0.1) 0 4px 12px 0,
+    rgba(0, 0, 0, 0.08) 0 0 0 1px;
   --footnote-target-bg: lightcyan;
   --tb-odd-bg: #fbfcfd;
   --tb-border-color: #eaeaea;
