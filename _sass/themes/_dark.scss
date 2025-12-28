@@ -2,15 +2,18 @@
   color-scheme: dark;
 
   /* Framework color */
-  --main-bg: rgb(27, 27, 30);
+  // --main-bg: rgb(27, 27, 30); 기존 배경색
+  --main-bg: rgb(38, 38, 38);
   --mask-bg: rgb(68, 69, 70);
   --main-border-color: rgb(44, 45, 45);
 
   /* Common color */
-  --text-color: rgb(175, 176, 177);
+  // --text-color: rgb(175, 176, 177); # 기존 text 색상
+  --text-color: rgb(185, 186, 187);
   --text-muted-color: #868686;
   --text-muted-highlight-color: #aeaeae;
-  --heading-color: #cccccc;
+  // --heading-color: #cccccc;
+  --heading-color: #e5e5e5;
   --label-color: #a7a7a7;
   --blockquote-border-color: rgb(66, 66, 66);
   --blockquote-text-color: #868686;
@@ -44,9 +47,11 @@
   --avatar-border-color: rgb(206, 206, 206, 0.9);
 
   /* Topbar */
-  --topbar-bg: rgb(27, 27, 30, 0.64);
+  // --topbar-bg: rgb(27, 27, 30, 0.64);
+  --topbar-bg: rgb(38, 38, 38, 0.64);
   --topbar-text-color: var(--text-color);
-  --search-border-color: rgb(55, 55, 55);
+  // --search-border-color: rgb(55, 55, 55); # 기존 search border 색상
+  --search-border-color: rgb(80, 80, 80);
   --search-icon-color: rgb(100, 102, 105);
   --input-focus-border-color: rgb(112, 114, 115);
 
@@ -138,14 +143,26 @@
     }
   }
 
+  //  기존 archives box 테두리 색상
+  // #archives li:nth-child(odd) {
+  //   background-image: linear-gradient(
+  //     to left,
+  //     rgb(26, 26, 30),
+  //     rgb(39, 39, 45),
+  //     rgb(39, 39, 45),
+  //     rgb(39, 39, 45),
+  //     rgb(26, 26, 30)
+  //   );
+  // }
+
   #archives li:nth-child(odd) {
     background-image: linear-gradient(
       to left,
-      rgb(26, 26, 30),
-      rgb(39, 39, 45),
-      rgb(39, 39, 45),
-      rgb(39, 39, 45),
-      rgb(26, 26, 30)
+      rgba(38, 38, 38),
+      rgba(50, 50, 50),
+      rgba(50, 50, 50),
+      rgba(50, 50, 50),
+      rgba(38, 38, 38)
     );
   }
 
@@ -299,5 +316,10 @@
 
   .highlight .ss {
     color: #90a959;
+  }
+
+  /* Bold text styling */
+  strong, b {
+    color: #d5d5d5;
   }
 }
